@@ -1,0 +1,23 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+.user-settings-table {
+ border-spacing: 0;
+}
+
+.user-settings-table th {
+  border-top: 1px solid #7e8993;
+  padding-left: 10px;
+}
+.user-settings-table td:last-child,
+.user-settings-table th:last-child {
+  border-right: 1px solid #7e8993;
+}
+
+.user-settings-table td,
+.user-settings-table th {
+  border-bottom: 1px solid #7e8993;
+  border-left: 1px solid #7e8993;
+}

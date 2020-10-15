@@ -1,0 +1,64 @@
+{
+  "data": [{
+    "id": "s24408019",
+    "license": "premier",
+    "description": "Premier Account",
+    "price_per_download": {
+      "local_amount": 26,
+      "local_currency": "USD"
+    },
+    "allotment": {
+      "downloads_left": 100000,
+      "downloads_limit": 100000
+    },
+    "formats": [{
+      "size": "huge",
+      "details_for_image": {
+        "width": 5000,
+        "height": 2812,
+        "dpi": 300
+      }
+    }, {
+      "size": "medium",
+      "details_for_image": {
+        "width": 1000,
+        "height": 562,
+        "dpi": 300
+      }
+    }, {
+      "size": "small",
+      "details_for_image": {
+        "width": 500,
+        "height": 281,
+        "dpi": 300
+      }
+    }]
+  }, {
+    "id": "s24408022",
+    "license": "premier_digital",
+    "description": "Premier Digital Account",
+    "price_per_download": {
+      "local_amount": 25,
+      "local_currency": "USD"
+    },
+    "allotment": {
+      "downloads_left": 100000,
+      "downloads_limit": 100000
+    },
+    "formats": [{
+      "size": "huge",
+      "details_for_image": {
+        "width": 5000,
+        "height": 2812,
+        "dpi": 300
+      }
+    }, {
+      "size": "small",
+      "details_for_image": {
+        "width": 500,
+        "height": 281,
+        "dpi": 300
+      }
+    }]
+  }]
+}

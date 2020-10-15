@@ -1,0 +1,66 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-shutterstock-shutterstock-block {
+	border: 1px solid;
+	padding: 1em;
+	background: #ffffff;
+
+	.components-edit__heading {
+		font-size: 18pt;
+		font-weight: 400;
+		vertical-align: middle;
+		margin-left: 18px;
+		font-family: "Roboto",sans-serif;
+	}
+
+	.components-edit__paragraph {
+		font-size: 13px;
+	}
+
+	.components-edit__shutterstock-icon {
+		width: 30px;
+		height: 30px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: -5px;
+	}
+
+	.components-edit__image-container {
+		position: relative;
+	}
+
+	.components-edit__image-container .components-edit__license-image-button {
+		position: absolute;
+		height: 40px;
+		background: rgb(245, 67, 54);
+		border-radius: 20px;
+		color: white;
+		font-size: 13px;
+		font-family: 'Roboto';
+		font-weight: bold;
+		bottom: 0;
+		right: 0;
+		margin-bottom: 60px;
+		margin-right: 15px;
+		&:disabled {
+			background-color: rgba(245, 67, 54, 0.80);
+    	color: rgba(255, 255, 255, .50);
+    	opacity: 0.8;
+		}
+		.loading-spinner {
+			width: 25px;
+			overflow: hidden;
+			height: 20px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: 15px 15px;
+			opacity: 1;
+			background-image: url(./images/loading.svg);
+			margin-right: 2px;
+		}
+	}
+}
