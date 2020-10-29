@@ -9,7 +9,6 @@
  * @package    Shutterstock
  * @subpackage Shutterstock/admin/partials
  */
-
 ?>
 	<input
 		class="<?php echo esc_attr( $atts['class'] ); ?>"

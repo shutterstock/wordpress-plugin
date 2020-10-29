@@ -18,6 +18,7 @@ const ShutterstockUI = ({
   licenseImage = false,
   subscriptions = [],
 }) => {
+  const userIsAbleToSearchEditorial = shutterstock?.permissions?.includes('can_user_search_editorial_images');
   const widgetRef = useRef();
   const [overlay, setOverlay] = useState({ show: false, text: '' });
 
@@ -90,9 +91,10 @@ const ShutterstockUI = ({
       onClick: async (e, item, options) => {
         e.preventDefault();
         try {
+          const mediaType = item.media_type;
           toggleOverlay(true, 'Loading. Please wait.');
 
-          const subscriptionsWithImageDetails = await getSubscriptionWithDetails(item.id);
+          const subscriptionsWithImageDetails = await getSubscriptionWithDetails(item.id, mediaType);
 
             // Adding subscription to the route
           routesConfig[1].props = {
@@ -108,7 +110,7 @@ const ShutterstockUI = ({
           toggleOverlay(false);
           
           options.history.push(`/license/images/${item.id}`);
-        } catch(error) {          
+        } catch(error) {
           widgetRef.current.toggleLoadingIndicator(false);
           toggleOverlay(false);          
           handleError(error);          
@@ -139,11 +141,16 @@ const ShutterstockUI = ({
               try {
                 toggleOverlay(true, 'Licensing Image. Please wait.');
                 const contributorId = item?.contributor?.id;
-                let contributorName = '';
-                if (contributorId) {
+                const mediaType = item?.media_type;
+                const isEditorial = mediaType === 'editorial';
+
+                let contributorName = isEditorial ? item?.byline : '';
+
+                if (contributorId && !isEditorial) {
                   const contributorDetails = await apiFetch({ path: `shutterstock/contributor/${contributorId}`});
                   contributorName = contributorDetails?.data?.[0]?.display_name || contributorId;
                 }
+
                 const licensing = await apiFetch({
                   path: 'shutterstock/images/licenses',
                   method: 'POST',
@@ -155,7 +162,10 @@ const ShutterstockUI = ({
                     description: item.description,
                     ...(subscription?.metadata ? { metadata: subscription.metadata } : {}),
                     contributorName,
-                    ...(subscription?.details_for_image)
+                    ...(subscription?.details_for_image),
+                    mediaType,
+                    license: subscription?.license,
+                    country: shutterstock?.country,
                   },
                 });
                 
@@ -173,7 +183,7 @@ const ShutterstockUI = ({
                   closeModal();
                   toggleOverlay(false);
                 } else {
-                  // display error.
+                  handleError(licensing);
                 }                
               } catch(error) {
                 toggleOverlay(false);
@@ -189,6 +199,18 @@ const ShutterstockUI = ({
   }
 
   useEffect(() => {
+
+    const searchBarDropdownFilters = [
+      {
+        label: __('Images', 'shutterstock'),
+        assetType: 'images',
+      },
+      {
+        label: __('Editorial', 'shutterstock'),
+        assetType: 'editorial',
+      },      
+    ];
+
     const widgetConfig = {
       mediaType: 'images',
       title: __('Add Shutterstock content to your post', 'shutterstock-block'),
@@ -218,6 +240,14 @@ const ShutterstockUI = ({
       overlayActions,
       customHeaders: {
         'x-shutterstock-application': `Wordpress/${shutterstock?.version}`,
+      },
+      editorialCountry: shutterstock?.country,
+      searchFilters: {
+        showFilterDrawer: true,
+        images: {          
+          orientationFilter: true,
+        },        
+        ...(userIsAbleToSearchEditorial ? { searchBarDropdownFilters } : {})
       },
     };
 

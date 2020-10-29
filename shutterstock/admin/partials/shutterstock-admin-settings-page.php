@@ -23,7 +23,7 @@
     </p>
   </div>
   <hr />
-  <form method="post" action="options.php">
+  <form method="post" action="options.php" id="shutterstock-admin-settings-form">
     <?php
       settings_fields( 'shutterstock_option_group' );
       do_settings_sections( 'shutterstock-admin' );

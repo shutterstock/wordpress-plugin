@@ -21,3 +21,27 @@
   border-bottom: 1px solid #7e8993;
   border-left: 1px solid #7e8993;
 }
+
+.shutterstock-token {
+    width: 80ch;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    border: 1px solid #7e8993;
+    padding: 4px 4px 4px 8px;
+    background-color: white !important;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    display: block;
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: 400;
+    resize: none;
+    height: 150px;
+    line-height: 1.4em;
+    overflow: auto;
+    overflow-wrap: break-word;
+    overflow-x: auto;
+    overflow-y: auto;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+    box-sizing: border-box;
+}
