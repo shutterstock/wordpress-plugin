@@ -1,4 +1,4 @@
-# Shutterstock wordpress-plugin
+# Shutterstock WordPress Plugin
 
 Access Shutterstock's exceptional, royalty-free content straight from WordPress.
 
