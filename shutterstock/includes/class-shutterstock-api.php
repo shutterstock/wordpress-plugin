@@ -17,7 +17,7 @@ class Shutterstock_API {
 				'permission_callback' => array($this, 'get_permissions_check'),
 			));
 
-			register_rest_route($this->shutterstock, '/images/(?P<id>\d+)', array(
+			register_rest_route($this->shutterstock, '/images/(?P<id>\w+)', array(
 				'methods' => 'GET',
 				'callback' => array($this, 'get_image_details'),
 				'permission_callback' => array($this, 'get_permissions_check'),
@@ -39,6 +39,10 @@ class Shutterstock_API {
 	}	
 
   public function get_subscriptions($request) {
+		$parameters = $request->get_params();
+		$media_type = sanitize_text_field($parameters['mediaType']);
+		$is_editorial = $media_type === 'editorial';
+
 		$subscription_route = "{$this->api_url}/user/subscriptions";
 
 		$response = $this->do_api_get_request($subscription_route);
@@ -55,6 +59,13 @@ class Shutterstock_API {
 			'media',
 			'media_digital',
 		];
+
+		if ($is_editorial) {
+			$supported_licenses = [
+				'premier_editorial_all_digital',
+				'premier_editorial_all_media',
+			];
+		}
 
 		$filtered_subscriptions = array_values(
 			array_filter(
@@ -77,9 +88,15 @@ class Shutterstock_API {
 	
   public function get_image_details($request) {
 		$image_id = sanitize_text_field($request['id']);
+		$parameters = $request->get_params();
+		$media_type = sanitize_text_field($parameters['mediaType']);
+		$is_editorial = $media_type === 'editorial';
+		$country = $this->get_editorial_country();
 
-		$image_details_route = $this->api_url. "/images/". $image_id . "?view=full";
-	
+		$image_details_route = $is_editorial
+			? $this->api_url. '/editorial/'. $image_id . '?view=full&country=' . $country 
+			: $this->api_url. '/images/'. $image_id . '?view=full';
+
 		$response = $this->do_api_get_request($image_details_route);
 
 		$decoded_response_body = json_decode($response['response_body'], true);
@@ -106,6 +123,8 @@ class Shutterstock_API {
 		$image_id = sanitize_text_field($req_body['id']);
 		$image_description = sanitize_text_field($req_body['description']);
 		$contributor_name = sanitize_text_field($req_body['contributorName']);
+		$media_type = sanitize_text_field($req_body['mediaType']);		
+		$is_editorial = $media_type === 'editorial';
 
 		$width = sanitize_text_field($req_body['width']);
 		$height = sanitize_text_field($req_body['height']);
@@ -118,26 +137,47 @@ class Shutterstock_API {
 
 		$token = $this->get_api_token();
 
-		$license_url = $this->api_url. "/images/licenses?subscription_id=". $subscription_id;
+		$license_url = $is_editorial
+			? $this->api_url. '/editorial/licenses'
+			: $this->api_url. '/images/licenses?subscription_id='. $subscription_id;
 
-		$body = [
-			"images" => [
-				[
-					"image_id" => $image_id,
-					"size" => $size,
-					"format" => 'jpg'
+		$body_key = $is_editorial ? 'editorial' : 'images';
+		$body = [];
+
+		if ($is_editorial) {
+			$country = $this->get_editorial_country();
+			$license = isset($req_body['license']) ? sanitize_text_field($req_body['license']) : '';
+			
+			$body = [
+				"country" => $country,
+				"editorial" => [
+					[
+						"editorial_id" => $image_id,
+						"license" => $license,
+						"size" => $size,
+					],
+				],
+			];
+		} else {
+			$body = [
+				"images" => [
+					[
+						"image_id" => $image_id,
+						"size" => $size,
+						"format" => 'jpg'
+					]
 				]
-			]
-		];
+			];
+		}
 
 		// Add price if passed
 		if ($local_amount) {
-			$body["images"][0]["price"] = $local_amount;
+			$body[$body_key][0]["price"] = $local_amount;
 		}
 
 		// Add metada if passed
 		if ($metadata) {
-			$body["images"][0]["metadata"] = $metadata;
+			$body[$body_key][0]["metadata"] = $metadata;
 		}
 
 		$args = [
@@ -156,8 +196,18 @@ class Shutterstock_API {
 
 		$decoded_body = json_decode($response_body, true);
 
-		if ($response_code !== 200 || isset($decoded_body['errors'])) {
-			return wp_send_json_error($decoded_body, $response_code);
+		$success_error = isset($decoded_body['data'][0]['error']);
+
+		if ($response_code !== 200 || $success_error || isset($decoded_body['errors'])) {
+			$error = $decoded_body;
+			
+			// licensing return 200 even if some error occurs. This type of error response returned by editorial.
+			if ($success_error) {
+				$error = $decoded_body['data'][0];
+				$error['message'] = $decoded_body['data'][0]['error'];
+			}
+
+			return wp_send_json_error($error, $response_code);
 		}
 
 		$download_url = $decoded_body['data'][0]['download']['url'];
@@ -184,7 +234,7 @@ class Shutterstock_API {
 		$response = '';
 
 		if (function_exists('vip_safe_wp_remote_get')) {
-			$response = vip_safe_wp_remote_get($download_url, '', 3, 3, 60, $args);
+			$response = vip_safe_wp_remote_get($download_url, '', 3, 3, 60);
 		} else {
 			$response = wp_remote_get($download_url, ['timeout' => 60]); // @codingStandardsIgnoreLine -- for non-VIP environments		
 		}
@@ -205,11 +255,11 @@ class Shutterstock_API {
 		
 		$uploaded_image_path = $uploaded_file['file'];
 
-		if ($size === 'huge') {
+		if ($size === 'huge' || $size === 'original') {
 			$max_width = 1500;
 			$resized_height = intval(($height * ($max_width/$width)));
 			$editor = wp_get_image_editor($uploaded_image_path, array());
-			$result = $editor->resize($max_width, $resized_height, true);
+			$editor->resize($max_width, $resized_height, true);
 			$scaled_image = $editor->save($editor->generate_filename('scaled'));
 			$uploaded_image_path = $scaled_image['path'];
 		}
@@ -265,7 +315,19 @@ class Shutterstock_API {
 		$can_license_editorial_images = in_array('can_user_license_shutterstock_editorial_image', $permissions, true); 
 		$can_license_all_images = in_array('can_user_license_all_shutterstock_images', $permissions, true);
 
-		$is_editorial = isset($request['is_editorial']) && $request['is_editorial'];
+		$request_type = $request->get_method();
+		$is_editorial = false;
+		$media_type = 'images';
+
+		if ($request_type === 'GET') {
+			$parameters = $request->get_params();
+			$media_type  = sanitize_text_field($parameters['mediaType']);
+		} else if ($request_type === 'POST') {
+			$req_body = json_decode($request->get_body(), true);
+			$media_type = sanitize_text_field($req_body['mediaType']);
+		}
+
+		$is_editorial = ($media_type === 'editorial');
 
 		if ($can_license_all_images || ($is_editorial && $can_license_editorial_images) || (!$is_editorial && $can_license_photo)) {
 			return true;
@@ -297,6 +359,14 @@ class Shutterstock_API {
 		}
 
 		return $permissions;
+	}
+
+	private function get_editorial_country() {
+		$editorial_country = !empty($this->get_options('editorial_country')) 
+			? $this->get_options('editorial_country') 
+			: "USA";
+
+		return $editorial_country;
 	}
 
 	private function get_options($field) {

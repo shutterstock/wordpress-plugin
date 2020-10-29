@@ -113,7 +113,7 @@ class Shutterstock_Public {
 		
 		// Registering the shutterstock-block script
 		$index_js     = 'shutterstock-block/build/index.js';
-		$script_asset = require( $script_asset_path );
+		$script_asset = require(dirname( __FILE__ ) . '/shutterstock-block/build/index.asset.php' );
 	
 		wp_register_script(
 			'shutterstock-block-block-editor',
@@ -123,31 +123,17 @@ class Shutterstock_Public {
 		);
 
 		// Registering Shutterstock UI script
-		$shutterstock_ui_js = 'shutterstock-block/js/sstk-widget.js';
-		
-		wp_register_script(
-			'shutterstock-block-block-editor-shuttestock-ui-js',
-			'https://api-cdn.shutterstock.com/0.1.22/static/js/sstk-widget.js'
-		);
+		wp_register_script('shutterstock-block-block-editor-shuttestock-ui-js', 'https://api-cdn.shutterstock.com/0.1.25/static/js/sstk-widget.js');
 		
 		wp_set_script_translations( 'shutterstock-block-block-editor', 'shutterstock-block' );
 	
 		// Registering the shutterstock-block styles
 		$editor_css = 'shutterstock-block/build/index.css';
 
-		wp_register_style(
-			'shutterstock-block-block-editor',
-			plugins_url( $editor_css, __FILE__ ),
-			array(),
-		);
+		wp_register_style('shutterstock-block-block-editor', plugins_url( $editor_css, __FILE__ ));
 		
 		// Registering Shutterstock UI styles
-		$shutterstock_ui_css = 'shutterstock-block/css/sstk-widget.css';
-		wp_register_style(
-			'shutterstock-block-block-editor-shutterstock-ui-css',
-			'https://api-cdn.shutterstock.com/0.1.22/static/css/sstk-widget.css',
-			array(),
-		);
+		wp_register_style('shutterstock-block-block-editor-shutterstock-ui-css', 'https://api-cdn.shutterstock.com/0.1.25/static/css/sstk-widget.css');
 
 		// Registerging the shutterstock-block. Pattern is 'namespace/block-name'
 		register_block_type( 'shutterstock/shutterstock-block', array(
@@ -165,6 +151,14 @@ class Shutterstock_Public {
 			$api_key = $shutterstock_option['api_key'];
 		} else if (isset($shutterstock_network_option['api_key'])) {
 			$api_key = $shutterstock_network_option['api_key'];	
+		}
+
+		// Provide editorial country
+		$editorial_country = 'USA';
+		if (isset($shutterstock_option['editorial_country'])) {
+			$editorial_country = $shutterstock_option['editorial_country'];
+		} else if (isset($shutterstock_network_option['editorial_country'])) { 
+			$editorial_country = $shutterstock_network_option['editorial_country'];
 		}
 
 		// Get the user settings for the account
@@ -194,6 +188,7 @@ class Shutterstock_Public {
 			'language' => $language,
 			'permissions' => $permissions,
 			'version' => $this->version,
+			'country' => $editorial_country,
 		];
 
 		wp_localize_script('shutterstock-block-block-editor', 'shutterstock', $shutterstock_js_object );

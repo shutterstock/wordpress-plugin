@@ -1,6 +1,8 @@
 .components-shutterstock-ui__inputgroup {
   .components-shutterstock-ui__input {
     border: none;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
     &:focus{
       box-shadow: none;
     }

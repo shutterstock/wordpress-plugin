@@ -53,7 +53,6 @@ class Shutterstock_Admin {
 
 		$this->shutterstock = $shutterstock;
 		$this->version = $version;
-
 	}
 
 	/**
@@ -199,15 +198,73 @@ class Shutterstock_Admin {
 			)
 		);
 
+        add_settings_field(
+            'api_secret', // id
+            __('API Secret *', 'shutterstock'), // title
+            array( $this, 'field_text' ), // callback
+            $page, // page
+            'shutterstock_setting_section', // section
+            array(
+                'id' => 'api_secret',
+                'description' => 'Required. Use the API secret from an app you have created.',
+            )
+        );
+
+	$nonce = wp_create_nonce('generate-token');
+
+	$network_admin = is_network_admin();
+
+	$redirect_uri = $network_admin ?
+            network_admin_url('edit.php?action=shutterstock_network_generate_access_token&_wpnonce='.$nonce) :
+	    admin_url('admin.php?action=shutterstock_generate_access_token&_wpnonce='.$nonce);
+	    
+	$post_location = $network_admin ?
+		'edit.php?action=shutterstock_network_update_options' :
+		'options.php';
+
+
+        $redirect_query_params = http_build_query(array(
+            'state' => gmdate(DATE_ATOM),
+	    'redirect_uri' => $redirect_uri,
+            'client_id' => 'CLIENT_ID',
+            'scope' => 'licenses.create licenses.view purchases.view user.view'
+        ));
+
+        $query_params = http_build_query(array(
+            'next' => '/oauth/authorize?' . $redirect_query_params,
+        ));
+
+        $onclick_location = 'https://accounts.shutterstock.com/login?' . $query_params;
+
+
+        add_settings_field(
+            'app_token', // id
+            __('App Token *', 'shutterstock'),
+            array($this, 'field_button'), // callback
+            $page, // page
+            'shutterstock_setting_section', // section
+            array(
+                'id' => 'app_token',
+                'context' => [
+                    'pre_class' => 'shutterstock-token',
+                    'onclickLocation' => $onclick_location,
+                    'postLocation' => $post_location,
+                    'has_value_button_text' => 'Logout',
+		    'no_value_button_text' => 'Log in with Shutterstock',
+		    'description' => 'Required for licensing.',
+                ],
+            )
+        );
+
 		add_settings_field(
-			'app_token', // id
-			__('App Token *', 'shutterstock'),
-			array( $this, 'field_textarea' ), // callback
+			'editorial_country', // id
+			__('Editorial Country', 'shutterstock'), // title
+			array( $this, 'field_text' ), // callback
 			$page, // page
 			'shutterstock_setting_section', // section
 			array(
-				'id' => 'app_token',
-				'description' => 'Required. You can generate a token on your developer apps page.',
+				'id' => 'editorial_country',
+				'description' => 'Show only editorial content that is available for distribution in a certain country (A three-character (ISO 3166 Alpha-3) country code).',
 			)
 		);
 
@@ -219,7 +276,7 @@ class Shutterstock_Admin {
 			'shutterstock_setting_section', // section
 			array(
 				'id' => 'user_settings',
-				'description' => 'Define which user roles are allowed to search and/or license assets.',				
+				'description' => 'Define which user roles are allowed to search and/or license assets.',
 			)
 		);
 
@@ -229,6 +286,14 @@ class Shutterstock_Admin {
 		$sanitary_values = array();
 		if ( isset( $input['api_key'] ) ) {
 			$sanitary_values['api_key'] = sanitize_text_field( $input['api_key'] );
+		}
+
+        if ( isset( $input['api_secret'] ) ) {
+            $sanitary_values['api_secret'] = sanitize_text_field( $input['api_secret'] );
+        }
+
+		if ( isset( $input['editorial_country'] ) ) {
+			$sanitary_values['editorial_country'] = sanitize_text_field( $input['editorial_country'] );
 		}
 
 		if ( isset( $input['app_token'] ) ) {
@@ -260,13 +325,14 @@ class Shutterstock_Admin {
 	 * @return 	string 						The HTML field
 	 */
 	public function field_text( $args ) {
-		$defaults['class'] 			= 'regular-text';
+		$defaults			= [];
+		$defaults['class'] 		= 'regular-text';
 		$defaults['description'] 	= '';
-		$defaults['label'] 			= '';
-		$defaults['name'] 			= "{$this->shutterstock}_option_name[{$args['id']}]";
+		$defaults['label'] 		= '';
+		$defaults['name'] 		= "{$this->shutterstock}_option_name[{$args['id']}]";
 		$defaults['placeholder'] 	= '';
-		$defaults['type'] 			= 'text';
-		$defaults['value'] 			= '';
+		$defaults['type'] 		= 'text';
+		$defaults['value'] 		= '';
 
 		$atts = wp_parse_args( $args, $defaults );
 		if ( ! empty( $this->shutterstock_options[$atts['id']] ) ) {
@@ -286,15 +352,15 @@ class Shutterstock_Admin {
 	 * @return 	string 						The HTML field
 	 */
 	public function field_textarea( $args ) {
-
-		$defaults['class'] 			= '';
-		$defaults['cols'] 			= 100;
+		$defaults			= [];
+		$defaults['class'] 		= '';
+		$defaults['cols'] 		= 100;
 		$defaults['context'] 		= '';
 		$defaults['description'] 	= '';
-		$defaults['label'] 			= '';
-		$defaults['name'] 			= "{$this->shutterstock}_option_name[{$args['id']}]";
-		$defaults['rows'] 			= 6;
-		$defaults['value'] 			= '';
+		$defaults['label'] 		= '';
+		$defaults['name'] 		= "{$this->shutterstock}_option_name[{$args['id']}]";
+		$defaults['rows'] 		= 6;
+		$defaults['value'] 		= '';
 
 		$atts = wp_parse_args( $args, $defaults );
 
@@ -308,9 +374,35 @@ class Shutterstock_Admin {
 
 	}
 
+    /**
+     * Creates a button field
+     *
+     * @param 	array 		$args 			The arguments for the field
+     * @return 	string 						The HTML field
+     */
+    public function field_button( $args ) {
+
+        $defaults = [];
+        $defaults['context'] 		= '';
+        $defaults['value'] 			= '';
+        $defaults['name'] 		= "{$this->shutterstock}_option_name[{$args['id']}]";
+
+        $atts = wp_parse_args( $args, $defaults );
+
+        if ( ! empty( $this->shutterstock_options[$atts['id']] ) ) {
+
+            $atts['value'] = $this->shutterstock_options[$atts['id']];
+
+        }
+
+        include( plugin_dir_path( __FILE__ ) . "partials/{$this->shutterstock}-admin-field-shutterstock-login-button.php" );
+
+    }
+
 	public function field_user_settings($args) {
 		$wp_roles = wp_roles();
 		$role_names = $wp_roles->role_names;
+		$atts = [];
 		$atts['role_names'] = $role_names;
 		$atts['description'] = $args['description'];
 
@@ -340,27 +432,32 @@ class Shutterstock_Admin {
 		$options = $new_whitelist_options['shutterstock_network_option_group'];
 
 		// Go through the posted data and save only our options.
-		foreach ($options as $option) {			
+		foreach ($options as $option) {
 			if (isset($_POST[$option])) {
-				$api_key = isset( $_POST[$option]['api_key'] ) ? sanitize_text_field($_POST[$option]['api_key']) : '';			
+				$api_key = isset( $_POST[$option]['api_key'] ) ? sanitize_text_field($_POST[$option]['api_key']) : '';
+				$api_secret = isset( $_POST[$option]['api_secret'] ) ? sanitize_text_field($_POST[$option]['api_secret']) : '';
 				$app_token = isset( $_POST[$option]['app_token'] ) ? sanitize_textarea_field($_POST[$option]['app_token']) : '';
+				$editorial_country = isset( $_POST[$option]['editorial_country'] ) ? sanitize_text_field($_POST[$option]['editorial_country']) : '';
 				$user_settings = [];
 
 				if (isset($_POST[$option]['user_settings'])) {
 					$wp_roles = wp_roles();
 					$role_names = $wp_roles->role_names;
-					
-					foreach($role_names as $role_slug => $role_display_name) {
+					$roles_slugs = array_keys($role_names);
+
+					foreach($roles_slugs as $role_slug) {
 						if (isset($_POST[$option]['user_settings'][$role_slug])) {
 							$user_settings[$role_slug] = array_map( 'sanitize_text_field', wp_unslash( $_POST[$option]['user_settings'][$role_slug] ) );
 						}
-					}			
-				}			
+					}
+				}
 
 				update_site_option($option, array(
 					'api_key' => $api_key,
+					'api_secret' => $api_secret,
 					'app_token' => $app_token,
 					'user_settings' => $user_settings,
+					'editorial_country' => $editorial_country,
 				));
 			}
 		}
@@ -372,6 +469,39 @@ class Shutterstock_Admin {
 		exit;
 	}
 
+	public function shutterstock_generate_access_token() {
+		$nonce = isset($_REQUEST['_wpnonce']) ? sanitize_text_field($_REQUEST['_wpnonce']): '';
+
+		if (!wp_verify_nonce( $nonce, 'generate-token')) {
+			die( esc_html_e( 'Security check', 'textdomain' ) ); 
+		} else {
+			$code = isset($_REQUEST['code']) ? sanitize_text_field($_REQUEST['code']) : '';
+			
+			if ($code) {
+				$option = is_network_admin() ? $this->get_site_option() : $this->get_option();
+				$token = $this->post_token($code, $option['api_key'], $option['api_secret']);
+				
+				$option['app_token'] = $token;
+
+				if (is_network_admin()) {
+					update_site_option("{$this->shutterstock}_option_name", $option);
+					$wp_nonce = wp_create_nonce('shutterstock-network-settings-updated');
+					// At last we redirect back to our options page.
+					wp_redirect(add_query_arg(array('page' => 'shutterstock_network_options_page',
+					'updated' => $wp_nonce, ), network_admin_url('settings.php')));						
+					exit;
+				} else {
+					update_option("{$this->shutterstock}_option_name", $option);
+					$wp_nonce = wp_create_nonce('shutterstock-setting-updated');
+					// At last we redirect back to our options page.
+					wp_redirect(add_query_arg(array('page' => 'shutterstock_options_page',
+					'updated' => $wp_nonce, ), admin_url('options-general.php')));						
+					exit;
+				}
+			}				
+		}			
+	}
+
 	private function get_option() {
 		return get_option("{$this->shutterstock}_option_name");
 	}
@@ -379,4 +509,31 @@ class Shutterstock_Admin {
 	private function get_site_option() {
 		return get_site_option("{$this->shutterstock}_option_name");
 	}
+
+	private function post_token($code, $key, $secret) {
+        $token_url = 'https://api.shutterstock.com/v2/oauth/access_token';
+
+        $body = [
+            "client_id" => $key,
+            "client_secret" => $secret,
+            "code" => $code,
+            "grant_type" => 'authorization_code',
+        ];
+
+        $args = [
+            'headers' => [
+                'Content-Type' => 'application/json',
+                'x-shutterstock-application' => 'Wordpress/'. $this->version,
+            ],
+            'body' => wp_json_encode($body),
+            'data_format' => 'body',
+        ];
+
+        $response = wp_remote_post($token_url, $args);
+        $response_body = wp_remote_retrieve_body($response);
+
+        $decoded_body = json_decode($response_body, true);
+
+        return $decoded_body['access_token'];
+    }
 }

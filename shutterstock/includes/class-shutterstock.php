@@ -70,7 +70,7 @@ class Shutterstock {
 		if ( defined( 'SHUTTERSTOCK_VERSION' ) ) {
 			$this->version = SHUTTERSTOCK_VERSION;
 		} else {
-			$this->version = '1.0.0';
+			$this->version = '1.1.0';
 		}
 		$this->shutterstock = 'shutterstock';
 
@@ -164,6 +164,8 @@ class Shutterstock {
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'settings_init' );
 		$this->loader->add_action( 'network_admin_menu', $plugin_admin, 'add_network_admin_settings_page' );
 		$this->loader->add_action( 'network_admin_edit_shutterstock_network_update_options', $plugin_admin, 'shutterstock_network_update_options' );
+		$this->loader->add_action( 'network_admin_edit_shutterstock_network_generate_access_token', $plugin_admin, 'shutterstock_generate_access_token' );
+		$this->loader->add_action( 'admin_action_shutterstock_generate_access_token', $plugin_admin, 'shutterstock_generate_access_token');
 	}
 
 	/**
@@ -185,7 +187,7 @@ class Shutterstock {
 	}
 
 	private function define_shutterstock_api_hooks() {
-		$plugin_shutterstock_api = new Shutterstock_API( $this->get_shutterstock(), $this->get_version() );		
+		$plugin_shutterstock_api = new Shutterstock_API( $this->get_shutterstock(), $this->get_version() );
 		$this->loader->add_action( 'rest_api_init', $plugin_shutterstock_api, 'register_routes');
 	}
 

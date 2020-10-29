@@ -17,7 +17,7 @@
 <?php
 
 if (isset($_GET['updated']) && wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['updated'] ) ), 'shutterstock-network-settings-updated' ) ): ?>
-<div id="message" class="updated notice is-dismissible"><p><?php _e('Settting saved.') ?></p></div>
+<div id="message" class="updated notice is-dismissible"><p><?php esc_html_e('Settting saved.') ?></p></div>
 <?php endif; ?>
 <div class="wrap">
   <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
@@ -29,7 +29,7 @@ if (isset($_GET['updated']) && wp_verify_nonce( sanitize_text_field( wp_unslash(
   </div>
   <hr />
   <?php settings_errors(); ?>
-  <form method="post" action="edit.php?action=shutterstock_network_update_options">
+  <form method="post" action="edit.php?action=shutterstock_network_update_options" id="shutterstock-admin-settings-form">
     <?php
       settings_fields( 'shutterstock_network_option_group' );
       do_settings_sections( 'shutterstock_network_options_page' );

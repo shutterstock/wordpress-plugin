@@ -41,13 +41,22 @@ const Edit = (props) => {
 
 	const openModal = () => setShutterstockModalOpen(true);
 	const closeModal = () => setShutterstockModalOpen(false);
+	const mediaType = props.attributes?.img?.media_type || 'image';
+	const isEditorial = mediaType === 'editorial';
 
-	const userIsAbleToLicenseImages = shutterstock?.permissions.includes('can_user_license_shutterstock_photos') ||
-		shutterstock?.permissions.includes('can_user_license_all_shutterstock_images');
-	const userIsAbleToLicenseEditorial = shutterstock?.permissions.includes('can_user_license_shutterstock_editorial_image') ||
-		shutterstock?.permissions.includes('can_user_license_all_shutterstock_images');;
+	const { permissions = {} } = shutterstock;
+	const userIsAbleToLicenseAllImages = permissions.includes('can_user_license_all_shutterstock_images');
+	const userIsAbleToLicenseEditorial = permissions.includes('can_user_license_shutterstock_editorial_image');
+	const userIsAbleToLicensePhotos = permissions.includes('can_user_license_shutterstock_photos');
+	let canLicense = false;
 
-	const canLicense = userIsAbleToLicenseImages || userIsAbleToLicenseEditorial;
+	if (
+		userIsAbleToLicenseAllImages ||
+		(isEditorial && userIsAbleToLicenseEditorial) || 
+		(!isEditorial && userIsAbleToLicensePhotos)
+	) {
+		canLicense = true;
+	}
 
 	const toogleLoading = (status) => {
 		setLicenseImage(status);
@@ -108,7 +117,7 @@ const Edit = (props) => {
 							onClick={async () => {
 								try {
 									toogleLoading(true);
-									const subsWithImgDetails = await getSubscriptionWithDetails(props.attributes?.img.id);
+									const subsWithImgDetails = await getSubscriptionWithDetails(props.attributes?.img.id, mediaType);
 									setSubscriptions(subsWithImgDetails);
 									openModal();
 									setLoading(false);
