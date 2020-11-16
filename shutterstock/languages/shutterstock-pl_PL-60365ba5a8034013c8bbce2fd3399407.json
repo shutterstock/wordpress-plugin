@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.296Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "pl_PL",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Dodaj tre\u015bci Shutterstock do swojego posta"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstock blokuje przegl\u0105danie i wstawianie obraz\u00f3w shutterstock"
+            ],
+            "wordpress:text_block_paragraph": [
+                "Dodaj obrazy z biblioteki Shutterstock zawieraj\u0105cej ponad 340 milion\u00f3w zdj\u0119\u0107, wektor\u00f3w i ilustracji o wysokiej jako\u015bci."
+            ],
+            "wordpress:text_browse": [
+                "Przegl\u0105daj"
+            ],
+            "wordpress:text_editorial": [
+                "Dziennikarskie"
+            ],
+            "wordpress:text_images": [
+                "Obrazy"
+            ],
+            "wordpress:text_insert_preview": [
+                "Wstaw podgl\u0105d"
+            ],
+            "wordpress:text_license": [
+                "Licencja"
+            ],
+            "wordpress:text_license_this_image": [
+                "Licencjonuj ten obraz"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Licencjonuj obraz. Prosimy czeka\u0107."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Wczytywanie. Prosimy czeka\u0107."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Przepraszamy, wyst\u0105pi\u0142 b\u0142\u0105d. Spr\u00f3buj ponownie."
+            ]
+        }
+    }
+}

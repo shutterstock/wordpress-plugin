@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.273Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "cs_CZ",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "P\u0159idejte obsah slu\u017eby Shutterstock k va\u0161emu p\u0159\u00edsp\u011bvku"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Blok slu\u017eby Shutterstock pro proch\u00e1zen\u00ed a vkl\u00e1d\u00e1n\u00ed sn\u00edmk\u016f Shutterstock"
+            ],
+            "wordpress:text_block_paragraph": [
+                "P\u0159idejte sn\u00edmky z knihovny slu\u017eby Shutterstock, kter\u00e1 zahrnuje v\u00edce n\u011b\u017e 340 milion\u016f fotografi\u00ed, vektor\u016f a ilustrac\u00ed ve vysok\u00e9 kvalit\u011b."
+            ],
+            "wordpress:text_browse": [
+                "Proch\u00e1zet"
+            ],
+            "wordpress:text_editorial": [
+                "Redak\u010dn\u00ed"
+            ],
+            "wordpress:text_images": [
+                "Sn\u00edmky"
+            ],
+            "wordpress:text_insert_preview": [
+                "Vlo\u017eit n\u00e1hled"
+            ],
+            "wordpress:text_license": [
+                "Licence"
+            ],
+            "wordpress:text_license_this_image": [
+                "Licencovat tento sn\u00edmek"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Licencov\u00e1n\u00ed sn\u00edmku... \u010cekejte pros\u00edm..."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Na\u010d\u00edt\u00e1n\u00ed... \u010cekejte pros\u00edm..."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "N\u011bco se nepovedlo. Zkuste to pros\u00edm znovu."
+            ]
+        }
+    }
+}

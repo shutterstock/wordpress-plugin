@@ -15,7 +15,7 @@
             echo '
             <script type="text/javascript">
                 function logout() {
-                  var pre = \'<pre class="' . esc_attr($atts['context']['pre_class']) . '">' . esc_textarea($atts['value']) . '</pre>\';
+                  var pre = \'<p class="' . esc_attr($atts['context']['connected_class']) . '">' . esc_html__('wordpress:logging_out', 'shutterstock') . '</p>\';
                   jQuery(".shutterstock-token").replaceWith(pre);
                 }
             </script>
@@ -25,10 +25,10 @@
                 id="' . esc_attr($atts['id']) . '"
                 name="' . esc_attr($atts['name']) . '"
                 value="' . esc_textarea($atts['value']) . '"
-                class="' . esc_attr($atts['context']['pre_class']) . '">' .
-                    esc_textarea($atts['value']) .
+                class="' . esc_attr($atts['context']['connected_class']) . '">' .
+                    esc_html__('wordpress:connected', 'shutterstock') .
                 '</textarea>';
-            echo '<button onclick="logout()">' . esc_attr($atts['context']['has_value_button_text']) . '</button>';
+            echo '<button class="logout" onclick="logout()">' . esc_attr($atts['context']['has_value_button_text']) . '</button>';
         } else {
             echo '
             <script type="text/javascript">
@@ -45,6 +45,7 @@
                 }
             </script>
             <input
+                class="login"
                 type="button"
                 value="' . esc_attr($atts['context']['no_value_button_text']) . '"
                 onclick="loginWithShutterstock()"

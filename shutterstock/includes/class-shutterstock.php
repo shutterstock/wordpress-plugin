@@ -70,7 +70,7 @@ class Shutterstock {
 		if ( defined( 'SHUTTERSTOCK_VERSION' ) ) {
 			$this->version = SHUTTERSTOCK_VERSION;
 		} else {
-			$this->version = '1.1.0';
+			$this->version = '1.1.1';
 		}
 		$this->shutterstock = 'shutterstock';
 
@@ -143,6 +143,8 @@ class Shutterstock {
 		$plugin_i18n = new Shutterstock_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		$this->loader->add_filter('load_textdomain_mofile', $plugin_i18n, 'load_textdomain_mofile', 10, 2);
+		$this->loader->add_filter('load_script_translation_file', $plugin_i18n, 'load_script_translation_file', 10, 3);
 
 	}
 

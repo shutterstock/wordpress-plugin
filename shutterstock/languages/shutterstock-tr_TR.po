@@ -1,0 +1,157 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shutterstock 1.1.0\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: shutterstock\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"POT-Creation-Date: 2020-11-09T20:44:52.304Z\n"
+"PO-Revision-Date: 2020-11-09T20:44:52.304Z\n"
+"Language: tr_TR\n"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+msgid "wordpress:connected"
+msgstr "Bağlandı"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
+msgid "wordpress:logging_out"
+msgstr "Oturum kapatılıyor"
+
+msgid "wordpress:plugin_description"
+msgstr ""
+"Shutterstock eklentisi, yaratıcı sürecinizi basitleştiriyor. İster taslak "
+"oluştururken ister eksiksiz bir makale yayınlarken zamandan tasarruf edin."
+
+msgid "wordpress:plugin_title"
+msgstr "Shutterstock"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_add_shuttersock_content_to_post"
+msgstr "Yayınınıza Shutterstock içeriği ekleyin"
+
+#: admin/class-shutterstock-admin.php:191
+msgid "wordpress:text_api_key"
+msgstr "API Anahtarı *"
+
+#: admin/class-shutterstock-admin.php:197
+msgid "wordpress:text_api_key_description"
+msgstr "Zorunlu. Oluşturduğunuz bir uygulamadaki API anahtarını kullanın."
+
+#: admin/class-shutterstock-admin.php:203
+msgid "wordpress:text_api_secret"
+msgstr "API Gizli Sorusu *"
+
+#: admin/class-shutterstock-admin.php:209
+msgid "wordpress:text_api_secret_description"
+msgstr "Zorunlu. Oluşturduğunuz bir uygulamadaki API gizli sorusunu kullanın."
+
+#: admin/class-shutterstock-admin.php:242
+msgid "wordpress:text_app_token"
+msgstr "Uygulama Belirteci *"
+
+#: admin/class-shutterstock-admin.php:254
+msgid "wordpress:text_app_token_description"
+msgstr "Lisanslama için zorunludur."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_description_in_sidebar"
+msgstr "Shutterstock Görselleri aramak ve eklemek için Shutterstock bloğu"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_paragraph"
+msgstr ""
+"Shutterstock’un 340 milyondan fazla yüksek kaliteli fotoğraf, vektör ve "
+"illüstrasyondan oluşan kütüphanesinden görseller ekleyin."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_browse"
+msgstr "Göz at"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_editorial"
+msgstr "Haber Amaçlı İçerik"
+
+#: admin/class-shutterstock-admin.php:261
+msgid "wordpress:text_editorial_country"
+msgstr "Haber Amaçlı İçerik Ülkesi"
+
+#: admin/class-shutterstock-admin.php:267
+msgid "wordpress:text_editorial_country_description"
+msgstr ""
+"Yalnızca belirli bir ülkede dağıtımda olan haber amaçlı içerikleri "
+"görüntüleyin (Üç karakterli (ISO 3166 Alpha-3) ülke kodu)."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_images"
+msgstr "Görseller"
+
+#: admin/partials/shutterstock-admin-network-settings-page.php:28
+#: admin/partials/shutterstock-admin-settings-page.php:23
+msgid "wordpress:text_insert_account_information"
+msgstr ""
+"Bu eklentiyi kullanmak için lütfen Shutterstock hesap bilgilerinizi girin. "
+"<a href=\"%s\" target=\"_blank\">Geliştirici uygulamaları sayfanızda</a> "
+"bir uygulama ve erişim belirteci oluşturabilirsiniz."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_insert_preview"
+msgstr "Önizleme ekle"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license"
+msgstr "Lisans"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:16
+msgid "wordpress:text_license_all_assets"
+msgstr "Tüm Varlıkları Lisansla"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:15
+msgid "wordpress:text_license_editorial_images"
+msgstr "Haber Amaçlı Görselleri Lisansla"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:13
+msgid "wordpress:text_license_images"
+msgstr "Görselleri Lisansla"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license_this_image"
+msgstr "Bu görseli lisansla"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_licensing_image_please_wait"
+msgstr "Görsel lisanslanıyor. Lütfen bekleyin."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_loading_please_wait"
+msgstr "Yükleniyor. Lütfen bekleyin."
+
+#: admin/class-shutterstock-admin.php:253
+msgid "wordpress:text_log_in_with_shutterstock"
+msgstr "Shutterstock’ta oturum açın"
+
+#: admin/class-shutterstock-admin.php:252
+msgid "wordpress:text_logout"
+msgstr "Oturumu Kapat"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:14
+msgid "wordpress:text_search_editorial_images"
+msgstr "Haber Amaçlı Görsel Ara"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_something_went_wrong"
+msgstr "Bir sorun oluştu. Lütfen tekrar deneyin."
+
+#: admin/class-shutterstock-admin.php:273
+msgid "wordpress:text_user_settings"
+msgstr "Kullanıcı Ayarları"
+
+#: admin/class-shutterstock-admin.php:279
+msgid "wordpress:text_user_settings_description"
+msgstr ""
+"Varlık aramak ve/veya lisanslamak için hangi kullanıcı rollerine izin "
+"verildiğini tanımlayın."
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:22
+msgid "wordpress:text_user_type"
+msgstr "Kullanıcı Türü"

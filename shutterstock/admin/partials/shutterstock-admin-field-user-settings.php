@@ -10,19 +10,19 @@
  * @subpackage Shutterstock/admin/partials
  */
 $capabilites_with_texts = [
-  'can_user_license_shutterstock_photos' => 'License Images',
-  'can_user_search_editorial_images' => 'Search Editorial Images',
-  'can_user_license_shutterstock_editorial_image' => 'License Editorial Images	',
-  'can_user_license_all_shutterstock_images' => 'License All Assets',
+  'can_user_license_shutterstock_photos' => esc_html__('wordpress:text_license_images', 'shutterstock'),
+  'can_user_search_editorial_images' => esc_html__('wordpress:text_search_editorial_images', 'shutterstock'),
+  'can_user_license_shutterstock_editorial_image' => esc_html__('wordpress:text_license_editorial_images', 'shutterstock'),
+  'can_user_license_all_shutterstock_images' => esc_html__('wordpress:text_license_all_assets', 'shutterstock'),
 ];
 
 ?>
 <table class="user-settings-table">
     <thead>
-      <th><?php echo esc_html_e('User Type', 'shutterstock') ?></th>
+      <th><?php echo esc_html_e('wordpress:text_user_type', 'shutterstock') ?></th>
       <?php
       foreach($capabilites_with_texts as $capability) { ?>
-        <th><?php echo esc_html_e(esc_attr($capability), 'shutterstock'); ?></th>
+        <th><?php echo esc_attr($capability); ?></th>
       <?php }?>
     <tbody>
     <?php

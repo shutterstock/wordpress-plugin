@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.302Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "sv_SE",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "L\u00e4gg till Shutterstock-inneh\u00e5ll till din post"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstock-blockering f\u00f6r att g\u00e5 igenom och infoga Shutterstock-bilder"
+            ],
+            "wordpress:text_block_paragraph": [
+                "L\u00e4gg till bilder fr\u00e5n Shutterstocks bibliotek med \u00f6ver 340 miljoner h\u00f6gkvalitativa fotografier, vektorer och illustrationer."
+            ],
+            "wordpress:text_browse": [
+                "Bl\u00e4ddra"
+            ],
+            "wordpress:text_editorial": [
+                "Redaktionellt"
+            ],
+            "wordpress:text_images": [
+                "Bilder"
+            ],
+            "wordpress:text_insert_preview": [
+                "Infoga f\u00f6rhandsgranskning"
+            ],
+            "wordpress:text_license": [
+                "Licens"
+            ],
+            "wordpress:text_license_this_image": [
+                "Licensiera den h\u00e4r bilden"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Licensierar bild. V\u00e4nta."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "L\u00e4ser in. V\u00e4nta."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "N\u00e5got gick fel. F\u00f6rs\u00f6k igen."
+            ]
+        }
+    }
+}

@@ -22,9 +22,12 @@ if (isset($_GET['updated']) && wp_verify_nonce( sanitize_text_field( wp_unslash(
 <div class="wrap">
   <h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
   <div>
-    <p>            
-      Please insert your Shutterstock account information to use this plugin. You can create an app and access token on your 
-      <a href="https://www.shutterstock.com/account/developers/apps" target="_blank">developer apps page</a>.
+    <p>
+      <?php
+        $url = 'https://www.shutterstock.com/account/developers/apps';
+        $link = sprintf( wp_kses( __( 'wordpress:text_insert_account_information', 'shutterstock' ), array(  'a' => array( 'href' => array(), 'target' => '_blank' ) ) ), esc_url( $url ) ); // @codingStandardsIgnoreLine
+        echo $link; // @codingStandardsIgnoreLine
+      ?>
     </p>
   </div>
   <hr />

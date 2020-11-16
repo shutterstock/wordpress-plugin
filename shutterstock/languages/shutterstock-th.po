@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shutterstock 1.1.0\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: shutterstock\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"POT-Creation-Date: 2020-11-09T20:44:52.307Z\n"
+"PO-Revision-Date: 2020-11-09T20:44:52.307Z\n"
+"Language: th\n"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+msgid "wordpress:connected"
+msgstr "เชื่อมต่ออยู่"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
+msgid "wordpress:logging_out"
+msgstr "ออกจากระบบ"
+
+msgid "wordpress:plugin_description"
+msgstr ""
+"ปลั๊กอิน Shutterstock ช่วยให้ทำงานสร้างสรรค์ได้ไม่ยุ่งยาก ช่วยประหยัดเวลา "
+"ไม่ว่าจะเขียนร่างหรือเผยแพร่บทความเต็มๆ"
+
+msgid "wordpress:plugin_title"
+msgstr "Shutterstock"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_add_shuttersock_content_to_post"
+msgstr "เพิ่มเนื้อหา Shutterstock ในโพสต์ของคุณ"
+
+#: admin/class-shutterstock-admin.php:191
+msgid "wordpress:text_api_key"
+msgstr "รหัส API*"
+
+#: admin/class-shutterstock-admin.php:197
+msgid "wordpress:text_api_key_description"
+msgstr "ต้องมี ใช้รหัส API จากแอปที่คุณสร้างขึ้น"
+
+#: admin/class-shutterstock-admin.php:203
+msgid "wordpress:text_api_secret"
+msgstr "ข้อมูลลับ API*"
+
+#: admin/class-shutterstock-admin.php:209
+msgid "wordpress:text_api_secret_description"
+msgstr "ต้องมี ใช้ข้อมูลลับ API จากแอปที่คุณสร้างขึ้น"
+
+#: admin/class-shutterstock-admin.php:242
+msgid "wordpress:text_app_token"
+msgstr "โทเค็นของแอป*"
+
+#: admin/class-shutterstock-admin.php:254
+msgid "wordpress:text_app_token_description"
+msgstr "ต้องมีสำหรับการรับสิทธิ์ใช้งาน"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_description_in_sidebar"
+msgstr "บล็อก Shutterstock สำหรับการเรียกดูและแทรกภาพของ Shutterstock"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_paragraph"
+msgstr ""
+"เพิ่มภาพจากไลบรารีของ Shutterstock ที่มีภาพถ่าย เวกเตอร์ "
+"และภาพประกอบมากกว่า 340 ล้านรายการ"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_browse"
+msgstr "เรียกดู"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_editorial"
+msgstr "บทความข่าว"
+
+#: admin/class-shutterstock-admin.php:261
+msgid "wordpress:text_editorial_country"
+msgstr "ประเทศของบทความข่าว"
+
+#: admin/class-shutterstock-admin.php:267
+msgid "wordpress:text_editorial_country_description"
+msgstr ""
+"แสดงเฉพาะเนื้อหาบทความข่าวที่สามารถแจกจ่ายในบางประเทศ "
+"(รหัสประเทศสามตัวอักษร (ISO 3166 Alpha-3))"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_images"
+msgstr "ภาพ"
+
+#: admin/partials/shutterstock-admin-network-settings-page.php:28
+#: admin/partials/shutterstock-admin-settings-page.php:23
+msgid "wordpress:text_insert_account_information"
+msgstr ""
+"โปรดป้อนข้อมูลบัญชี Shutterstock เพื่อใช้ปลั๊กอินนี้ "
+"คุณสามารถสร้างแอปและเข้าถึงโทเค็นใน <a href=\"%s\" "
+"target=\"_blank\">หน้าแอปของนักพัฒนา</a>"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_insert_preview"
+msgstr "แทรกตัวอย่าง"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license"
+msgstr "สิทธิ์ใช้งาน"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:16
+msgid "wordpress:text_license_all_assets"
+msgstr "รับสิทธิ์ใช้งานเนื้อหาทั้งหมด"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:15
+msgid "wordpress:text_license_editorial_images"
+msgstr "รับสิทธิ์ใช้งานภาพสำหรับบทความข่าว"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:13
+msgid "wordpress:text_license_images"
+msgstr "ภาพที่ให้สิทธิ์ใช้งาน"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license_this_image"
+msgstr "รับสิทธิ์ใช้งานภาพนี้"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_licensing_image_please_wait"
+msgstr "การรับสิทธิ์ใช้งานภาพ โปรดรอสักครู่"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_loading_please_wait"
+msgstr "กำลังโหลด โปรดรอสักครู่"
+
+#: admin/class-shutterstock-admin.php:253
+msgid "wordpress:text_log_in_with_shutterstock"
+msgstr "เข้าสู่ระบบด้วย Shutterstock"
+
+#: admin/class-shutterstock-admin.php:252
+msgid "wordpress:text_logout"
+msgstr "ออกจากระบบ"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:14
+msgid "wordpress:text_search_editorial_images"
+msgstr "ค้นหาภาพสำหรับบทความข่าว"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_something_went_wrong"
+msgstr "มีข้อผิดพลาด โปรดลองอีกครั้ง"
+
+#: admin/class-shutterstock-admin.php:273
+msgid "wordpress:text_user_settings"
+msgstr "การตั้งค่าของผู้ใช้"
+
+#: admin/class-shutterstock-admin.php:279
+msgid "wordpress:text_user_settings_description"
+msgstr "กำหนดบทบาทของผู้ใช้ที่อนุญาตให้ค้นหา และ/หรือ รับสิทธิ์ใช้งานเนื้อหา"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:22
+msgid "wordpress:text_user_type"
+msgstr "ประเภทผู้ใช้"

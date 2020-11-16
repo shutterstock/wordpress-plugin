@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.283Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "en_US",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Add Shutterstock content to your post"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstock block to browse and insert shutterstock images"
+            ],
+            "wordpress:text_block_paragraph": [
+                "Add images from Shutterstock's library of over 340  million high-quality photos, vectors and illustrations."
+            ],
+            "wordpress:text_browse": [
+                "Browse"
+            ],
+            "wordpress:text_editorial": [
+                "Editorial"
+            ],
+            "wordpress:text_images": [
+                "Images"
+            ],
+            "wordpress:text_insert_preview": [
+                "Insert preview"
+            ],
+            "wordpress:text_license": [
+                "License"
+            ],
+            "wordpress:text_license_this_image": [
+                "License this image"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Licensing Image. Please wait."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Loading. Please wait."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Something went wrong. Please try again."
+            ]
+        }
+    }
+}

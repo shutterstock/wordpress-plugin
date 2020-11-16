@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.315Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "zh_TW",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "\u5c07 Shutterstock \u5167\u5bb9\u65b0\u589e\u5230\u60a8\u7684\u8cbc\u6587\u4e2d"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstock \u584a\u700f\u89bd\u548c\u63d2\u5165 Shutterstock \u5716\u7247"
+            ],
+            "wordpress:text_block_paragraph": [
+                "\u5f9e Shutterstock \u7684\u8cc7\u6599\u5eab\u4e2d\u65b0\u589e\u8d85\u904e 3.4 \u5104\u5f35\u9ad8\u54c1\u8cea\u7167\u7247\u3001\u5411\u91cf\u5716\u548c\u63d2\u5716\u7684\u5716\u7247\u3002"
+            ],
+            "wordpress:text_browse": [
+                "\u700f\u89bd"
+            ],
+            "wordpress:text_editorial": [
+                "\u5831\u5c0e"
+            ],
+            "wordpress:text_images": [
+                "\u5716\u7247"
+            ],
+            "wordpress:text_insert_preview": [
+                "\u63d2\u5165\u9810\u89bd"
+            ],
+            "wordpress:text_license": [
+                "\u6388\u6b0a"
+            ],
+            "wordpress:text_license_this_image": [
+                "\u6388\u6b0a\u6b64\u5716\u7247"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "\u6388\u6b0a\u5716\u7247\u3002\u8acb\u7a0d\u5019\u3002"
+            ],
+            "wordpress:text_loading_please_wait": [
+                "\u8f09\u5165\u4e2d\u3002\u8acb\u7a0d\u5019\u3002"
+            ],
+            "wordpress:text_something_went_wrong": [
+                "\u51fa\u73fe\u932f\u8aa4\u3002\u8acb\u518d\u8a66\u4e00\u6b21\u3002"
+            ]
+        }
+    }
+}
