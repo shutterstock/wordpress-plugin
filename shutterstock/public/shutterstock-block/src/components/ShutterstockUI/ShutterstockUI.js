@@ -25,7 +25,7 @@ const ShutterstockUI = ({
   const toggleOverlay = (status, text = '') => setOverlay({
     ...overlay, 
     show: status,
-    text: __(text, 'shutterstock-block')
+    text,
   });
 
   const { snackbar, setSnackbar } = useSnackbarTimeout({});
@@ -33,11 +33,11 @@ const ShutterstockUI = ({
   const showSnackbar = (text) => setSnackbar({
     ...snackbar,
     show: true,
-    text: __(text, 'shutterstock-block'),
+    text,
   });
 
   const handleError = (error) => {
-    let errorMessage = 'Something went wrong. Please try again.';
+    let errorMessage = __('wordpress:text_something_went_wrong', 'shutterstock');
     if (error?.data?.statusCode !== 500 && error?.data?.message) {
       errorMessage = error?.data?.message;
     }
@@ -54,7 +54,7 @@ const ShutterstockUI = ({
   };
 
   const commonInsertPreviewProps = {
-    label: __('Insert preview', 'shutterstock-block'),
+    label: __('wordpress:text_insert_preview', 'shutterstock'),
     onClick: insertPreview,
   };
 
@@ -78,21 +78,15 @@ const ShutterstockUI = ({
   }];
 
   if (canLicense) {
-    const showOverlay = (status, text = '') => setOverlay({
-      ...overlay, 
-      show: status,
-      text: __(text) 
-    });
-
     const commonLicensingProps = {
-      label: __('License', 'shutterstock-block'),
+      label: __('wordpress:text_license', 'shutterstock'),
       icon: licenseImageSvg,
       isPrimary: true,
       onClick: async (e, item, options) => {
         e.preventDefault();
         try {
           const mediaType = item.media_type;
-          toggleOverlay(true, 'Loading. Please wait.');
+          toggleOverlay(true, __('wordpress:text_loading_please_wait', 'shutterstock'));
 
           const subscriptionsWithImageDetails = await getSubscriptionWithDetails(item.id, mediaType);
 
@@ -139,7 +133,7 @@ const ShutterstockUI = ({
               const { subscription } = options;
 
               try {
-                toggleOverlay(true, 'Licensing Image. Please wait.');
+                toggleOverlay(true, __('wordpress:text_licensing_image_please_wait', 'shutterstock'));
                 const contributorId = item?.contributor?.id;
                 const mediaType = item?.media_type;
                 const isEditorial = mediaType === 'editorial';
@@ -202,18 +196,19 @@ const ShutterstockUI = ({
 
     const searchBarDropdownFilters = [
       {
-        label: __('Images', 'shutterstock'),
+        label: __('wordpress:text_images', 'shutterstock'),
         assetType: 'images',
       },
       {
-        label: __('Editorial', 'shutterstock'),
+        label: __('wordpress:text_editorial', 'shutterstock'),
         assetType: 'editorial',
       },      
     ];
 
     const widgetConfig = {
       mediaType: 'images',
-      title: __('Add Shutterstock content to your post', 'shutterstock-block'),
+      imageType: ['photo'],
+      title: __('wordpress:text_add_shuttersock_content_to_post', 'shutterstock'),
       subtitle: '',
       container: widgetRef.current,
       showMore: true,
@@ -229,8 +224,16 @@ const ShutterstockUI = ({
       },
       theme: {
         searchBar: {
+          searchForm: 'components-shutterstock-ui__searchForm',
+          searchContainer: 'components-shutterstock-ui__searchContainer',
           inputGroup: 'components-shutterstock-ui__inputgroup',
-          formControlInput: 'components-shutterstock-ui__input'
+          formControlInput: 'components-shutterstock-ui__input',
+          filterDrawer: {
+            filterDrawerContainer: 'components-shutterstock-ui__filterDrawerContainer',
+            overlay: 'components-shutterstock-ui__widget-drawer-position-fixed',
+            filterDrawer: 'components-shutterstock-ui__widget-drawer-position-fixed',
+            filterButtonWrapper: 'components-shutterstock-ui__filterButtonWrapper'
+          }
         },
       },
       extraRoutes: {

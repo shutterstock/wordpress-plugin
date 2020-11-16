@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.290Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "hu_HU",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Adjon Shutterstock-tartalmakat a bejegyz\u00e9s\u00e9hez."
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstock-blokk Shutterstock-k\u00e9pek b\u00f6ng\u00e9sz\u00e9s\u00e9hez \u00e9s besz\u00far\u00e1s\u00e1hoz"
+            ],
+            "wordpress:text_block_paragraph": [
+                "Vegyen fel k\u00e9peket a Shutterstock t\u00f6bb mint 340 milli\u00f3 min\u0151s\u00e9gi fot\u00f3t, vektork\u00e9pet \u00e9s illusztr\u00e1ci\u00f3t tartalmaz\u00f3 k\u00e9pt\u00e1r\u00e1b\u00f3l."
+            ],
+            "wordpress:text_browse": [
+                "B\u00f6ng\u00e9sz\u00e9s"
+            ],
+            "wordpress:text_editorial": [
+                "Szerkeszt\u0151i"
+            ],
+            "wordpress:text_images": [
+                "K\u00e9pek"
+            ],
+            "wordpress:text_insert_preview": [
+                "El\u0151n\u00e9zet besz\u00far\u00e1sa"
+            ],
+            "wordpress:text_license": [
+                "Licenc"
+            ],
+            "wordpress:text_license_this_image": [
+                "A k\u00e9p licencel\u00e9se"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "K\u00e9p licencel\u00e9se folyamatban. V\u00e1rjon."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Bet\u00f6lt\u00e9s folyamatban. V\u00e1rjon."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Valamilyen hiba t\u00f6rt\u00e9nt. Pr\u00f3b\u00e1lja \u00fajra."
+            ]
+        }
+    }
+}

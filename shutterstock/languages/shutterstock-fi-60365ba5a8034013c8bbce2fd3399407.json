@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.300Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fi",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Lis\u00e4\u00e4 Shutterstock-sis\u00e4lt\u00f6\u00e4 julkaisuusi"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstock-lohko Shutterstock-kuvien selaamiseen ja lis\u00e4\u00e4miseen"
+            ],
+            "wordpress:text_block_paragraph": [
+                "Lis\u00e4\u00e4 kuvia Shutterstockin yli 340 miljoonan laadukkaan valokuvan, vektorikuvan ja kuvituskuvan kirjastosta."
+            ],
+            "wordpress:text_browse": [
+                "Selaa"
+            ],
+            "wordpress:text_editorial": [
+                "Toimituksellinen sis\u00e4lt\u00f6"
+            ],
+            "wordpress:text_images": [
+                "Kuvat"
+            ],
+            "wordpress:text_insert_preview": [
+                "Aseta esikatselu"
+            ],
+            "wordpress:text_license": [
+                "Lisenssi"
+            ],
+            "wordpress:text_license_this_image": [
+                "Lisensoi t\u00e4m\u00e4 kuva"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Lisensoidaan kuvaa. Odota."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Ladataan. Odota."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Jokin meni pieleen. Yrit\u00e4 uudelleen."
+            ]
+        }
+    }
+}

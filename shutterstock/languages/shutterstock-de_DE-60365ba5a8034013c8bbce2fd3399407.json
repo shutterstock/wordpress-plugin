@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.281Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "de_DE",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Shutterstock Inhalte zu Ihrem Beitrag hinzuf\u00fcgen"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstock Block zum Durchsuchen und Einf\u00fcgen von Shutterstock Bildern"
+            ],
+            "wordpress:text_block_paragraph": [
+                "F\u00fcgen Sie Bilder aus den Bibliotheken von Shutterstock hinzu, darunter 340 Millionen hochwertige Fotos, Vektorgrafiken und Illustrationen."
+            ],
+            "wordpress:text_browse": [
+                "Durchsuchen"
+            ],
+            "wordpress:text_editorial": [
+                "Redaktionell"
+            ],
+            "wordpress:text_images": [
+                "Bilder"
+            ],
+            "wordpress:text_insert_preview": [
+                "Vorschau einf\u00fcgen"
+            ],
+            "wordpress:text_license": [
+                "Lizenz"
+            ],
+            "wordpress:text_license_this_image": [
+                "Dieses Bild lizenzieren"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Bild wird lizenziert. Bitte warten."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Wird geladen. Bitte warten."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Es ist ein Fehler aufgetreten. Versuchen Sie es erneut."
+            ]
+        }
+    }
+}

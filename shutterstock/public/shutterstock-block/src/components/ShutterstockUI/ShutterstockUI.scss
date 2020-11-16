@@ -21,6 +21,12 @@
     top: 90px;
     position: relative;
   }
+
+  .components-shutterstock-ui__searchContainer {
+    .components-shutterstock-ui__filterButtonWrapper {
+      width: initial; 
+    }
+  }  
 }
 
 .components-shutterstock-ui__widget-container-overlay {
@@ -52,4 +58,14 @@
     font-size: 18px;
     color: #ffffff !important;
   }
+}
+
+.components-shutterstock-ui__filterDrawerContainer {
+  .components-shutterstock-ui__widget-drawer-position-fixed {
+    position: fixed;
+  }
+}
+
+.components-shutterstock-ui__searchForm {
+  flex: 1;
 }
