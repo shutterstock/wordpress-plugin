@@ -123,9 +123,9 @@ class Shutterstock_Public {
 		);
 
 		// Registering Shutterstock UI script
-		wp_register_script('shutterstock-block-block-editor-shuttestock-ui-js', 'https://api-cdn.shutterstock.com/0.1.25/static/js/sstk-widget.js');
+		wp_register_script('shutterstock-block-block-editor-shuttestock-ui-js', 'https://api-cdn.shutterstock.com/0.1.28/static/js/sstk-widget.js');
 		
-		wp_set_script_translations( 'shutterstock-block-block-editor', 'shutterstock-block' );
+		wp_set_script_translations( 'shutterstock-block-block-editor', 'shutterstock', plugin_dir_path(__DIR__) . 'languages');
 	
 		// Registering the shutterstock-block styles
 		$editor_css = 'shutterstock-block/build/index.css';
@@ -133,7 +133,7 @@ class Shutterstock_Public {
 		wp_register_style('shutterstock-block-block-editor', plugins_url( $editor_css, __FILE__ ));
 		
 		// Registering Shutterstock UI styles
-		wp_register_style('shutterstock-block-block-editor-shutterstock-ui-css', 'https://api-cdn.shutterstock.com/0.1.25/static/css/sstk-widget.css');
+		wp_register_style('shutterstock-block-block-editor-shutterstock-ui-css', 'https://api-cdn.shutterstock.com/0.1.28/static/css/sstk-widget.css');
 
 		// Registerging the shutterstock-block. Pattern is 'namespace/block-name'
 		register_block_type( 'shutterstock/shutterstock-block', array(
@@ -143,7 +143,7 @@ class Shutterstock_Public {
 		
 		// Logic to provide api key from backend to frontend via javascript object
 		$api_key = '';
-		$language = substr(get_locale(), 0, 2) ;
+		$language = $this->get_supported_language();
 		$shutterstock_option = get_option("{$this->shutterstock}_option_name"); // Getting the option from admin
 		$shutterstock_network_option = get_site_option("{$this->shutterstock}_option_name"); // Getting the option from network admin
 		
@@ -192,6 +192,17 @@ class Shutterstock_Public {
 		];
 
 		wp_localize_script('shutterstock-block-block-editor', 'shutterstock', $shutterstock_js_object );
+	}
+
+	private function get_supported_language() {
+		$plugin_i18n = new Shutterstock_i18n();
+		$locale = $plugin_i18n->get_supported_locale(get_locale());
+
+		$language = in_array($locale, ['zh_HK', 'zh_TW'], true)
+		? 'zh-Hant'
+		: substr($locale, 0, 2);
+
+		return $language;
 	}
 
 }

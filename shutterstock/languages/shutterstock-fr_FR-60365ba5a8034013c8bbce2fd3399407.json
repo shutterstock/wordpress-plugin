@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.287Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fr_FR",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Ajouter du contenu Shutterstock \u00e0 votre publication"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Bloc Shutterstock permettant de parcourir et d\u2019ins\u00e9rer des images Shutterstock"
+            ],
+            "wordpress:text_block_paragraph": [
+                "Ajoutez des images provenant de la biblioth\u00e8que de plus de 340\u00a0millions de photos, images vectorielles et illustrations haute qualit\u00e9 de Shutterstock."
+            ],
+            "wordpress:text_browse": [
+                "Parcourir"
+            ],
+            "wordpress:text_editorial": [
+                "\u00c9ditorial"
+            ],
+            "wordpress:text_images": [
+                "Images"
+            ],
+            "wordpress:text_insert_preview": [
+                "Ins\u00e9rer l\u2019aper\u00e7u"
+            ],
+            "wordpress:text_license": [
+                "Licence"
+            ],
+            "wordpress:text_license_this_image": [
+                "Acheter une licence pour cette image"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Association d\u2019une licence \u00e0 l\u2019image en cours. Veuillez patienter."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Chargement en cours. Veuillez patienter."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Un probl\u00e8me est survenu. Veuillez r\u00e9essayer."
+            ]
+        }
+    }
+}

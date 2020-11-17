@@ -29,22 +29,22 @@ registerBlockType('shutterstock/shutterstock-block', {
 	 * This is the display title for your block, which can be translated with `i18n` functions.
 	 * The block inserter will show this name.
 	 */
-	title: __('Shutterstock', 'shutterstock-block'),
+	title: 'Shutterstock',
 
 	/**
 	 * This is a short description for your block, can be translated with `i18n` functions.
 	 * It will be shown in the Block Tab in the Settings Sidebar.
 	 */
 	description: __(
-		'Shutterstock block to browse and insert shutterstock images',
-		'shutterstock-block'
+		'wordpress:text_block_description_in_sidebar',
+		'shutterstock'
 	),
 
 	/**
 	 * Blocks are grouped into categories to help users browse and discover them.
 	 * The categories provided by core are `common`, `embed`, `formatting`, `layout` and `widgets`.
 	 */
-	category: 'media',
+	category: 'common',
 
 	/**
 	 * An icon property should be specified to make it easier to identify a block.

@@ -188,25 +188,25 @@ class Shutterstock_Admin {
 	public function register_fields($page) {
 		add_settings_field(
 			'api_key', // id
-			__('API Key *', 'shutterstock'), // title
+			__('wordpress:text_api_key', 'shutterstock'), // title
 			array( $this, 'field_text' ), // callback
 			$page, // page
 			'shutterstock_setting_section', // section
 			array(
 				'id' => 'api_key',
-				'description' => 'Required. Use the API key from an app you have created.',
+				'description' => __('wordpress:text_api_key_description', 'shutterstock'),
 			)
 		);
 
         add_settings_field(
             'api_secret', // id
-            __('API Secret *', 'shutterstock'), // title
+            __('wordpress:text_api_secret', 'shutterstock'), // title
             array( $this, 'field_text' ), // callback
             $page, // page
             'shutterstock_setting_section', // section
             array(
                 'id' => 'api_secret',
-                'description' => 'Required. Use the API secret from an app you have created.',
+                'description' => __('wordpress:text_api_secret_description', 'shutterstock'),
             )
         );
 
@@ -217,7 +217,7 @@ class Shutterstock_Admin {
 	$redirect_uri = $network_admin ?
             network_admin_url('edit.php?action=shutterstock_network_generate_access_token&_wpnonce='.$nonce) :
 	    admin_url('admin.php?action=shutterstock_generate_access_token&_wpnonce='.$nonce);
-	    
+
 	$post_location = $network_admin ?
 		'edit.php?action=shutterstock_network_update_options' :
 		'options.php';
@@ -239,44 +239,44 @@ class Shutterstock_Admin {
 
         add_settings_field(
             'app_token', // id
-            __('App Token *', 'shutterstock'),
+            __('wordpress:text_app_token', 'shutterstock'),
             array($this, 'field_button'), // callback
             $page, // page
             'shutterstock_setting_section', // section
             array(
                 'id' => 'app_token',
                 'context' => [
-                    'pre_class' => 'shutterstock-token',
+                    'connected_class' => 'shutterstock-token',
                     'onclickLocation' => $onclick_location,
                     'postLocation' => $post_location,
-                    'has_value_button_text' => 'Logout',
-		    'no_value_button_text' => 'Log in with Shutterstock',
-		    'description' => 'Required for licensing.',
+                    'has_value_button_text' => __('wordpress:text_logout', 'shutterstock'),
+		    'no_value_button_text' => __('wordpress:text_log_in_with_shutterstock', 'shutterstock'),
+		    'description' => __('wordpress:text_app_token_description', 'shutterstock'),
                 ],
             )
         );
 
 		add_settings_field(
 			'editorial_country', // id
-			__('Editorial Country', 'shutterstock'), // title
+			__('wordpress:text_editorial_country', 'shutterstock'), // title
 			array( $this, 'field_text' ), // callback
 			$page, // page
 			'shutterstock_setting_section', // section
 			array(
 				'id' => 'editorial_country',
-				'description' => 'Show only editorial content that is available for distribution in a certain country (A three-character (ISO 3166 Alpha-3) country code).',
+				'description' => __('wordpress:text_editorial_country_description', 'shutterstock'),
 			)
 		);
 
 		add_settings_field(
 			'user_settings', // id
-			__('User Settings', 'shutterstock'), // title
+			__('wordpress:text_user_settings', 'shutterstock'), // title
 			array( $this, 'field_user_settings' ), // callback
 			$page, // page
 			'shutterstock_setting_section', // section
 			array(
 				'id' => 'user_settings',
-				'description' => 'Define which user roles are allowed to search and/or license assets.',
+				'description' => __('wordpress:text_user_settings_description', 'shutterstock'),				
 			)
 		);
 
@@ -476,11 +476,11 @@ class Shutterstock_Admin {
 			die( esc_html_e('Security error.') );
 		} else {
 			$code = isset($_REQUEST['code']) ? sanitize_text_field($_REQUEST['code']) : '';
-			
+
 			if ($code) {
 				$option = is_network_admin() ? $this->get_site_option() : $this->get_option();
 				$token = $this->post_token($code, $option['api_key'], $option['api_secret']);
-				
+
 				$option['app_token'] = $token;
 
 				if (is_network_admin()) {
@@ -488,18 +488,18 @@ class Shutterstock_Admin {
 					$wp_nonce = wp_create_nonce('shutterstock-network-settings-updated');
 					// At last we redirect back to our options page.
 					wp_redirect(add_query_arg(array('page' => 'shutterstock_network_options_page',
-					'updated' => $wp_nonce, ), network_admin_url('settings.php')));						
+					'updated' => $wp_nonce, ), network_admin_url('settings.php')));
 					exit;
 				} else {
 					update_option("{$this->shutterstock}_option_name", $option);
 					$wp_nonce = wp_create_nonce('shutterstock-setting-updated');
 					// At last we redirect back to our options page.
 					wp_redirect(add_query_arg(array('page' => 'shutterstock_options_page',
-					'updated' => $wp_nonce, ), admin_url('options-general.php')));						
+					'updated' => $wp_nonce, ), admin_url('options-general.php')));
 					exit;
 				}
-			}				
-		}			
+			}
+		}
 	}
 
 	private function get_option() {

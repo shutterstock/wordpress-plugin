@@ -3,7 +3,7 @@
 	"title": "Shutterstock Block",
 	"category": "media",
 	"description": "Add images from Shutterstock's library of over 340  million high-quality photos, vectors and illustrations.",
-	"textdomain": "shutterstock-block",
+	"textdomain": "shutterstock",
 	"supports": {
 		"html": false
 	},

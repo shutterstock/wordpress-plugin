@@ -1,0 +1,153 @@
+# Copyright (C) 2020 Shutterstock
+# This file is distributed under the same license as the Shutterstock plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Shutterstock 1.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shutterstock\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-11-03T19:55:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: shutterstock\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+msgid "Shutterstock"
+msgstr ""
+
+#. Description of the plugin
+msgid "The Shutterstock plugin takes the complexity out of creativity. Save time, whether you're creating a draft or publishing a full article."
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:191
+msgid "wordpress:text_api_key"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:197
+msgid "wordpress:text_api_key_description"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:203
+msgid "wordpress:text_api_secret"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:209
+msgid "wordpress:text_api_secret_description"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:242
+msgid "wordpress:text_app_token"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:252
+msgid "wordpress:text_logout"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:253
+msgid "wordpress:text_log_in_with_shutterstock"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:254
+msgid "wordpress:text_app_token_description"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:261
+msgid "wordpress:text_editorial_country"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:267
+msgid "wordpress:text_editorial_country_description"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:273
+msgid "wordpress:text_user_settings"
+msgstr ""
+
+#: admin/class-shutterstock-admin.php:279
+msgid "wordpress:text_user_settings_description"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
+msgid "Logging out"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+msgid "Connected"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:13
+msgid "wordpress:text_license_images"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:14
+msgid "wordpress:text_search_editorial_images"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:15
+msgid "wordpress:text_license_editorial_images"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:16
+msgid "wordpress:text_license_all_assets"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:22
+msgid "wordpress:text_user_type"
+msgstr ""
+
+#: admin/partials/shutterstock-admin-network-settings-page.php:28
+#: admin/partials/shutterstock-admin-settings-page.php:23
+msgid "wordpress:text_insert_account_information"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_something_went_wrong"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_insert_preview"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_loading_please_wait"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_licensing_image_please_wait"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_images"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_editorial"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_add_shuttersock_content_to_post"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license_this_image"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_paragraph"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_browse"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_description_in_sidebar"
+msgstr ""

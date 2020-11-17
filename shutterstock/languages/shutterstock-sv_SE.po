@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shutterstock 1.1.0\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: shutterstock\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"POT-Creation-Date: 2020-11-09T20:44:52.302Z\n"
+"PO-Revision-Date: 2020-11-09T20:44:52.302Z\n"
+"Language: sv_SE\n"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+msgid "wordpress:connected"
+msgstr "Ansluten"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
+msgid "wordpress:logging_out"
+msgstr "Logga ut"
+
+msgid "wordpress:plugin_description"
+msgstr ""
+"Shutterstocks pluginprogram gör kreativitet enklare. Spara tid, oavsett om "
+"du skapar ett utkast eller publicerar en hel artikel."
+
+msgid "wordpress:plugin_title"
+msgstr "Shutterstock"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_add_shuttersock_content_to_post"
+msgstr "Lägg till Shutterstock-innehåll till din post"
+
+#: admin/class-shutterstock-admin.php:191
+msgid "wordpress:text_api_key"
+msgstr "API-nyckel*"
+
+#: admin/class-shutterstock-admin.php:197
+msgid "wordpress:text_api_key_description"
+msgstr "Obligatorisk. Använd API-nyckeln från appen som du skapat."
+
+#: admin/class-shutterstock-admin.php:203
+msgid "wordpress:text_api_secret"
+msgstr "API-lösenord*"
+
+#: admin/class-shutterstock-admin.php:209
+msgid "wordpress:text_api_secret_description"
+msgstr "Obligatorisk. Använd API-lösenordet från appen som du skapat."
+
+#: admin/class-shutterstock-admin.php:242
+msgid "wordpress:text_app_token"
+msgstr "App-token*"
+
+#: admin/class-shutterstock-admin.php:254
+msgid "wordpress:text_app_token_description"
+msgstr "Krävs för licensiering."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_description_in_sidebar"
+msgstr "Shutterstock-blockering för att gå igenom och infoga Shutterstock-bilder"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_paragraph"
+msgstr ""
+"Lägg till bilder från Shutterstocks bibliotek med över 340 miljoner "
+"högkvalitativa fotografier, vektorer och illustrationer."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_browse"
+msgstr "Bläddra"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_editorial"
+msgstr "Redaktionellt"
+
+#: admin/class-shutterstock-admin.php:261
+msgid "wordpress:text_editorial_country"
+msgstr "Redaktionellt land"
+
+#: admin/class-shutterstock-admin.php:267
+msgid "wordpress:text_editorial_country_description"
+msgstr ""
+"Visa endast redaktionellt innehåll som är tillgängligt för distribution i "
+"ett visst land (landskod med tre tecken (ISO 3166 Alpha-3))."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_images"
+msgstr "Bilder"
+
+#: admin/partials/shutterstock-admin-network-settings-page.php:28
+#: admin/partials/shutterstock-admin-settings-page.php:23
+msgid "wordpress:text_insert_account_information"
+msgstr ""
+"Ange din Shutterstock-kontoinformation för att använda denna plugin. Du kan "
+"skapa en app och åtkomsttoken på din <a href=\"%s\" "
+"target=\"_blank\">utvecklarsida för appar</a>."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_insert_preview"
+msgstr "Infoga förhandsgranskning"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license"
+msgstr "Licens"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:16
+msgid "wordpress:text_license_all_assets"
+msgstr "Licensiera alla tillgångar"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:15
+msgid "wordpress:text_license_editorial_images"
+msgstr "Licens för redaktionella bilder"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:13
+msgid "wordpress:text_license_images"
+msgstr "Licensbilder"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license_this_image"
+msgstr "Licensiera den här bilden"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_licensing_image_please_wait"
+msgstr "Licensierar bild. Vänta."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_loading_please_wait"
+msgstr "Läser in. Vänta."
+
+#: admin/class-shutterstock-admin.php:253
+msgid "wordpress:text_log_in_with_shutterstock"
+msgstr "Logga in med Shutterstock"
+
+#: admin/class-shutterstock-admin.php:252
+msgid "wordpress:text_logout"
+msgstr "Utloggning"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:14
+msgid "wordpress:text_search_editorial_images"
+msgstr "Sök bland redaktionella bilder"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_something_went_wrong"
+msgstr "Något gick fel. Försök igen."
+
+#: admin/class-shutterstock-admin.php:273
+msgid "wordpress:text_user_settings"
+msgstr "Användarinställningar"
+
+#: admin/class-shutterstock-admin.php:279
+msgid "wordpress:text_user_settings_description"
+msgstr "Definiera vilka användarroller som får söka och/eller licensiera tillgångar."
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:22
+msgid "wordpress:text_user_type"
+msgstr "Användartyp"

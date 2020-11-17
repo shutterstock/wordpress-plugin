@@ -1,0 +1,156 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shutterstock 1.1.0\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: shutterstock\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2)\n"
+"POT-Creation-Date: 2020-11-09T20:44:52.296Z\n"
+"PO-Revision-Date: 2020-11-09T20:44:52.296Z\n"
+"Language: pl_PL\n"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+msgid "wordpress:connected"
+msgstr "Połączono"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
+msgid "wordpress:logging_out"
+msgstr "Wylogowywanie"
+
+msgid "wordpress:plugin_description"
+msgstr ""
+"Wtyczka Shutterstock usuwa komplikacje i wspiera kreatywność. Zaoszczędź "
+"czas podczas tworzenia szkicu lub publikacji pełnego artykułu."
+
+msgid "wordpress:plugin_title"
+msgstr "Shutterstock"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_add_shuttersock_content_to_post"
+msgstr "Dodaj treści Shutterstock do swojego posta"
+
+#: admin/class-shutterstock-admin.php:191
+msgid "wordpress:text_api_key"
+msgstr "Klucz API *"
+
+#: admin/class-shutterstock-admin.php:197
+msgid "wordpress:text_api_key_description"
+msgstr "Wymagane. Użyj klucza API z aplikacji, którą utworzyłeś."
+
+#: admin/class-shutterstock-admin.php:203
+msgid "wordpress:text_api_secret"
+msgstr "API Secret *"
+
+#: admin/class-shutterstock-admin.php:209
+msgid "wordpress:text_api_secret_description"
+msgstr "Wymagane. Użyj klucza API secret z aplikacji, którą utworzyłeś."
+
+#: admin/class-shutterstock-admin.php:242
+msgid "wordpress:text_app_token"
+msgstr "Token aplikacji *"
+
+#: admin/class-shutterstock-admin.php:254
+msgid "wordpress:text_app_token_description"
+msgstr "Wymagane do licencji."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_description_in_sidebar"
+msgstr "Shutterstock blokuje przeglądanie i wstawianie obrazów shutterstock"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_paragraph"
+msgstr ""
+"Dodaj obrazy z biblioteki Shutterstock zawierającej ponad 340 milionów "
+"zdjęć, wektorów i ilustracji o wysokiej jakości."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_browse"
+msgstr "Przeglądaj"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_editorial"
+msgstr "Dziennikarskie"
+
+#: admin/class-shutterstock-admin.php:261
+msgid "wordpress:text_editorial_country"
+msgstr "Kraj materiałów dziennikarskich"
+
+#: admin/class-shutterstock-admin.php:267
+msgid "wordpress:text_editorial_country_description"
+msgstr ""
+"Pokaż tylko treści, które są dostępne do dystrybucji w danym kraju (trzy "
+"znaki (ISO 3166 Alpha-3) kodu kraju)."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_images"
+msgstr "Obrazy"
+
+#: admin/partials/shutterstock-admin-network-settings-page.php:28
+#: admin/partials/shutterstock-admin-settings-page.php:23
+msgid "wordpress:text_insert_account_information"
+msgstr ""
+"Wprowadź informacje o koncie Shutterstock, aby użyć tej wtyczki. Możesz "
+"utworzyć aplikację i token dostępu na <a href=\"%s\" "
+"target=\"_blank\">stronie programowania aplikacji</a>."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_insert_preview"
+msgstr "Wstaw podgląd"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license"
+msgstr "Licencja"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:16
+msgid "wordpress:text_license_all_assets"
+msgstr "Licencjonuj wszystkie materiały"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:15
+msgid "wordpress:text_license_editorial_images"
+msgstr "Licencjonuj obrazy dziennikarskie"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:13
+msgid "wordpress:text_license_images"
+msgstr "Obrazy licencyjne"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license_this_image"
+msgstr "Licencjonuj ten obraz"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_licensing_image_please_wait"
+msgstr "Licencjonuj obraz. Prosimy czekać."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_loading_please_wait"
+msgstr "Wczytywanie. Prosimy czekać."
+
+#: admin/class-shutterstock-admin.php:253
+msgid "wordpress:text_log_in_with_shutterstock"
+msgstr "Zaloguj się z Shutterstock"
+
+#: admin/class-shutterstock-admin.php:252
+msgid "wordpress:text_logout"
+msgstr "Wyloguj"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:14
+msgid "wordpress:text_search_editorial_images"
+msgstr "Wyszukaj obrazy dziennikarskie"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_something_went_wrong"
+msgstr "Przepraszamy, wystąpił błąd. Spróbuj ponownie."
+
+#: admin/class-shutterstock-admin.php:273
+msgid "wordpress:text_user_settings"
+msgstr "Ustawienia użytkownika"
+
+#: admin/class-shutterstock-admin.php:279
+msgid "wordpress:text_user_settings_description"
+msgstr "Określ, które role użytkownika mogą wyszukiwać lub licencjonować materiały."
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:22
+msgid "wordpress:text_user_type"
+msgstr "Typ użytkownika"

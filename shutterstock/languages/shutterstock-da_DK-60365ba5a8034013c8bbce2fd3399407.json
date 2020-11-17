@@ -1,0 +1,51 @@
+{
+    "translation-revision-date": "2020-11-09T20:44:52.279Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "public\/shutterstock-block\/build\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "da_DK",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Tilf\u00f8j Shutterstock-indhold til din postering"
+            ],
+            "wordpress:text_block_description_in_sidebar": [
+                "Shutterstocks blokering for at gennemse og inds\u00e6tte Shutterstock-billeder"
+            ],
+            "wordpress:text_block_paragraph": [
+                "Tilf\u00f8j billeder fra Shutterstocks bibliotek med over 340 millioner fotos i h\u00f8j kvalitet, vektorer og illustrationer."
+            ],
+            "wordpress:text_browse": [
+                "Gennemse"
+            ],
+            "wordpress:text_editorial": [
+                "Redaktionel"
+            ],
+            "wordpress:text_images": [
+                "Billeder"
+            ],
+            "wordpress:text_insert_preview": [
+                "Inds\u00e6t forh\u00e5ndsvisning"
+            ],
+            "wordpress:text_license": [
+                "Licens"
+            ],
+            "wordpress:text_license_this_image": [
+                "F\u00e5 licens p\u00e5 dette billede"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "F\u00e5 licens p\u00e5 billede. Vent et \u00f8jeblik."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Indl\u00e6ser. Vent et \u00f8jeblik."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Der opstod en fejl. Pr\u00f8v igen."
+            ]
+        }
+    }
+}

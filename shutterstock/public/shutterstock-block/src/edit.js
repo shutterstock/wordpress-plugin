@@ -68,7 +68,7 @@ const Edit = (props) => {
 	});
 
 	const handleError = (error) => {
-    let errorMessage = 'Something went wrong. Please try again.';
+    let errorMessage = __('wordpress:text_something_went_wrong', 'shutterstock');
     if (error?.data?.statusCode !== 500 && error?.data?.message) {
       errorMessage = error.data.message;
     }
@@ -76,7 +76,7 @@ const Edit = (props) => {
     setSnackbar({
 			...snackbar,
     	show: true,
-    	text: __(errorMessage, 'shutterstock-block'),
+    	text: errorMessage,
 		});
 	};
 
@@ -128,7 +128,7 @@ const Edit = (props) => {
 							className="components-edit__license-image-button"
 						>
 							{loading && <span className="loading-spinner" />}
-							<span>{__('License this image', 'shutterstock-block')}</span>
+							<span>{__('wordpress:text_license_this_image', 'shutterstock')}</span>
 						</Button>
 					}
 				</div>
@@ -136,8 +136,8 @@ const Edit = (props) => {
 			}
 			<div className="components-edit__paragraph">
 				{__(
-					'Add images from Shutterstock\'s library of over 340  million high-quality photos, vectors and illustrations.',
-					'shutterstock-block'
+					'wordpress:text_block_paragraph',
+					'shutterstock'
 				)}
 			</div>
 			<Button
@@ -148,7 +148,7 @@ const Edit = (props) => {
 				}}
 				className="components-shutterstock-modal__open-modal-button "
 			>
-				{__('Browse', 'shutterstock-block')}
+				{__('wordpress:text_browse', 'shutterstock')}
 			</Button>
 			{isShutterstockModalOpen && <ShutterstockUIModal
         setAttributes={props.setAttributes}

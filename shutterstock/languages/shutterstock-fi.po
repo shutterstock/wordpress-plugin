@@ -1,0 +1,155 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Shutterstock 1.1.0\n"
+"mime-version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: shutterstock\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"POT-Creation-Date: 2020-11-09T20:44:52.300Z\n"
+"PO-Revision-Date: 2020-11-09T20:44:52.300Z\n"
+"Language: fi\n"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+msgid "wordpress:connected"
+msgstr "Yhdistetty"
+
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
+msgid "wordpress:logging_out"
+msgstr "Kirjaudutaan ulos"
+
+msgid "wordpress:plugin_description"
+msgstr ""
+"Shutterstock-liitännäinen poistaa monimutkaisuuden luovuudesta. Säästä "
+"aikaa luonnoksen tekemisessä tai täyden artikkelin julkaisemisessa."
+
+msgid "wordpress:plugin_title"
+msgstr "Shutterstock"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_add_shuttersock_content_to_post"
+msgstr "Lisää Shutterstock-sisältöä julkaisuusi"
+
+#: admin/class-shutterstock-admin.php:191
+msgid "wordpress:text_api_key"
+msgstr "API-avain*"
+
+#: admin/class-shutterstock-admin.php:197
+msgid "wordpress:text_api_key_description"
+msgstr "Pakollinen. Käytä API-avainta luomastasi sovelluksesta."
+
+#: admin/class-shutterstock-admin.php:203
+msgid "wordpress:text_api_secret"
+msgstr "API-salauskoodi*"
+
+#: admin/class-shutterstock-admin.php:209
+msgid "wordpress:text_api_secret_description"
+msgstr "Pakollinen. Käytä API-salauskoodia luomastasi sovelluksesta."
+
+#: admin/class-shutterstock-admin.php:242
+msgid "wordpress:text_app_token"
+msgstr "Sovelluksen tunniste*"
+
+#: admin/class-shutterstock-admin.php:254
+msgid "wordpress:text_app_token_description"
+msgstr "Tarvitaan lisensointiin."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_description_in_sidebar"
+msgstr "Shutterstock-lohko Shutterstock-kuvien selaamiseen ja lisäämiseen"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_block_paragraph"
+msgstr ""
+"Lisää kuvia Shutterstockin yli 340 miljoonan laadukkaan valokuvan, "
+"vektorikuvan ja kuvituskuvan kirjastosta."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_browse"
+msgstr "Selaa"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_editorial"
+msgstr "Toimituksellinen sisältö"
+
+#: admin/class-shutterstock-admin.php:261
+msgid "wordpress:text_editorial_country"
+msgstr "Toimituksellinen maa"
+
+#: admin/class-shutterstock-admin.php:267
+msgid "wordpress:text_editorial_country_description"
+msgstr ""
+"Näytä vain toimituksellinen sisältö, joka on saatavilla jaettavaksi "
+"tietyissä maissa (kolmimerkkinen (ISO 3166 Alpha-3) maakoodi)."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_images"
+msgstr "Kuvat"
+
+#: admin/partials/shutterstock-admin-network-settings-page.php:28
+#: admin/partials/shutterstock-admin-settings-page.php:23
+msgid "wordpress:text_insert_account_information"
+msgstr ""
+"Anna Shutterstock-tilisi tiedot, jotta voit käyttää tätä liitännäistä. Voit "
+"luoda sovelluksen ja käyttää tunnistettasi <a href=\"%s\" "
+"target=\"_blank\">kehittäjän sovellussivullasi</a>."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_insert_preview"
+msgstr "Aseta esikatselu"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license"
+msgstr "Lisenssi"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:16
+msgid "wordpress:text_license_all_assets"
+msgstr "Lisensoi kaikki tuotteet"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:15
+msgid "wordpress:text_license_editorial_images"
+msgstr "Lisensoi toimituksellisia kuvia"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:13
+msgid "wordpress:text_license_images"
+msgstr "Lisensoi kuvia"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license_this_image"
+msgstr "Lisensoi tämä kuva"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_licensing_image_please_wait"
+msgstr "Lisensoidaan kuvaa. Odota."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_loading_please_wait"
+msgstr "Ladataan. Odota."
+
+#: admin/class-shutterstock-admin.php:253
+msgid "wordpress:text_log_in_with_shutterstock"
+msgstr "Kirjaudu Shutterstockin tunnuksilla"
+
+#: admin/class-shutterstock-admin.php:252
+msgid "wordpress:text_logout"
+msgstr "Kirjaudu ulos"
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:14
+msgid "wordpress:text_search_editorial_images"
+msgstr "Hae toimituksellisia kuvia"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_something_went_wrong"
+msgstr "Jokin meni pieleen. Yritä uudelleen."
+
+#: admin/class-shutterstock-admin.php:273
+msgid "wordpress:text_user_settings"
+msgstr "Käyttäjän asetukset"
+
+#: admin/class-shutterstock-admin.php:279
+msgid "wordpress:text_user_settings_description"
+msgstr "Määritä, mitkä käyttäjäroolit saavat hakea ja/tai lisensoida tuotteita."
+
+#: admin/partials/shutterstock-admin-field-user-settings.php:22
+msgid "wordpress:text_user_type"
+msgstr "Käyttäjätyyppi"
