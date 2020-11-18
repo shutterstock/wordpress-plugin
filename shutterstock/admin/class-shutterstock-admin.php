@@ -473,7 +473,7 @@ class Shutterstock_Admin {
 		$nonce = isset($_REQUEST['_wpnonce']) ? sanitize_text_field($_REQUEST['_wpnonce']): '';
 
 		if (!wp_verify_nonce( $nonce, 'generate-token')) {
-			die( esc_html_e( 'Security check', 'textdomain' ) );
+			die( esc_html_e('Security error.') );
 		} else {
 			$code = isset($_REQUEST['code']) ? sanitize_text_field($_REQUEST['code']) : '';
 
