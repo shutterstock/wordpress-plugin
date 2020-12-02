@@ -1,19 +1,23 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.305Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.305Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.310Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.310Z\n"
 "Language: ru_RU\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "Подключено"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Выполняется загрузка изображение. Подождите."
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
@@ -21,9 +25,8 @@ msgstr "Выход из системы"
 
 msgid "wordpress:plugin_description"
 msgstr ""
-"С подключаемым модулем Shutterstock творчество — настоящее удовольствие. "
-"Экономьте время, независимо от того, создаете ли вы проект или публикуете "
-"полную статью."
+"Получите доступ к исключительным материалам от WordPress без лицензионных "
+"платежей (роялти)."
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -71,6 +74,14 @@ msgid "wordpress:text_browse"
 msgstr "Обзор"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Загрузить и вставить"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Загрузки"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Редакционные материалы"
 
@@ -84,6 +95,10 @@ msgstr ""
 "Показывать только редакционные материалы, которые доступны для "
 "распространения в определенной стране (трехсимвольный (ISO 3166 Alpha-3) "
 "код страны)."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Дом"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

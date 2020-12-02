@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.290Z",
+    "translation-revision-date": "2020-11-27T12:15:24.295Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "hu_HU",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "K\u00e9pek let\u00f6lt\u00e9se folyamatban. Kis t\u00fcrelmet."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "Adjon Shutterstock-tartalmakat a bejegyz\u00e9s\u00e9hez."
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "B\u00f6ng\u00e9sz\u00e9s"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "Let\u00f6lt\u00e9s \u00e9s beilleszt\u00e9s"
+            ],
+            "wordpress:text_downloads": [
+                "Let\u00f6lt\u00e9sek"
+            ],
             "wordpress:text_editorial": [
                 "Szerkeszt\u0151i"
+            ],
+            "wordpress:text_home": [
+                "Kezd\u0151lap"
             ],
             "wordpress:text_images": [
                 "K\u00e9pek"

@@ -1,25 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.313Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.313Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.318Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.318Z\n"
 "Language: zh_CN\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "已连接"
 
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "正在下载图片。请稍候。"
+
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
 msgstr "正在注销"
 
 msgid "wordpress:plugin_description"
-msgstr "Shutterstock 插件让创意不再复杂。无论您在撰写草稿还是发表一篇完整的文章，都可以帮助您节省时间。"
+msgstr "直接通过 Wordpress 访问优秀的免版税内容。"
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -65,6 +69,14 @@ msgid "wordpress:text_browse"
 msgstr "浏览"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "下载和插入"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "下载"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "新闻传媒"
 
@@ -75,6 +87,10 @@ msgstr "新闻传媒国家或地区"
 #: admin/class-shutterstock-admin.php:267
 msgid "wordpress:text_editorial_country_description"
 msgstr "仅显示可在特定国家或地区（三字符 (ISO 3166 Alpha-3) 国家地区代码）分发的新闻传媒内容。"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "首页"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

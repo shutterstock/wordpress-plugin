@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.304Z",
+    "translation-revision-date": "2020-11-27T12:15:24.308Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "tr_TR",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "G\u00f6rsel indiriliyor. L\u00fctfen bekleyin."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "Yay\u0131n\u0131n\u0131za Shutterstock i\u00e7eri\u011fi ekleyin"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "G\u00f6z at"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "\u0130ndir ve Ekle"
+            ],
+            "wordpress:text_downloads": [
+                "\u0130ndirmeler"
+            ],
             "wordpress:text_editorial": [
                 "Haber Ama\u00e7l\u0131 \u0130\u00e7erik"
+            ],
+            "wordpress:text_home": [
+                "Ana Sayfa"
             ],
             "wordpress:text_images": [
                 "G\u00f6rseller"

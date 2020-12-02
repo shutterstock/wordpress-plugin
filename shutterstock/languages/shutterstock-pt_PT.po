@@ -1,27 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.298Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.298Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.302Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.302Z\n"
 "Language: pt_PT\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "Conectado"
 
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Baixando imagem. Aguarde."
+
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
 msgstr "Saindo"
 
 msgid "wordpress:plugin_description"
-msgstr ""
-"Com o plugin da Shutterstock, a criatividade fica muito mais fácil. Ganhe "
-"tempo, seja ao criar um rascunho ou ao publicar um artigo completo."
+msgstr "Acesse conteúdos incríveis e livres de direitos diretamente do WordPress."
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -69,6 +71,14 @@ msgid "wordpress:text_browse"
 msgstr "Explorar"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Baixar e inserir"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Downloads"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Editorial"
 
@@ -81,6 +91,10 @@ msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Exibe somente conteúdo editorial disponível para distribuição em "
 "determinado país (um código do país com três caracteres (ISO 3166 Alpha-3))."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Página inicial"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

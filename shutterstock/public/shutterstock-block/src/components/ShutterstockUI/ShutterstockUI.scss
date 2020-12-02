@@ -15,7 +15,7 @@
 }
 
 .components-shutterstock-ui__widget-container {
-  height: calc(100vh - 126px);
+  height: 100vh;
   overflow-y: scroll;    
   & > div {
     top: 90px;
@@ -43,6 +43,8 @@
   transition: opacity .1s;
   opacity: 1;
   background-image: url(../../images/loading.svg);
+  z-index: 111;
+  top: 60px;
 
   .text {
     max-width: 300px;
@@ -68,4 +70,28 @@
 
 .components-shutterstock-ui__searchForm {
   flex: 1;
+}
+
+.components-shutterstock-ui__navigation {
+  z-index: 111111111;
+  position: absolute;
+  margin-left: 180px;
+  top: 19px;
+  font-weight: bold;
+ 
+  a {
+    margin: 0 10px;
+    cursor: pointer;
+    color: #444;
+  }
+} 
+
+.components-shutterstock-ui__navigation.disabled a {
+  pointer-events: none;
+}
+
+@media (min-width: 600px) {
+  .components-shutterstock-ui__widget-container {
+    height: calc(100vh - 126px);    
+  }
 }

@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.283Z",
+    "translation-revision-date": "2020-11-27T12:15:24.286Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "en_US",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "Downloading image. Please wait."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "Add Shutterstock content to your post"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "Browse"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "Download and Insert"
+            ],
+            "wordpress:text_downloads": [
+                "Downloads"
+            ],
             "wordpress:text_editorial": [
                 "Editorial"
+            ],
+            "wordpress:text_home": [
+                "Home"
             ],
             "wordpress:text_images": [
                 "Images"

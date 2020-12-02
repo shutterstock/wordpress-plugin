@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.279Z",
+    "translation-revision-date": "2020-11-27T12:15:24.282Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "da_DK",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "Henter billede. Vent et \u00f8jeblik."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "Tilf\u00f8j Shutterstock-indhold til din postering"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "Gennemse"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "Download og inds\u00e6t"
+            ],
+            "wordpress:text_downloads": [
+                "Downloads"
+            ],
             "wordpress:text_editorial": [
                 "Redaktionel"
+            ],
+            "wordpress:text_home": [
+                "Hjem"
             ],
             "wordpress:text_images": [
                 "Billeder"

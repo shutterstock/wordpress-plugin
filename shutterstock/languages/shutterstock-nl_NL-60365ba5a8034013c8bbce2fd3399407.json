@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.292Z",
+    "translation-revision-date": "2020-11-27T12:15:24.296Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "nl_NL",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "Afbeelding downloaden. Een ogenblik geduld."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "Voeg Shutterstock-content toe aan je bericht"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "Bladeren"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "Downloaden en invoegen"
+            ],
+            "wordpress:text_downloads": [
+                "Downloads"
+            ],
             "wordpress:text_editorial": [
                 "Redactioneel"
+            ],
+            "wordpress:text_home": [
+                "Startpagina"
             ],
             "wordpress:text_images": [
                 "Afbeeldingen"

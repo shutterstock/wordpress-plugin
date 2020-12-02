@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.302Z",
+    "translation-revision-date": "2020-11-27T12:15:24.306Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "sv_SE",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "Laddar ned bilder. V\u00e4nta."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "L\u00e4gg till Shutterstock-inneh\u00e5ll till din post"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "Bl\u00e4ddra"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "Ladda ned och infoga"
+            ],
+            "wordpress:text_downloads": [
+                "Nedladdningar"
+            ],
             "wordpress:text_editorial": [
                 "Redaktionellt"
+            ],
+            "wordpress:text_home": [
+                "Hem"
             ],
             "wordpress:text_images": [
                 "Bilder"

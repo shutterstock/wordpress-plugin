@@ -2,13 +2,21 @@ import React, { useRef, useEffect, useState } from 'react';
 import apiFetch from '@wordpress/api-fetch';
 
 import { __ } from '@wordpress/i18n';
+import { __unstableStripHTML as stripHTML } from '@wordpress/dom';
+
 import './ShutterstockUI.scss';
 import insertPreviewSvg from '../../images/insert-preview.svg';
 import licenseImageSvg from '../../images/shopping-cart.svg';
 import insertPreviewDarkSvg from '../../images/insert-preview-dark.svg';
-import getSubscriptionWithDetails from './getSubscriptionWithDetails';
+import getSubscriptionWithDetails, { getLicenseHistory } from './getSubscriptionWithDetails';
+import redownloadAndInsertImage from './redownloadAndInsertImage';
 
 import ShutterstockSnackbar, { useSnackbarTimeout } from '../ShutterstockSnackbar';
+
+const regex = {
+  HTMLRegExp: /<\/?[a-z][^>]*?>/gi,
+  NewLineRegExp: /\r?\n|\r/gi,
+};
 
 const ShutterstockUI = ({
   setAttributes,
@@ -43,6 +51,7 @@ const ShutterstockUI = ({
     }
     
     showSnackbar(errorMessage);
+    toggleOverlay(false);
   };
 
   const insertPreview = (e, item) => {
@@ -93,6 +102,7 @@ const ShutterstockUI = ({
             // Adding subscription to the route
           routesConfig[1].props = {
             ...routesConfig[1].props,
+            assetInfo: item,
             subscriptions: subscriptionsWithImageDetails,
           }
 
@@ -178,7 +188,7 @@ const ShutterstockUI = ({
                   toggleOverlay(false);
                 } else {
                   handleError(licensing);
-                }                
+                }            
               } catch(error) {
                 toggleOverlay(false);
                 handleError(error);
@@ -189,7 +199,51 @@ const ShutterstockUI = ({
         assetInfo,
         subscriptions: subscriptions
       }
-    });
+    },
+    {      
+      path: '/license-history',
+      component: ShutterstockWidget.components.LicenseHistoryPage,
+      props: {
+        onLicenseHistoryItemClick: (item, { history }) => {
+          routesConfig[0].props = {
+            ...routesConfig[0].props,
+            assetInfo: item,
+          }
+
+          widgetRef.current.updateRoutes({
+            routesConfig,
+          });
+          
+          widgetRef.current.toggleLoadingIndicator(false);
+          history.push(`/images/${item.id}`)
+        },
+        getMoreResults: async (page) => {
+          const licenseHistory = await getLicenseHistory('images', page + 1);          
+          return licenseHistory;
+        },
+        licenseHistory: [],
+        overlayActions: [
+          {
+            label: __('wordpress:text_dowbload_and_insert', 'shutterstock'),
+            icon: insertPreviewSvg,
+            onClick: (e, item, redownloadProps) => {
+              e.preventDefault();
+              redownloadAndInsertImage(
+                item, 
+                { 
+                  ...redownloadProps, 
+                  toggleOverlay, 
+                  handleError,
+                  setAttributes,
+                  closeModal,
+                }
+              );    
+            }
+          },                              
+        ],
+      },
+    }
+    );
   }
 
   useEffect(() => {
@@ -220,6 +274,16 @@ const ShutterstockUI = ({
       assetsPerPage: 26,
       onItemClick: (e, item, options) => {
         e.preventDefault();
+        routesConfig[0].props = {
+          ...routesConfig[0].props,
+          assetInfo: item,
+        }
+
+        widgetRef.current.updateRoutes({
+          routesConfig,
+        });
+        
+        widgetRef.current.toggleLoadingIndicator(false);
         options.history.push(`/images/${item.id}`)
       },
       theme: {
@@ -239,6 +303,7 @@ const ShutterstockUI = ({
       extraRoutes: {
         ...(licenseImage ? { initialRoute: `/license/images/${assetInfo.id}` } : { } ),
         routesConfig,
+        excludeSearchBarRoutes: ['^\/license-history$']
       },
       overlayActions,
       customHeaders: {
@@ -252,6 +317,20 @@ const ShutterstockUI = ({
         },        
         ...(userIsAbleToSearchEditorial ? { searchBarDropdownFilters } : {})
       },
+      searchSuggestions: {
+        enable: true,
+        textProvider: () => {
+          const postTitle = wp.data.select('core/editor').getEditedPostAttribute('title') || '';
+          const postContent = wp.data.select('core/editor').getEditedPostContent() || '';          
+
+          const text = stripHTML(`${postTitle} ${postContent}`)
+            .replace(regex.HTMLRegExp, '')
+            .replace(regex.NewLineRegExp, '')
+            .trim();
+
+          return text;
+        }
+      }
     };
 
     // eslint-disable-next-line no-undef
@@ -266,8 +345,48 @@ const ShutterstockUI = ({
     }
   }, []);
 
+
   return (
     <>
+      {canLicense && (
+        <div className={`components-shutterstock-ui__navigation ${overlay.show ? 'disabled' : ''}`}>
+          <a
+            onClick={(e, options) => {
+              widgetRef.current.getHistory().push(`/`);
+            }}
+          >
+            {__('wordpress:text_home', 'shutterstock')}
+          </a>
+          <a
+            className={`components-shutterstock-ui__download`}
+            onClick={async (e) => {
+              try {          
+                toggleOverlay(true, __('wordpress:text_loading_please_wait', 'shutterstock'));
+                const licenseHistory = await getLicenseHistory('images');
+                
+                routesConfig[2].props = {
+                  ...routesConfig[2].props,
+                  licenseHistory,
+                }
+                widgetRef.current.updateRoutes({
+                  routesConfig,
+                });
+                
+                widgetRef.current.toggleLoadingIndicator(false);
+                toggleOverlay(false);
+                widgetRef.current.getHistory().push(`/license-history`);
+
+              } catch(error) {            
+                widgetRef.current.toggleLoadingIndicator(false);
+                toggleOverlay(false);          
+                handleError(error);          
+              }   
+            }}
+          >
+            {__('wordpress:text_downloads', 'shutterstock')}
+          </a>
+        </div> 
+      )}     
       <div ref={widgetRef} className="components-shutterstock-ui__widget-container" />
       {overlay.show && (
         <div className="components-shutterstock-ui__widget-container-overlay">

@@ -1,18 +1,22 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.284Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.284Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.289Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.289Z\n"
 "Language: es_ES\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "Conectado"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Descargando imagen. Espere un momento."
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
@@ -20,9 +24,8 @@ msgstr "Cerrando sesión"
 
 msgid "wordpress:plugin_description"
 msgstr ""
-"El complemento de Shutterstock elimina la complejidad en el momento de la "
-"creatividad. Ahorre tiempo, ya sea al crear un borrador o al publicar un "
-"artículo completo."
+"Acceda a contenidos excepcionales y libres de regalías directamente de "
+"WordPress."
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -70,6 +73,14 @@ msgid "wordpress:text_browse"
 msgstr "Explorar"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Descargar e insertar"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Descargas"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Editorial"
 
@@ -82,6 +93,10 @@ msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Vea solo contenido editorial que esté disponible para distribución en un "
 "país específico. El código de país tiene tres caracteres (ISO 3166 Alpha-3)."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Inicio"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
