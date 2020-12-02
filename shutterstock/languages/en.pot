@@ -2,12 +2,14 @@
 # This file is distributed under the same license as the Shutterstock plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shutterstock\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-10-29T12:53:51+00:00\n"
+"POT-Creation-Date: 2020-11-20T15:02:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: shutterstock\n"
@@ -19,7 +21,7 @@ msgstr "Shutterstock"
 
 #. Description of the plugin
 msgid "wordpress:plugin_description"
-msgstr "The Shutterstock plugin takes the complexity out of creativity. Save time, whether you're creating a draft or publishing a full article."
+msgstr "Access exceptional, royalty-free content straight from WordPress."
 
 #: admin/class-shutterstock-admin.php:191
 msgid "wordpress:text_api_key"
@@ -103,6 +105,10 @@ msgid "wordpress:text_insert_account_information"
 msgstr "Please insert your Shutterstock account information to use this plugin. You can create an app and access token on your  <a href=\"%s\" target=\"_blank\">developer apps page</a>."
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Downloading image. Please wait."
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "Something went wrong. Please try again."
 
@@ -123,6 +129,10 @@ msgid "wordpress:text_licensing_image_please_wait"
 msgstr "Licensing Image. Please wait."
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Download and Insert"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Add Shutterstock content to your post"
 
@@ -137,6 +147,14 @@ msgstr "Editorial"
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Add Shutterstock content to your post"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Home"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Downloads"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"

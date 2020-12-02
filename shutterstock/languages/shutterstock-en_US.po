@@ -1,27 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.283Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.283Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.286Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.286Z\n"
 "Language: en_US\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "Connected"
 
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Downloading image. Please wait."
+
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
 msgstr "Logging out"
 
 msgid "wordpress:plugin_description"
-msgstr ""
-"The Shutterstock plugin takes the complexity out of creativity. Save time, "
-"whether you're creating a draft or publishing a full article."
+msgstr "Access exceptional, royalty-free content straight from WordPress."
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -69,6 +71,14 @@ msgid "wordpress:text_browse"
 msgstr "Browse"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Download and Insert"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Downloads"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Editorial"
 
@@ -81,6 +91,10 @@ msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Show only editorial content that is available for distribution in a certain "
 "country (A three-character (ISO 3166 Alpha-3) country code)."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Home"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

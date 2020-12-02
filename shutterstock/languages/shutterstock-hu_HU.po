@@ -1,18 +1,22 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.290Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.290Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.295Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.295Z\n"
 "Language: hu_HU\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "Kapcsolatban"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Képek letöltése folyamatban. Kis türelmet."
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
@@ -20,9 +24,8 @@ msgstr "Kijelentkezés"
 
 msgid "wordpress:plugin_description"
 msgstr ""
-"A Shutterstock-modulnak köszönhetően a kreativitással nem jár többé "
-"komplikáció. Időt takaríthat meg, legyen szó vázlatok készítéséről vagy "
-"teljes cikk közzétételéről."
+"Kiemelkedő jogdíjmentes tartalmakhoz férhet hozzá, közvetlenül a WordPress "
+"felületéről."
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -72,6 +75,14 @@ msgid "wordpress:text_browse"
 msgstr "Böngészés"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Letöltés és beillesztés"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Letöltések"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Szerkesztői"
 
@@ -84,6 +95,10 @@ msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Csak egy adott országban (ISO 3166 Alpha-3 szerinti háromkarakteres "
 "országkód) való terjesztésre elérhető szerkesztői tartalmak megjelenítése."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Kezdőlap"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

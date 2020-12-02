@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the Shutterstock plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shutterstock\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-11-03T19:55:41+00:00\n"
+"POT-Creation-Date: 2020-11-20T15:02:27+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: shutterstock\n"
@@ -20,7 +20,7 @@ msgid "Shutterstock"
 msgstr ""
 
 #. Description of the plugin
-msgid "The Shutterstock plugin takes the complexity out of creativity. Save time, whether you're creating a draft or publishing a full article."
+msgid "Access exceptional, royalty-free content straight from WordPress."
 msgstr ""
 
 #: admin/class-shutterstock-admin.php:191
@@ -72,11 +72,11 @@ msgid "wordpress:text_user_settings_description"
 msgstr ""
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
-msgid "Logging out"
+msgid "wordpress:logging_out"
 msgstr ""
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
-msgid "Connected"
+msgid "wordpress:connected"
 msgstr ""
 
 #: admin/partials/shutterstock-admin-field-user-settings.php:13
@@ -105,6 +105,10 @@ msgid "wordpress:text_insert_account_information"
 msgstr ""
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr ""
 
@@ -125,6 +129,10 @@ msgid "wordpress:text_licensing_image_please_wait"
 msgstr ""
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr ""
 
@@ -134,6 +142,14 @@ msgstr ""
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr ""
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
 msgstr ""
 
 #: public/shutterstock-block/build/index.js:1

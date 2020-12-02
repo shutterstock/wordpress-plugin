@@ -2,8 +2,8 @@
 Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
-Tested up to: 5.5
-Stable tag: 1.1.1
+Tested up to: 5.6
+Stable tag: 1.2.0
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -25,6 +25,8 @@ Take your ideas for a test run and use our watermarked content on draft posts an
 **License**
 Love how it looks? License the content and use it directly within your posts and pages.
 
+By default, WordPress sites have access to a limited library of Shutterstock media. **To connect the WordPress plugin to your existing subscription or access our full collection, fill out the form at [https://www.shutterstock.com/design/plugins-wordpress](https://www.shutterstock.com/design/plugins-wordpress).**
+
 This plugin uses the Shutterstock API. For more information, see [https://developers.shutterstock.com](https://developers.shutterstock.com).
 
 == Screenshots ==
@@ -34,6 +36,8 @@ This plugin uses the Shutterstock API. For more information, see [https://develo
 == Installation ==
 
 **Prerequisites**
+
+By default, WordPress sites have access to a limited library of Shutterstock media. **To connect the WordPress plugin to your existing subscription or access our full collection, fill out the form at https://www.shutterstock.com/design/plugins-wordpress.**
 
 To install the Shutterstock plugin for WordPress, you need an API application for the Shutterstock API. You can create an application at [https://www.shutterstock.com/account/developers/apps](https://www.shutterstock.com/account/developers/apps). 
 
@@ -97,6 +101,9 @@ Now that you have the Shutterstock plugin installed and configured, you can use 
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.2.0 =
+Introduced smart image recommendations and license history with re-download functionality
+
 = 1.1.1 =
 Add translations
 

@@ -4,7 +4,7 @@ class Shutterstock_API {
 
 	private $api_url = 'https://api.shutterstock.com/v2';
 
-  public function __construct($shutterstock, $version) {
+  	public function __construct($shutterstock, $version) {
 		$this->shutterstock = $shutterstock;
 		$this->version = $version;
 	}
@@ -17,7 +17,7 @@ class Shutterstock_API {
 				'permission_callback' => array($this, 'get_permissions_check'),
 			));
 
-			register_rest_route($this->shutterstock, '/images/(?P<id>\w+)', array(
+			register_rest_route($this->shutterstock, '/images/(?P<id>\d+[a-zA-z]*)', array(
 				'methods' => 'GET',
 				'callback' => array($this, 'get_image_details'),
 				'permission_callback' => array($this, 'get_permissions_check'),
@@ -35,10 +35,22 @@ class Shutterstock_API {
 				'permission_callback' => array($this, 'get_permissions_check'),
 			));
 
+			register_rest_route($this->shutterstock, '/images/licenses', array(
+				'methods' => 'GET',
+				'callback' => array($this, 'get_list_image_licenses'),
+				'permission_callback' => array($this, 'get_permissions_check'),
+			));
+
+			register_rest_route($this->shutterstock, '/images/licenses/(?P<id>\w+)/downloads', array(
+				'methods' => 'POST',
+				'callback' => array($this, 'redownload_image'),
+				'permission_callback' => array($this, 'get_permissions_check'),
+			));
+
 		}		
 	}	
 
-  public function get_subscriptions($request) {
+  	public function get_subscriptions($request) {
 		$parameters = $request->get_params();
 		$media_type = sanitize_text_field($parameters['mediaType']);
 		$is_editorial = $media_type === 'editorial';
@@ -83,25 +95,22 @@ class Shutterstock_API {
 			)
 		);
 
-		return wp_send_json($filtered_subscriptions, $response['response_code']);
+		return new WP_REST_Response($filtered_subscriptions, $response['response_code']);
 	}
 	
-  public function get_image_details($request) {
-		$image_id = sanitize_text_field($request['id']);
-		$parameters = $request->get_params();
+  	public function get_image_details($request) {
+		$image_id = sanitize_text_field($request['id']);		
+		$parameters = $request->get_params();		
 		$media_type = sanitize_text_field($parameters['mediaType']);
 		$is_editorial = $media_type === 'editorial';
 		$country = $this->get_editorial_country();
-
 		$image_details_route = $is_editorial
 			? $this->api_url. '/editorial/'. $image_id . '?view=full&country=' . $country 
 			: $this->api_url. '/images/'. $image_id . '?view=full';
-
 		$response = $this->do_api_get_request($image_details_route);
-
 		$decoded_response_body = json_decode($response['response_body'], true);
 
-		return wp_send_json($decoded_response_body, $response['response_code']);
+		return new WP_REST_Response($decoded_response_body, $response['response_code']);
 	}
 
 	public function get_contributor_details($request) {
@@ -113,7 +122,20 @@ class Shutterstock_API {
 
 		$decoded_response_body = json_decode($response['response_body'], true);
 
-		return wp_send_json($decoded_response_body, $response['response_code']);
+		return new WP_REST_Response($decoded_response_body, $response['response_code']);
+	}
+
+	public function get_list_image_licenses($request) {
+		$parameters = $request->get_params();
+		$page = isset($parameters['page']) ? sanitize_text_field($parameters['page']) : 1;
+		$per_page = isset($parameters['per_page']) ? sanitize_text_field($parameters['per_page']) : 20;
+		$list_image_licenses_route = $this->api_url. '/images/licenses?per_page='. $per_page .'&page=' . $page;
+		
+		$response = $this->do_api_get_request($list_image_licenses_route);
+
+		$decoded_response_body = json_decode($response['response_body'], true);
+
+		return new WP_REST_Response($decoded_response_body, $response['response_code']);
 	}
 
 	public function license_image($request) {
@@ -230,6 +252,76 @@ class Shutterstock_API {
 		return wp_send_json_success($uploaded_image_url, $response_code);
 	}
 
+	public function redownload_image($request) {
+		$license_id = sanitize_text_field($request['id']);
+		$req_body = json_decode($request->get_body(), true);
+		$size = sanitize_text_field($req_body['size']);
+
+		$image_id = sanitize_text_field($req_body['imageId']);
+		$image_description = sanitize_text_field($req_body['description']);
+		$contributor_name = sanitize_text_field($req_body['contributorName']);
+		$media_type = sanitize_text_field($req_body['mediaType']);
+
+		$width = sanitize_text_field($req_body['width']);
+		$height = sanitize_text_field($req_body['height']);
+
+		$redownload_url = $this->api_url. '/images/licenses/'. $license_id . '/downloads';
+		$token = $this->get_api_token();
+		
+		$body = [
+			"size" => $size,
+		];
+
+		$args = [
+			'headers' => [
+					'Authorization' => 'Bearer ' . $token,
+					'Content-Type' => 'application/json; charset=utf-8',
+					'x-shutterstock-application' => 'Wordpress/'. $this->version,
+			],		
+			'body' => wp_json_encode($body),	
+			'data_format' => 'body',
+		];
+		
+		$response = wp_remote_post($redownload_url, $args);
+		$response_code = wp_remote_retrieve_response_code($response);		
+		$response_body = wp_remote_retrieve_body($response);		
+		$decoded_body = json_decode($response_body, true);
+		
+		$success_error = isset($decoded_body['data'][0]['error']);
+
+		if ($response_code !== 200 || $success_error || isset($decoded_body['errors'])) {
+			$error = $decoded_body;
+			
+			// return 200 even if some error occurs. This type of error response returned by editorial.
+			if ($success_error) {
+				$error = $decoded_body['data'][0];
+				$error['message'] = $decoded_body['data'][0]['error'];
+			}
+
+			return wp_send_json_error($error, $response_code);
+		}
+
+		$download_url = $decoded_body['url'];
+
+		$filename = 'shutterstock-'. $image_id. '-' .$size. '-redownloaded.jpg';
+
+		$post_description = 'Shutterstock ID: '. $image_id . ', Photographer: '. $contributor_name;
+
+		$uploaded_image_url = $this->download_upload_image_to_media_library(
+			$download_url,
+			$filename,
+			$size,
+			$image_description,
+			$image_id,
+			$post_description,
+			$width,
+			$height
+		);
+
+		return wp_send_json_success($uploaded_image_url, $response_code);
+
+	}
+
 	private function download_upload_image_to_media_library($download_url, $filename, $size, $title, $image_id, $post_description, $width, $height) {
 		$response = '';
 
@@ -321,10 +413,10 @@ class Shutterstock_API {
 
 		if ($request_type === 'GET') {
 			$parameters = $request->get_params();
-			$media_type  = sanitize_text_field($parameters['mediaType']);
+			$media_type = isset($parameters['mediaType']) ? sanitize_text_field($parameters['mediaType']) : 'images';
 		} else if ($request_type === 'POST') {
 			$req_body = json_decode($request->get_body(), true);
-			$media_type = sanitize_text_field($req_body['mediaType']);
+			$media_type = isset($req_body['mediaType']) ? sanitize_text_field($req_body['mediaType']) : 'images';
 		}
 
 		$is_editorial = ($media_type === 'editorial');

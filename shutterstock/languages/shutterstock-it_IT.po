@@ -1,27 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.289Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.289Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.293Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.293Z\n"
 "Language: it_IT\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "Connesso"
 
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Download dell'immagine in corso. Attendi."
+
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
 msgstr "Disconnessione in corso"
 
 msgid "wordpress:plugin_description"
-msgstr ""
-"Il plugin di Shutterstock facilita il processo creativo. Risparmia tempo, "
-"che tu stia creando una bozza o pubblicando un articolo completo."
+msgstr "Accedi a contenuti royalty free eccezionali direttamente da WordPress."
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -69,6 +71,14 @@ msgid "wordpress:text_browse"
 msgstr "Sfoglia"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Scarica e inserisci"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Download"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Contenuti editoriali"
 
@@ -81,6 +91,10 @@ msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Mostra solo i contenuti editoriali disponibili per la distribuzione in un "
 "determinato paese (codice paese a tre caratteri (ISO 3166 alfa-3))."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Home"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

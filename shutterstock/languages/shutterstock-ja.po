@@ -1,27 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.311Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.311Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.316Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.316Z\n"
 "Language: ja\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "接続済み"
 
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "画像をダウンロードしています。しばらくお待ちください。"
+
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
 msgstr "ログアウトしています"
 
 msgid "wordpress:plugin_description"
-msgstr ""
-"Shutterstockプラグインがあれば、クリエイティブな制作作業をスムーズに進められます。下書きを作成するときでも、記事全体を公開するときでも、時間"
-"を節約しましょう。"
+msgstr "WordPressから直接、高品質なロイヤリティフリー素材にアクセスします。"
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -67,6 +69,14 @@ msgid "wordpress:text_browse"
 msgstr "閲覧"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "ダウンロードして挿入"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "ダウンロード"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "エディトリアル"
 
@@ -77,6 +87,10 @@ msgstr "エディトリアルカントリー"
 #: admin/class-shutterstock-admin.php:267
 msgid "wordpress:text_editorial_country_description"
 msgstr "特定の国で配信可能なエディトリアル素材のみを表示します（3文字［ISO 3166 Alpha-3］の国名コード）。"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "ホーム"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

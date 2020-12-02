@@ -20,8 +20,8 @@
 }
 
 .components-shutterstock-modal__content {
-  width: 80%;
-  height: calc(100vh - 126px);
+  width: 100%;
+  height: calc(100vh);
   .components-modal__header {
     position: fixed;
     width: 100%;
@@ -34,4 +34,25 @@
 
 .components-shutterstock-modal__shutterstock-logo {
   padding-bottom: 24px;
+}
+
+// Fix for radio button on licensing page. wordpress breaks it.
+.components-shutterstock-ui__widget-container {
+  input[type="radio"] {
+    &:checked{
+      &:before {
+        width: 8px;
+        height: 8px;
+        margin: .1875rem;
+        background-color: #1e8cbe;
+      }
+    }
+    
+  }
+}
+
+@media (min-width: 600px) {
+  .components-shutterstock-modal__content {
+    width: 80%;
+  }  
 }

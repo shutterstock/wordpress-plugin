@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.300Z",
+    "translation-revision-date": "2020-11-27T12:15:24.304Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "fi",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "Ladataan kuvaa. Odota."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "Lis\u00e4\u00e4 Shutterstock-sis\u00e4lt\u00f6\u00e4 julkaisuusi"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "Selaa"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "Lataa ja lis\u00e4\u00e4"
+            ],
+            "wordpress:text_downloads": [
+                "Lataukset"
+            ],
             "wordpress:text_editorial": [
                 "Toimituksellinen sis\u00e4lt\u00f6"
+            ],
+            "wordpress:text_home": [
+                "Etusivu"
             ],
             "wordpress:text_images": [
                 "Kuvat"

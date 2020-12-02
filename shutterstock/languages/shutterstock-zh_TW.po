@@ -1,25 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.315Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.315Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.320Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.320Z\n"
 "Language: zh_TW\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "已連線"
 
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "下載圖片。請稍候。"
+
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
 msgstr "退出"
 
 msgid "wordpress:plugin_description"
-msgstr "Shutterstock 外掛程式將創意化繁為簡。省時，無論您是要建立草稿還是發表全文。"
+msgstr "直接從 WordPress 存取非凡的免版稅內容。"
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -65,6 +69,14 @@ msgid "wordpress:text_browse"
 msgstr "瀏覽"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "下載並插入"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "下載次數"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "報導"
 
@@ -75,6 +87,10 @@ msgstr "報導國家/地區"
 #: admin/class-shutterstock-admin.php:267
 msgid "wordpress:text_editorial_country_description"
 msgstr "僅顯示可在特定國家/地區分發的報導內容（三個字元（ISO 3166 Alpha-3）國家/地區代碼）。"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "家"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.296Z",
+    "translation-revision-date": "2020-11-27T12:15:24.300Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "pl_PL",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "Trwa pobieranie obrazu. Prosz\u0119 czeka\u0107."
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "Dodaj tre\u015bci Shutterstock do swojego posta"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "Przegl\u0105daj"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "Pobierz i wstaw"
+            ],
+            "wordpress:text_downloads": [
+                "Materia\u0142y do pobrania"
+            ],
             "wordpress:text_editorial": [
                 "Dziennikarskie"
+            ],
+            "wordpress:text_home": [
+                "Strona g\u0142\u00f3wna"
             ],
             "wordpress:text_images": [
                 "Obrazy"

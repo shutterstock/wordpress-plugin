@@ -123,7 +123,7 @@ class Shutterstock_Public {
 		);
 
 		// Registering Shutterstock UI script
-		wp_register_script('shutterstock-block-block-editor-shuttestock-ui-js', 'https://api-cdn.shutterstock.com/0.1.28/static/js/sstk-widget.js');
+		wp_register_script('shutterstock-block-block-editor-shuttestock-ui-js', 'https://api-cdn.shutterstock.com/0.1.30/static/js/sstk-widget.js');
 		
 		wp_set_script_translations( 'shutterstock-block-block-editor', 'shutterstock', plugin_dir_path(__DIR__) . 'languages');
 	
@@ -133,7 +133,7 @@ class Shutterstock_Public {
 		wp_register_style('shutterstock-block-block-editor', plugins_url( $editor_css, __FILE__ ));
 		
 		// Registering Shutterstock UI styles
-		wp_register_style('shutterstock-block-block-editor-shutterstock-ui-css', 'https://api-cdn.shutterstock.com/0.1.28/static/css/sstk-widget.css');
+		wp_register_style('shutterstock-block-block-editor-shutterstock-ui-css', 'https://api-cdn.shutterstock.com/0.1.30/static/css/sstk-widget.css');
 
 		// Registerging the shutterstock-block. Pattern is 'namespace/block-name'
 		register_block_type( 'shutterstock/shutterstock-block', array(

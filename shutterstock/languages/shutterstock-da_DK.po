@@ -1,27 +1,29 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.0\n"
+"Project-Id-Version: Shutterstock 1.2.0\n"
 "mime-version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-09T20:44:52.279Z\n"
-"PO-Revision-Date: 2020-11-09T20:44:52.279Z\n"
+"POT-Creation-Date: 2020-11-27T12:15:24.282Z\n"
+"PO-Revision-Date: 2020-11-27T12:15:24.282Z\n"
 "Language: da_DK\n"
 
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
 msgid "wordpress:connected"
 msgstr "Forbindelse"
 
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:downloading_image"
+msgstr "Henter billede. Vent et øjeblik."
+
 #: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:18
 msgid "wordpress:logging_out"
 msgstr "Logger ud"
 
 msgid "wordpress:plugin_description"
-msgstr ""
-"Shutterstocks plugin gør det nemt at være kreativ. Spar tid, hvad enten du "
-"tegner en skitse eller publicerer en hel artikel."
+msgstr "Få adgang til ekstraordinært, royaltyfrit indhold direkte fra WordPress."
 
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
@@ -69,6 +71,14 @@ msgid "wordpress:text_browse"
 msgstr "Gennemse"
 
 #: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_dowbload_and_insert"
+msgstr "Download og indsæt"
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_downloads"
+msgstr "Downloads"
+
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Redaktionel"
 
@@ -81,6 +91,10 @@ msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Vis kun redaktionelt indhold, der er tilgængeligt til distribution i et "
 "bestemt land (en tre bogstavs-landekode, ISO 3166 Alpha-3)."
+
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_home"
+msgstr "Hjem"
 
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"

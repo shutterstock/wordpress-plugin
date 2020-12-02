@@ -40,4 +40,13 @@ const getSubscriptionWithDetails = async (imageId, mediaType = 'image') => {
   
 };
 
+export const getLicenseHistory = async (mediaType = 'images', page = 1) => {
+  try {
+    const licenseHistory = await apiFetch({ path: `shutterstock/images/licenses?mediaType=${mediaType}&page=${page}` });  
+    return licenseHistory;
+  } catch(e) {
+    throw e;
+  }
+}
+
 export default getSubscriptionWithDetails;

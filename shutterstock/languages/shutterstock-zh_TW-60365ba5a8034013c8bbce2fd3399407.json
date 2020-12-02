@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-09T20:44:52.315Z",
+    "translation-revision-date": "2020-11-27T12:15:24.320Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -10,6 +10,9 @@
                 "lang": "zh_TW",
                 "plural-forms": "nplurals=2; plural=(n != 1);"
             },
+            "wordpress:downloading_image": [
+                "\u4e0b\u8f09\u5716\u7247\u3002\u8acb\u7a0d\u5019\u3002"
+            ],
             "wordpress:text_add_shuttersock_content_to_post": [
                 "\u5c07 Shutterstock \u5167\u5bb9\u65b0\u589e\u5230\u60a8\u7684\u8cbc\u6587\u4e2d"
             ],
@@ -22,8 +25,17 @@
             "wordpress:text_browse": [
                 "\u700f\u89bd"
             ],
+            "wordpress:text_dowbload_and_insert": [
+                "\u4e0b\u8f09\u4e26\u63d2\u5165"
+            ],
+            "wordpress:text_downloads": [
+                "\u4e0b\u8f09\u6b21\u6578"
+            ],
             "wordpress:text_editorial": [
                 "\u5831\u5c0e"
+            ],
+            "wordpress:text_home": [
+                "\u5bb6"
             ],
             "wordpress:text_images": [
                 "\u5716\u7247"
