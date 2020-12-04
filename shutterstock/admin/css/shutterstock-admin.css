@@ -22,7 +22,7 @@
   border-left: 1px solid #7e8993;
 }
 
-textarea.shutterstock-token,
+.connected,
 p.shutterstock-token {
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -51,3 +51,10 @@ button.logout, input.login {
     cursor: pointer;
 }
 
+.connected {
+  padding-top: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
