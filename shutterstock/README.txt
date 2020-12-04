@@ -3,7 +3,7 @@ Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
 Tested up to: 5.6
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -17,7 +17,7 @@ The Shutterstock plugin for WordPress allows you to access our exceptional, roya
 The Shutterstock plugin takes the complexity out of creativity and saves time, whether you're creating a draft or publishing a full article.
 
 **Search**
-Choose content from Shutterstock's incredible collection.
+Choose content from Shutterstock's incredible collection and get suggestions based on the text on your page.
 
 **Preview**
 Take your ideas for a test run and use our watermarked content on draft posts and pages.
@@ -32,6 +32,7 @@ This plugin uses the Shutterstock API. For more information, see [https://develo
 == Screenshots ==
 
 1. Search for images and insert them into pages and posts
+2. Get recommendations based on the text on the page or post
 
 == Installation ==
 
@@ -89,6 +90,11 @@ Now that you have the Shutterstock plugin installed and configured, you can use 
 
 1. In the new block, click **Browse**. 
 1. In the popup window, search Shutterstock's library for media to add.
+You can click **View recommendations** to see suggested images based on the text of your blog post or page.
+
+   You can also go to the **Downloads** tab to see images that you have already licensed.
+   The images that are available for redownload depend on the subscription that the plugin is using; to connect the plugin to your subscription, fill out the form at https://www.shutterstock.com/design/plugins-wordpress.
+
 1. To try a piece of media in your page, click its **Insert Preview** button. WordPress adds a watermarked preview of the image to your page.
 
    ![Watermarked preview on the page](watermarked_preview.png)
@@ -101,6 +107,10 @@ Now that you have the Shutterstock plugin installed and configured, you can use 
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.2.1
+* Updated readme
+* Improvements and bugfixes
+
 = 1.2.0 =
 Introduced smart image recommendations and license history with re-download functionality
 

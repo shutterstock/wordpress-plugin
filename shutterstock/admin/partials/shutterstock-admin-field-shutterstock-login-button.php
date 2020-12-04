@@ -17,6 +17,7 @@
                 function logout() {
                   var pre = \'<p class="' . esc_attr($atts['context']['connected_class']) . '">' . esc_html__('wordpress:logging_out', 'shutterstock') . '</p>\';
                   jQuery(".shutterstock-token").replaceWith(pre);
+                  jQuery(".connected").addClass("hidden");
                 }
             </script>
             ';
@@ -25,9 +26,11 @@
                 id="' . esc_attr($atts['id']) . '"
                 name="' . esc_attr($atts['name']) . '"
                 value="' . esc_textarea($atts['value']) . '"
-                class="' . esc_attr($atts['context']['connected_class']) . '">' .
-                    esc_html__('wordpress:connected', 'shutterstock') .
+                class="' . esc_attr($atts['context']['connected_class']) . ' hidden">' .
+                    esc_textarea($atts['value']) .
                 '</textarea>';
+
+            echo '<div class="connected">'. esc_html__('wordpress:connected', 'shutterstock') .'</div>';
             echo '<button class="logout" onclick="logout()">' . esc_attr($atts['context']['has_value_button_text']) . '</button>';
         } else {
             echo '
