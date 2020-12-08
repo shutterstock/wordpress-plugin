@@ -38,7 +38,7 @@ This plugin uses the Shutterstock API. For more information, see [https://develo
 
 **Prerequisites**
 
-By default, WordPress sites have access to a limited library of Shutterstock media. **To connect the WordPress plugin to your existing subscription or access our full collection, fill out the form at https://www.shutterstock.com/design/plugins-wordpress.**
+By default, WordPress sites have access to a limited library of Shutterstock media. **To connect the WordPress plugin to your existing subscription or access our full collection, fill out the form at [https://www.shutterstock.com/design/plugins-wordpress](https://www.shutterstock.com/design/plugins-wordpress).**
 
 To install the Shutterstock plugin for WordPress, you need an API application for the Shutterstock API. You can create an application at [https://www.shutterstock.com/account/developers/apps](https://www.shutterstock.com/account/developers/apps). 
 
@@ -93,7 +93,7 @@ Now that you have the Shutterstock plugin installed and configured, you can use 
 You can click **View recommendations** to see suggested images based on the text of your blog post or page.
 
    You can also go to the **Downloads** tab to see images that you have already licensed.
-   The images that are available for redownload depend on the subscription that the plugin is using; to connect the plugin to your subscription, fill out the form at https://www.shutterstock.com/design/plugins-wordpress.
+   The images that are available for redownload depend on the subscription that the plugin is using; to connect the plugin to your subscription, fill out the form at [https://www.shutterstock.com/design/plugins-wordpress](https://www.shutterstock.com/design/plugins-wordpress).
 
 1. To try a piece of media in your page, click its **Insert Preview** button. WordPress adds a watermarked preview of the image to your page.
 
