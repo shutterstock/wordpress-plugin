@@ -107,6 +107,9 @@ You can click **View recommendations** to see suggested images based on the text
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.2.2
+* Documentation updates
+
 = 1.2.1
 * Updated readme
 * Improvements and bugfixes
