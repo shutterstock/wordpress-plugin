@@ -6,10 +6,13 @@
 	"license": "MIT",
 	"main": "build/index.js",
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "yarn build:shutterstock:block && yarn build:shutterstock:mediapage",
+		"build:shutterstock:mediapage": "wp-scripts build ./src/components/ShutterstockMediaPage/index.js --output-path=../../admin/shutterstock-media-page",
+		"build:shutterstock:block": "wp-scripts build",
 		"format:js": "wp-scripts format-js",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
+		"start:shutterstock:mediapage": "wp-scripts start ./src/components/ShutterstockMediaPage/index.js --output-path=../../admin/shutterstock-media-page",
 		"start": "wp-scripts start",
 		"packages-update": "wp-scripts packages-update"
 	},

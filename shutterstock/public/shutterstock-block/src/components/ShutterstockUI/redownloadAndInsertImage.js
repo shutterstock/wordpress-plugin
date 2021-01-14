@@ -2,24 +2,24 @@ import apiFetch from '@wordpress/api-fetch';
 import { __ } from '@wordpress/i18n';
 
 const redownloadAndInsertImage = async (item, props) => {
-	const { toggleOverlay, licenseId, size, setAttributes, closeModal, handleError } = props;
+	const { toggleOverlay, licenseId, size, setAttributes, closeModal, handleError, isMediaPage, showSnackbar } = props;
 	try {
 		toggleOverlay(true, __('wordpress:downloading_image', 'shutterstock'));
 		const contributorId = item?.contributor?.id;
 		let contributorName = '';
-		
+
 		if (contributorId) {
 			const contributorDetails = await apiFetch({ path: `shutterstock/contributor/${contributorId}`});
 			contributorName = contributorDetails?.data?.[0]?.display_name || contributorId;
 		}
-		
+
 		const { assets } = await apiFetch({ path: `shutterstock/images/${item.id}?mediaType=images` });
 
 		const redownloadedImage = await apiFetch({
 			path: `shutterstock/images/licenses/${licenseId}/downloads`,
 			method: 'POST',
 			contentType: 'application/json',
-			data: {	  
+			data: {
 				mediaType: 'images',
 				size,
 				contributorName,
@@ -31,16 +31,20 @@ const redownloadAndInsertImage = async (item, props) => {
 
 	 if (redownloadedImage?.success) {
 			const { url, id } = redownloadedImage.data;
+			if (!isMediaPage) {
+				setAttributes({
+					img: {
+						...item,
+						licensedImageUrl: url,
+						contributorName,
+						uploadedImageId: id
+					}
+				});
+				closeModal();
+			} else if (isMediaPage) {
+				showSnackbar(__('wordpress:text_image_stored_in_media_library', 'shutterstock'));
+			}
 
-			setAttributes({
-				img: {
-					...item,
-					licensedImageUrl: url,
-					contributorName,
-					uploadedImageId: id
-				}
-			});
-			closeModal();
 			toggleOverlay(false);
 		} else {
 			handleError(redownloadedImage);

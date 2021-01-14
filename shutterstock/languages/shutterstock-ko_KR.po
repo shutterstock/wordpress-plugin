@@ -6,14 +6,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"POT-Creation-Date: 2020-11-27T12:15:24.314Z\n"
-"PO-Revision-Date: 2020-11-27T12:15:24.314Z\n"
+"POT-Creation-Date: 2021-01-13T19:17:29.506Z\n"
+"PO-Revision-Date: 2021-01-13T19:17:29.506Z\n"
 "Language: ko_KR\n"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "연결됨"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "이미지를 다운로드하는 중입니다. 기다려 주세요."
@@ -28,31 +29,32 @@ msgstr "WordPress의 훌륭한 로열티 프리 콘텐츠에 바로 액세스하
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "게시물에 Shutterstock 콘텐츠를 추가하세요"
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "API 키 *"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "필수. 생성한 앱의 API 키를 사용하세요."
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "API 시크릿 *"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "필수. 생성한 앱의 API 시크릿을 사용하세요."
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "앱 토큰 *"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "사용 허가 시 필수."
 
@@ -61,6 +63,7 @@ msgid "wordpress:text_block_description_in_sidebar"
 msgstr "Shutterstock 이미지 검색 및 삽입을 위한 Shutterstock 블록"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr "3억 4천만 개 이상의 고품질 사진, 벡터 및 일러스트가 있는 Shutterstock 라이브러리에서 이미지를 추가하세요."
 
@@ -68,30 +71,45 @@ msgstr "3억 4천만 개 이상의 고품질 사진, 벡터 및 일러스트가 
 msgid "wordpress:text_browse"
 msgstr "찾아보기"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "다운로드 및 삽입"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "다운로드"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "다운로드"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "에디토리얼"
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "에디토리얼 국가"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr "특정 국가에서 배포가 가능한 에디토리얼 콘텐츠만 표시합니다(ISO 3166 Alpha-3/세 자리 국가 코드)."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "홈"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "이미지가 미디어 라이브러리에 저장됨"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr "이미지"
@@ -103,10 +121,12 @@ msgstr ""
 "플러그인을 사용하려면 Shutterstock 계정 정보를 입력해 주세요. <a href=\"%s\" "
 "target=\"_blank\">개발자 앱 페이지</a>에서 앱을 생성하고 토큰에 액세스할 수 있습니다."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "미리 보기 삽입"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "라이선스"
@@ -124,22 +144,25 @@ msgid "wordpress:text_license_images"
 msgstr "이미지에 라이선스 부여"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "이 이미지에 라이선스 부여"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "이미지에 라이선스를 부여 중입니다. 기다려 주세요."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "로드 중입니다. 기다려 주세요."
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "Shutterstock으로 로그인"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "로그아웃"
 
@@ -147,15 +170,16 @@ msgstr "로그아웃"
 msgid "wordpress:text_search_editorial_images"
 msgstr "에디토리얼 이미지 검색"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "문제가 발생했습니다. 다시 시도해 주세요."
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "사용자 설정"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr "자산을 검색하거나 자산에 라이선스를 부여할 수 있는 사용자 역할을 정의하세요."
 

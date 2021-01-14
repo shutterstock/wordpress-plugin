@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.513Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "zh_CN",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "\u6b63\u5728\u4e0b\u8f7d\u56fe\u7247\u3002\u8bf7\u7a0d\u5019\u3002"
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "\u5c06 Shutterstock \u5185\u5bb9\u6dfb\u52a0\u5230\u60a8\u7684\u6587\u7ae0"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "\u4e0b\u8f7d\u548c\u63d2\u5165"
+            ],
+            "wordpress:text_download": [
+                "\u4e0b\u8f7d"
+            ],
+            "wordpress:text_downloads": [
+                "\u4e0b\u8f7d"
+            ],
+            "wordpress:text_editorial": [
+                "\u65b0\u95fb\u4f20\u5a92"
+            ],
+            "wordpress:text_home": [
+                "\u9996\u9875"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "\u5b58\u50a8\u5728\u5a92\u4f53\u5e93\u4e2d\u7684\u56fe\u7247"
+            ],
+            "wordpress:text_images": [
+                "\u56fe\u7247"
+            ],
+            "wordpress:text_insert_preview": [
+                "\u63d2\u5165\u9884\u89c8"
+            ],
+            "wordpress:text_license": [
+                "\u8bb8\u53ef"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "\u8bb8\u53ef\u56fe\u7247\u3002\u8bf7\u7a0d\u5019\u3002"
+            ],
+            "wordpress:text_loading_please_wait": [
+                "\u6b63\u5728\u52a0\u8f7d\u3002\u8bf7\u7a0d\u5019\u3002"
+            ],
+            "wordpress:text_something_went_wrong": [
+                "\u51fa\u73b0\u9519\u8bef\u3002\u8bf7\u91cd\u8bd5\u3002"
+            ]
+        }
+    }
+}

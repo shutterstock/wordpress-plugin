@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.491Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fi",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "Ladataan kuvaa. Odota."
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Lis\u00e4\u00e4 Shutterstock-sis\u00e4lt\u00f6\u00e4 julkaisuusi"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "Lataa ja lis\u00e4\u00e4"
+            ],
+            "wordpress:text_download": [
+                "Lataa"
+            ],
+            "wordpress:text_downloads": [
+                "Lataukset"
+            ],
+            "wordpress:text_editorial": [
+                "Toimituksellinen sis\u00e4lt\u00f6"
+            ],
+            "wordpress:text_home": [
+                "Etusivu"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Kuva tallennettu mediakirjastoon"
+            ],
+            "wordpress:text_images": [
+                "Kuvat"
+            ],
+            "wordpress:text_insert_preview": [
+                "Aseta esikatselu"
+            ],
+            "wordpress:text_license": [
+                "Lisenssi"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Lisensoidaan kuvaa. Odota."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Ladataan. Odota."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Jokin meni pieleen. Yrit\u00e4 uudelleen."
+            ]
+        }
+    }
+}

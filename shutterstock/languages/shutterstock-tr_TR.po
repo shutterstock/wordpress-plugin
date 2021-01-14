@@ -6,14 +6,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n > 1)\n"
-"POT-Creation-Date: 2020-11-27T12:15:24.308Z\n"
-"PO-Revision-Date: 2020-11-27T12:15:24.308Z\n"
+"POT-Creation-Date: 2021-01-13T19:17:29.495Z\n"
+"PO-Revision-Date: 2021-01-13T19:17:29.495Z\n"
 "Language: tr_TR\n"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "Bağlandı"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "Görsel indiriliyor. Lütfen bekleyin."
@@ -28,31 +29,32 @@ msgstr "Doğrudan WordPress’ten istisnai ve telifsiz içeriğe erişin."
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Yayınınıza Shutterstock içeriği ekleyin"
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "API Anahtarı *"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "Zorunlu. Oluşturduğunuz bir uygulamadaki API anahtarını kullanın."
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "API Gizli Sorusu *"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "Zorunlu. Oluşturduğunuz bir uygulamadaki API gizli sorusunu kullanın."
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "Uygulama Belirteci *"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "Lisanslama için zorunludur."
 
@@ -60,6 +62,7 @@ msgstr "Lisanslama için zorunludur."
 msgid "wordpress:text_block_description_in_sidebar"
 msgstr "Shutterstock Görselleri aramak ve eklemek için Shutterstock bloğu"
 
+#: public/shutterstock-block/build/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr ""
@@ -70,32 +73,47 @@ msgstr ""
 msgid "wordpress:text_browse"
 msgstr "Göz at"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "İndir ve Ekle"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "İndir"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "İndirmeler"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Haber Amaçlı İçerik"
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "Haber Amaçlı İçerik Ülkesi"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Yalnızca belirli bir ülkede dağıtımda olan haber amaçlı içerikleri "
 "görüntüleyin (Üç karakterli (ISO 3166 Alpha-3) ülke kodu)."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "Ana Sayfa"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "Bu görsel, medya kütüphanesinde saklandı"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr "Görseller"
@@ -108,10 +126,12 @@ msgstr ""
 "<a href=\"%s\" target=\"_blank\">Geliştirici uygulamaları sayfanızda</a> "
 "bir uygulama ve erişim belirteci oluşturabilirsiniz."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "Önizleme ekle"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "Lisans"
@@ -129,22 +149,25 @@ msgid "wordpress:text_license_images"
 msgstr "Görselleri Lisansla"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "Bu görseli lisansla"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "Görsel lisanslanıyor. Lütfen bekleyin."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "Yükleniyor. Lütfen bekleyin."
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "Shutterstock’ta oturum açın"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "Oturumu Kapat"
 
@@ -152,15 +175,16 @@ msgstr "Oturumu Kapat"
 msgid "wordpress:text_search_editorial_images"
 msgstr "Haber Amaçlı Görsel Ara"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "Bir sorun oluştu. Lütfen tekrar deneyin."
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "Kullanıcı Ayarları"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr ""
 "Varlık aramak ve/veya lisanslamak için hangi kullanıcı rollerine izin "

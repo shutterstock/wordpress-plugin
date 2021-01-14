@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.476Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fr_FR",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "T\u00e9l\u00e9chargement de l\u2019image en cours. Veuillez patienter."
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Ajouter du contenu Shutterstock \u00e0 votre publication"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "T\u00e9l\u00e9charger et ins\u00e9rer"
+            ],
+            "wordpress:text_download": [
+                "T\u00e9l\u00e9charger"
+            ],
+            "wordpress:text_downloads": [
+                "T\u00e9l\u00e9chargements"
+            ],
+            "wordpress:text_editorial": [
+                "\u00c9ditorial"
+            ],
+            "wordpress:text_home": [
+                "Accueil"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Image stock\u00e9e dans la biblioth\u00e8que multim\u00e9dia"
+            ],
+            "wordpress:text_images": [
+                "Images"
+            ],
+            "wordpress:text_insert_preview": [
+                "Ins\u00e9rer l\u2019aper\u00e7u"
+            ],
+            "wordpress:text_license": [
+                "Licence"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Association d\u2019une licence \u00e0 l\u2019image en cours. Veuillez patienter."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Chargement en cours. Veuillez patienter."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Un probl\u00e8me est survenu. Veuillez r\u00e9essayer."
+            ]
+        }
+    }
+}

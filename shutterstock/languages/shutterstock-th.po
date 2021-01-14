@@ -6,14 +6,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"POT-Creation-Date: 2020-11-27T12:15:24.312Z\n"
-"PO-Revision-Date: 2020-11-27T12:15:24.312Z\n"
+"POT-Creation-Date: 2021-01-13T19:17:29.502Z\n"
+"PO-Revision-Date: 2021-01-13T19:17:29.502Z\n"
 "Language: th\n"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "เชื่อมต่ออยู่"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "ดาวน์โหลดภาพ โปรดรอสักครู่"
@@ -28,31 +29,32 @@ msgstr "เข้าถึงเนื้อหาที่โดดเด่น
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "เพิ่มเนื้อหา Shutterstock ในโพสต์ของคุณ"
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "รหัส API*"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "ต้องมี ใช้รหัส API จากแอปที่คุณสร้างขึ้น"
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "ข้อมูลลับ API*"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "ต้องมี ใช้ข้อมูลลับ API จากแอปที่คุณสร้างขึ้น"
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "โทเค็นของแอป*"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "ต้องมีสำหรับการรับสิทธิ์ใช้งาน"
 
@@ -60,6 +62,7 @@ msgstr "ต้องมีสำหรับการรับสิทธิ์
 msgid "wordpress:text_block_description_in_sidebar"
 msgstr "บล็อก Shutterstock สำหรับการเรียกดูและแทรกภาพของ Shutterstock"
 
+#: public/shutterstock-block/build/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr ""
@@ -70,32 +73,47 @@ msgstr ""
 msgid "wordpress:text_browse"
 msgstr "เรียกดู"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "ดาวน์โหลดและแทรก"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "ดาวน์โหลด"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "การดาวน์โหลด"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "บทความข่าว"
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "ประเทศของบทความข่าว"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "แสดงเฉพาะเนื้อหาบทความข่าวที่สามารถแจกจ่ายในบางประเทศ "
 "(รหัสประเทศสามตัวอักษร (ISO 3166 Alpha-3))"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "หน้าแรก"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "เก็บภาพในไลบรารีสื่อ"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr "ภาพ"
@@ -108,10 +126,12 @@ msgstr ""
 "คุณสามารถสร้างแอปและเข้าถึงโทเค็นใน <a href=\"%s\" "
 "target=\"_blank\">หน้าแอปของนักพัฒนา</a>"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "แทรกตัวอย่าง"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "สิทธิ์ใช้งาน"
@@ -129,22 +149,25 @@ msgid "wordpress:text_license_images"
 msgstr "ภาพที่ให้สิทธิ์ใช้งาน"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "รับสิทธิ์ใช้งานภาพนี้"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "การรับสิทธิ์ใช้งานภาพ โปรดรอสักครู่"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "กำลังโหลด โปรดรอสักครู่"
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "เข้าสู่ระบบด้วย Shutterstock"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "ออกจากระบบ"
 
@@ -152,15 +175,16 @@ msgstr "ออกจากระบบ"
 msgid "wordpress:text_search_editorial_images"
 msgstr "ค้นหาภาพสำหรับบทความข่าว"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "มีข้อผิดพลาด โปรดลองอีกครั้ง"
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "การตั้งค่าของผู้ใช้"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr "กำหนดบทบาทของผู้ใช้ที่อนุญาตให้ค้นหา และ/หรือ รับสิทธิ์ใช้งานเนื้อหา"
 

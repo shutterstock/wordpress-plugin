@@ -49,10 +49,11 @@ class Shutterstock_Admin {
 	 * @param      string    $shutterstock       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $shutterstock, $version ) {
+	public function __construct( $shutterstock, $version, $shutterstock_ui ) {
 
 		$this->shutterstock = $shutterstock;
 		$this->version = $version;
+		$this->shutterstock_ui = $shutterstock_ui;
 	}
 
 	/**
@@ -73,7 +74,6 @@ class Shutterstock_Admin {
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
-
 		wp_enqueue_style( $this->shutterstock, plugin_dir_url( __FILE__ ) . 'css/shutterstock-admin.css', array(), $this->version, 'all' );
 
 	}
@@ -83,7 +83,7 @@ class Shutterstock_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts($hook) {
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -99,6 +99,53 @@ class Shutterstock_Admin {
 
 		wp_enqueue_script( $this->shutterstock, plugin_dir_url( __FILE__ ) . 'js/shutterstock-admin.js', array( 'jquery' ), $this->version, false );
 
+		if ('media_page_shutterstock_media_page' === $hook) {
+			$this->load_scripts_for_media_page();
+		}
+	}
+
+	public function load_scripts_for_media_page() {
+		wp_register_style('shutterstock-media-page-shutterstock-ui-css', $this->shutterstock_ui['css']);
+		wp_enqueue_style( 'shutterstock-media-page-shutterstock-ui-css');
+		wp_register_script('shutterstock-media-page-shuttestock-ui-js', $this->shutterstock_ui['js']);
+		wp_enqueue_script( 'shutterstock-media-page-shuttestock-ui-js');
+
+		$dir = dirname( __FILE__ );
+
+		$script_asset_path = "$dir/shutterstock-media-page/index.asset.php";
+
+		if ( ! file_exists( $script_asset_path ) ) {
+			throw new Error(
+				'You need to run `npm start:shutterstock:mediapage` or `npm run build:shutterstock:mediapage` for the "shutterstock/public/shutterstock-block" block first.'
+			);
+		}
+
+
+		// Registering the shutterstock-media-page script
+		$index_js     = 'shutterstock-media-page/index.js';
+		$script_asset = require(dirname( __FILE__ ) . '/shutterstock-media-page/index.asset.php' );
+
+		// Registering the shutterstock-media-page styles
+		$index_css = 'shutterstock-media-page/index.css';
+
+		wp_register_style('shutterstock-media-page-styles', plugins_url( $index_css, __FILE__ ));
+
+		wp_register_script(
+			'shutterstock-media-page',
+			plugins_url( $index_js, __FILE__ ),
+			$script_asset['dependencies'],
+			$script_asset['version']
+		);
+
+		$loaded = wp_set_script_translations( 'shutterstock-media-page', 'shutterstock', plugin_dir_path(__DIR__) . 'languages/');
+
+		wp_enqueue_script('shutterstock-media-page');
+		wp_enqueue_style( 'shutterstock-media-page-styles');
+
+		$shutterstock_helper = new Shutterstock_Helper($this->shutterstock, $this->version);
+		$shutterstock_js_object = $shutterstock_helper->get_shutterstock_js_object();
+
+		wp_localize_script('shutterstock-media-page-shuttestock-ui-js', 'shutterstock', $shutterstock_js_object );
 	}
 
 	public function add_admin_settings_page() {
@@ -109,6 +156,19 @@ class Shutterstock_Admin {
 			"{$this->shutterstock}_options_page", // menu_slug
 			array( $this, 'create_admin_settings_page') // function
 		);
+
+		add_submenu_page(
+			'upload.php',
+			'Shutterstock',
+			'Shutterstock',
+			'upload_files',
+			'shutterstock_media_page',
+			array($this, 'create_media_page')
+		);
+	}
+
+	public function create_media_page() {
+		include( plugin_dir_path( __FILE__ ) . "partials/{$this->shutterstock}-media-shutterstock.php");
 	}
 
 	public function add_network_admin_settings_page() {
@@ -276,7 +336,7 @@ class Shutterstock_Admin {
 			'shutterstock_setting_section', // section
 			array(
 				'id' => 'user_settings',
-				'description' => __('wordpress:text_user_settings_description', 'shutterstock'),				
+				'description' => __('wordpress:text_user_settings_description', 'shutterstock'),
 			)
 		);
 
@@ -535,5 +595,5 @@ class Shutterstock_Admin {
         $decoded_body = json_decode($response_body, true);
 
         return $decoded_body['access_token'];
-    }
+	}
 }

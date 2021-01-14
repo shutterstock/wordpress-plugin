@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.482Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "nl_NL",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "Afbeelding downloaden. Een ogenblik geduld."
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Voeg Shutterstock-content toe aan je bericht"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "Downloaden en invoegen"
+            ],
+            "wordpress:text_download": [
+                "Downloaden"
+            ],
+            "wordpress:text_downloads": [
+                "Downloads"
+            ],
+            "wordpress:text_editorial": [
+                "Redactioneel"
+            ],
+            "wordpress:text_home": [
+                "Startpagina"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Afbeelding opgeslagen in mediabibliotheek"
+            ],
+            "wordpress:text_images": [
+                "Afbeeldingen"
+            ],
+            "wordpress:text_insert_preview": [
+                "Voorbeeld invoegen"
+            ],
+            "wordpress:text_license": [
+                "Licenti\u00ebren"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Afbeelding licenti\u00ebren. Een ogenblik geduld."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Laden\u2026 Een ogenblik geduld."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Er is iets misgegaan. Probeer het opnieuw."
+            ]
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.493Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "sv_SE",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "Laddar ned bilder. V\u00e4nta."
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "L\u00e4gg till Shutterstock-inneh\u00e5ll till din post"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "Ladda ned och infoga"
+            ],
+            "wordpress:text_download": [
+                "Ladda ned"
+            ],
+            "wordpress:text_downloads": [
+                "Nedladdningar"
+            ],
+            "wordpress:text_editorial": [
+                "Redaktionellt"
+            ],
+            "wordpress:text_home": [
+                "Hem"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Bild lagrad i mediabiblioteket"
+            ],
+            "wordpress:text_images": [
+                "Bilder"
+            ],
+            "wordpress:text_insert_preview": [
+                "Infoga f\u00f6rhandsgranskning"
+            ],
+            "wordpress:text_license": [
+                "Licens"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Licensierar bild. V\u00e4nta."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "L\u00e4ser in. V\u00e4nta."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "N\u00e5got gick fel. F\u00f6rs\u00f6k igen."
+            ]
+        }
+    }
+}
