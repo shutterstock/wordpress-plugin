@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-27T12:15:24.308Z",
+    "translation-revision-date": "2021-01-13T19:17:29.495Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -28,6 +28,9 @@
             "wordpress:text_dowbload_and_insert": [
                 "\u0130ndir ve Ekle"
             ],
+            "wordpress:text_download": [
+                "\u0130ndir"
+            ],
             "wordpress:text_downloads": [
                 "\u0130ndirmeler"
             ],
@@ -36,6 +39,9 @@
             ],
             "wordpress:text_home": [
                 "Ana Sayfa"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Bu g\u00f6rsel, medya k\u00fct\u00fcphanesinde sakland\u0131"
             ],
             "wordpress:text_images": [
                 "G\u00f6rseller"

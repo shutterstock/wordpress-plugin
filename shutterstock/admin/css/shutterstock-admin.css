@@ -58,3 +58,7 @@ button.logout, input.login {
 .hidden {
   display: none !important;
 }
+
+body.media_page_shutterstock_media_page {
+  background: #fff;
+}

@@ -23,51 +23,51 @@ msgstr "Shutterstock"
 msgid "wordpress:plugin_description"
 msgstr "Access exceptional, royalty-free content straight from WordPress."
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "API Key *"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "Required. Use the API key from an app you have created."
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "API Secret *"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "Required. Use the API secret from an app you have created."
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "App Token *"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "Logout"
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "Log in with Shutterstock"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "Required for licensing."
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "Editorial Country"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr "Show only editorial content that is available for distribution in a certain country (A three-character (ISO 3166 Alpha-3) country code)."
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "User Settings"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr "Define which user roles are allowed to search and/or license assets."
 
@@ -75,7 +75,7 @@ msgstr "Define which user roles are allowed to search and/or license assets."
 msgid "wordpress:logging_out"
 msgstr "Logging out"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "Connected"
 
@@ -104,62 +104,86 @@ msgstr "User Type"
 msgid "wordpress:text_insert_account_information"
 msgstr "Please insert your Shutterstock account information to use this plugin. You can create an app and access token on your  <a href=\"%s\" target=\"_blank\">developer apps page</a>."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "Downloading image. Please wait."
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "Image stored in media library"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "Something went wrong. Please try again."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "Insert preview"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "License"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "Loading. Please wait."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "Licensing Image. Please wait."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "Download and Insert"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "Download"
+
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Add Shutterstock content to your post"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
-msgid "wordpress:text_images"	
+msgid "wordpress:text_images"
 msgstr "Images"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Editorial"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Add Shutterstock content to your post"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "Home"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "Downloads"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "License this image"
 
+#: public/shutterstock-block/build/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr "Add images from Shutterstock's library of over 340  million high-quality photos, vectors and illustrations."

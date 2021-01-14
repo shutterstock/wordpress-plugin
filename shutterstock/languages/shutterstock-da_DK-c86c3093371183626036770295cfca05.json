@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.466Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "da_DK",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "Henter billede. Vent et \u00f8jeblik."
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Tilf\u00f8j Shutterstock-indhold til din postering"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "Download og inds\u00e6t"
+            ],
+            "wordpress:text_download": [
+                "Download"
+            ],
+            "wordpress:text_downloads": [
+                "Downloads"
+            ],
+            "wordpress:text_editorial": [
+                "Redaktionel"
+            ],
+            "wordpress:text_home": [
+                "Hjem"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Billede gemt i mediebibliotek"
+            ],
+            "wordpress:text_images": [
+                "Billeder"
+            ],
+            "wordpress:text_insert_preview": [
+                "Inds\u00e6t forh\u00e5ndsvisning"
+            ],
+            "wordpress:text_license": [
+                "Licens"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "F\u00e5 licens p\u00e5 billede. Vent et \u00f8jeblik."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Indl\u00e6ser. Vent et \u00f8jeblik."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Der opstod en fejl. Pr\u00f8v igen."
+            ]
+        }
+    }
+}

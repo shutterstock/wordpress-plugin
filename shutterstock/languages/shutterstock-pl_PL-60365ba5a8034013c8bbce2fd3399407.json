@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-27T12:15:24.300Z",
+    "translation-revision-date": "2021-01-13T19:17:29.487Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -28,6 +28,9 @@
             "wordpress:text_dowbload_and_insert": [
                 "Pobierz i wstaw"
             ],
+            "wordpress:text_download": [
+                "Pobierz"
+            ],
             "wordpress:text_downloads": [
                 "Materia\u0142y do pobrania"
             ],
@@ -36,6 +39,9 @@
             ],
             "wordpress:text_home": [
                 "Strona g\u0142\u00f3wna"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Obraz przechowywany w bibliotece multimedi\u00f3w"
             ],
             "wordpress:text_images": [
                 "Obrazy"

@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.484Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "nb_NO",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "Laster ned bildet. Vent."
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Legg til Shutterstock-innhold i innlegget ditt"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "Last ned og sett inn"
+            ],
+            "wordpress:text_download": [
+                "Last ned"
+            ],
+            "wordpress:text_downloads": [
+                "Nedlastinger"
+            ],
+            "wordpress:text_editorial": [
+                "Redaksjonelt"
+            ],
+            "wordpress:text_home": [
+                "Hjem"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Bildet er lagret i mediebiblioteket"
+            ],
+            "wordpress:text_images": [
+                "Bilder"
+            ],
+            "wordpress:text_insert_preview": [
+                "Sett inn forh\u00e5ndsvisning"
+            ],
+            "wordpress:text_license": [
+                "Lisens"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "Lisensierer bildet. Vent."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Laster. Vent."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Noe gikk galt. Pr\u00f8v p\u00e5 nytt."
+            ]
+        }
+    }
+}

@@ -3,7 +3,7 @@ Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
 Tested up to: 5.6
-Stable tag: 1.2.1
+Stable tag: 1.3.0
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -40,7 +40,7 @@ This plugin uses the Shutterstock API. For more information, see [https://develo
 
 By default, WordPress sites have access to a limited library of Shutterstock media. **To connect the WordPress plugin to your existing subscription or access our full collection, fill out the form at [https://www.shutterstock.com/design/plugins-wordpress](https://www.shutterstock.com/design/plugins-wordpress).**
 
-To install the Shutterstock plugin for WordPress, you need an API application for the Shutterstock API. You can create an application at [https://www.shutterstock.com/account/developers/apps](https://www.shutterstock.com/account/developers/apps). 
+To install the Shutterstock plugin for WordPress, you need an API application for the Shutterstock API. You can create an application at [https://www.shutterstock.com/account/developers/apps](https://www.shutterstock.com/account/developers/apps).
 
 The plugin works only with API applications that have referrer authentication enabled. In your application, you must specify the host names on which your WordPress site runs.
 
@@ -88,7 +88,7 @@ Now that you have the Shutterstock plugin installed and configured, you can use 
 
    ![Shutterstock block added to the page](browse_button.png)
 
-1. In the new block, click **Browse**. 
+1. In the new block, click **Browse**.
 1. In the popup window, search Shutterstock's library for media to add.
 You can click **View recommendations** to see suggested images based on the text of your blog post or page.
 
@@ -107,18 +107,21 @@ You can click **View recommendations** to see suggested images based on the text
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
-= 1.2.2
+= 1.3.0 =
+* Added Shutterstock Tab to Media Library (Media > Shutterstock)
+
+= 1.2.2 =
 * Documentation updates
 
-= 1.2.1
+= 1.2.1 =
 * Updated readme
 * Improvements and bugfixes
 
 = 1.2.0 =
-Introduced smart image recommendations and license history with re-download functionality
+* Introduced smart image recommendations and license history with re-download functionality
 
 = 1.1.1 =
-Add translations
+* Add translations
 
 = 1.1.0 =
-Initial version
+* Initial version

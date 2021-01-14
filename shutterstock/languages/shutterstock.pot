@@ -1,15 +1,15 @@
-# Copyright (C) 2020 Shutterstock
+# Copyright (C) 2021 Shutterstock
 # This file is distributed under the same license as the Shutterstock plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: Shutterstock 1.1.1\n"
+"Project-Id-Version: Shutterstock 1.2.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/shutterstock\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2020-11-20T15:02:27+00:00\n"
+"POT-Creation-Date: 2021-01-07T11:42:08+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: shutterstock\n"
@@ -23,51 +23,51 @@ msgstr ""
 msgid "Access exceptional, royalty-free content straight from WordPress."
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr ""
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr ""
 
@@ -75,7 +75,7 @@ msgstr ""
 msgid "wordpress:logging_out"
 msgstr ""
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr ""
 
@@ -104,50 +104,62 @@ msgstr ""
 msgid "wordpress:text_insert_account_information"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
-msgid "wordpress:text_something_went_wrong"
+msgid "wordpress:text_image_stored_in_media_library"
 msgstr ""
 
-#: public/shutterstock-block/build/index.js:1
-msgid "wordpress:text_insert_preview"
-msgstr ""
-
-#: public/shutterstock-block/build/index.js:1
-msgid "wordpress:text_license"
-msgstr ""
-
-#: public/shutterstock-block/build/index.js:1
-msgid "wordpress:text_loading_please_wait"
-msgstr ""
-
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
-msgid "wordpress:text_dowbload_and_insert"
+msgid "wordpress:text_something_went_wrong"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_insert_preview"
+msgstr ""
+
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_license"
+msgstr ""
+
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_loading_please_wait"
+msgstr ""
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr ""
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr ""

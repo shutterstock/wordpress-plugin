@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-27T12:15:24.310Z",
+    "translation-revision-date": "2021-01-13T19:17:29.499Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -28,6 +28,9 @@
             "wordpress:text_dowbload_and_insert": [
                 "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c \u0438 \u0432\u0441\u0442\u0430\u0432\u0438\u0442\u044c"
             ],
+            "wordpress:text_download": [
+                "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c"
+            ],
             "wordpress:text_downloads": [
                 "\u0417\u0430\u0433\u0440\u0443\u0437\u043a\u0438"
             ],
@@ -36,6 +39,9 @@
             ],
             "wordpress:text_home": [
                 "\u0414\u043e\u043c"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u0435 \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u043e \u0432 \u0431\u0438\u0431\u043b\u0438\u043e\u0442\u0435\u043a\u0435 \u043c\u0435\u0434\u0438\u0430"
             ],
             "wordpress:text_images": [
                 "\u0418\u0437\u043e\u0431\u0440\u0430\u0436\u0435\u043d\u0438\u044f"

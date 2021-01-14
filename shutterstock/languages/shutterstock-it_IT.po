@@ -6,14 +6,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-27T12:15:24.293Z\n"
-"PO-Revision-Date: 2020-11-27T12:15:24.293Z\n"
+"POT-Creation-Date: 2021-01-13T19:17:29.477Z\n"
+"PO-Revision-Date: 2021-01-13T19:17:29.477Z\n"
 "Language: it_IT\n"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "Connesso"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "Download dell'immagine in corso. Attendi."
@@ -28,31 +29,32 @@ msgstr "Accedi a contenuti royalty free eccezionali direttamente da WordPress."
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Aggiungi contenuti di Shutterstock al tuo post"
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "Chiave API*"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "Obbligatorio. Utilizza la chiave API da un'app che hai creato."
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "Segreto API*"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "Obbligatorio. Utilizza il segreto API da un'app che hai creato."
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "Token dell'app*"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "Obbligatorio per la concessione in licenza."
 
@@ -60,6 +62,7 @@ msgstr "Obbligatorio per la concessione in licenza."
 msgid "wordpress:text_block_description_in_sidebar"
 msgstr "Blocco di Shutterstock per sfogliare e inserire immagini di Shutterstock"
 
+#: public/shutterstock-block/build/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr ""
@@ -70,32 +73,47 @@ msgstr ""
 msgid "wordpress:text_browse"
 msgstr "Sfoglia"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "Scarica e inserisci"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "Scarica"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "Download"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Contenuti editoriali"
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "Contenuti editoriali Country"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Mostra solo i contenuti editoriali disponibili per la distribuzione in un "
 "determinato paese (codice paese a tre caratteri (ISO 3166 alfa-3))."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "Home"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "Immagine archiviata nella libreria multimediale"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr "Immagini"
@@ -108,10 +126,12 @@ msgstr ""
 "plugin. Puoi creare un'app e accedere ai token sulla tua <a href=\"%s\" "
 "target=\"_blank\">pagina delle app per sviluppatori</a>."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "Inserisci anteprima"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "Licenza"
@@ -129,22 +149,25 @@ msgid "wordpress:text_license_images"
 msgstr "Acquisisci in licenza immagini"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "Acquisisci in licenza questa immagine"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "Acquisisci immagine in licenza. Attendi."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "Caricamento in corso. Attendi."
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "Accedi con Shutterstock"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "Esci"
 
@@ -152,15 +175,16 @@ msgstr "Esci"
 msgid "wordpress:text_search_editorial_images"
 msgstr "Cerca tra le immagini editoriali"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "Si è verificato un errore. Riprova."
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "Impostazioni utente"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr ""
 "Definisci quali ruoli utente sono autorizzati a cercare e/o ad acquisire in "

@@ -1,0 +1,57 @@
+{
+    "translation-revision-date": "2021-01-13T19:17:29.495Z",
+    "generator": "WP-CLI\/2.4.0",
+    "source": "admin\/shutterstock-media-page\/index.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "tr_TR",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "wordpress:downloading_image": [
+                "G\u00f6rsel indiriliyor. L\u00fctfen bekleyin."
+            ],
+            "wordpress:text_add_shuttersock_content_to_post": [
+                "Yay\u0131n\u0131n\u0131za Shutterstock i\u00e7eri\u011fi ekleyin"
+            ],
+            "wordpress:text_dowbload_and_insert": [
+                "\u0130ndir ve Ekle"
+            ],
+            "wordpress:text_download": [
+                "\u0130ndir"
+            ],
+            "wordpress:text_downloads": [
+                "\u0130ndirmeler"
+            ],
+            "wordpress:text_editorial": [
+                "Haber Ama\u00e7l\u0131 \u0130\u00e7erik"
+            ],
+            "wordpress:text_home": [
+                "Ana Sayfa"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Bu g\u00f6rsel, medya k\u00fct\u00fcphanesinde sakland\u0131"
+            ],
+            "wordpress:text_images": [
+                "G\u00f6rseller"
+            ],
+            "wordpress:text_insert_preview": [
+                "\u00d6nizleme ekle"
+            ],
+            "wordpress:text_license": [
+                "Lisans"
+            ],
+            "wordpress:text_licensing_image_please_wait": [
+                "G\u00f6rsel lisanslan\u0131yor. L\u00fctfen bekleyin."
+            ],
+            "wordpress:text_loading_please_wait": [
+                "Y\u00fckleniyor. L\u00fctfen bekleyin."
+            ],
+            "wordpress:text_something_went_wrong": [
+                "Bir sorun olu\u015ftu. L\u00fctfen tekrar deneyin."
+            ]
+        }
+    }
+}

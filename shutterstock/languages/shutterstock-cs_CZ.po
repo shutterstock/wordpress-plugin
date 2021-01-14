@@ -6,14 +6,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2\n"
-"POT-Creation-Date: 2020-11-27T12:15:24.276Z\n"
-"PO-Revision-Date: 2020-11-27T12:15:24.276Z\n"
+"POT-Creation-Date: 2021-01-13T19:17:29.459Z\n"
+"PO-Revision-Date: 2021-01-13T19:17:29.459Z\n"
 "Language: cs_CZ\n"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "Připojeno"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "Probíhá stahování snímku. Čekejte prosím."
@@ -30,31 +31,32 @@ msgstr ""
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Přidejte obsah služby Shutterstock k vašemu příspěvku"
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "Klíč API *"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "Povinné. Použijte klíč API z aplikace, kterou jste vytvořili."
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "Tajný klíč API *"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "Povinné. Použijte tajný klíč API z aplikace, kterou jste vytvořili."
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "Token aplikace *"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "Povinné pro licencování."
 
@@ -62,6 +64,7 @@ msgstr "Povinné pro licencování."
 msgid "wordpress:text_block_description_in_sidebar"
 msgstr "Blok služby Shutterstock pro procházení a vkládání snímků Shutterstock"
 
+#: public/shutterstock-block/build/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr ""
@@ -72,32 +75,47 @@ msgstr ""
 msgid "wordpress:text_browse"
 msgstr "Procházet"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "Stáhnout a vložit"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "Stažení"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "Stažení"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Redakční"
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "Redakční země"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Zobrazit pouze redakční obsah, který je dostupný pro distribuci v určité "
 "zemi (třímístný (ISO 3166 Alpha-3) kód země)."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "Domů"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "Snímek byl uložen do knihovny médií"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr "Snímky"
@@ -110,10 +128,12 @@ msgstr ""
 "tohoto pluginu. Aplikaci a přístupový token můžete vytvořit na vaší <a "
 "href=\"%s\" target=\"_blank\">stránce vývojáře aplikací</a>."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "Vložit náhled"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "Licence"
@@ -131,22 +151,25 @@ msgid "wordpress:text_license_images"
 msgstr "Licencovat snímky"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "Licencovat tento snímek"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "Licencování snímku... Čekejte prosím..."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "Načítání... Čekejte prosím..."
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "Přihlášení pomocí služby Shutterstock"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "Odhlásit se"
 
@@ -154,15 +177,16 @@ msgstr "Odhlásit se"
 msgid "wordpress:text_search_editorial_images"
 msgstr "Vyhledat redakční snímky"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "Něco se nepovedlo. Zkuste to prosím znovu."
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "Uživatelská nastavení"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr ""
 "Definujte, které uživatelské role mají povolení vyhledat a/nebo licencovat "

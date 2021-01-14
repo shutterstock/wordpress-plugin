@@ -7,14 +7,15 @@ msgstr ""
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
-"POT-Creation-Date: 2020-11-27T12:15:24.310Z\n"
-"PO-Revision-Date: 2020-11-27T12:15:24.310Z\n"
+"POT-Creation-Date: 2021-01-13T19:17:29.499Z\n"
+"PO-Revision-Date: 2021-01-13T19:17:29.499Z\n"
 "Language: ru_RU\n"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "Подключено"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "Выполняется загрузка изображение. Подождите."
@@ -31,31 +32,32 @@ msgstr ""
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Добавьте материалы Shutterstock в свою публикацию"
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "Ключ API*"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "Обязательно. Используйте ключ API созданного приложения."
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "Секретный ключ API*"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "Обязательно. Используйте секретный ключ API созданного приложения."
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "Токен приложения*"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "Требуется для лицензирования."
 
@@ -63,6 +65,7 @@ msgstr "Требуется для лицензирования."
 msgid "wordpress:text_block_description_in_sidebar"
 msgstr "Блок Shutterstock для просмотра и вставки изображений Shutterstock"
 
+#: public/shutterstock-block/build/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr ""
@@ -73,33 +76,48 @@ msgstr ""
 msgid "wordpress:text_browse"
 msgstr "Обзор"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "Загрузить и вставить"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "Загрузить"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "Загрузки"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Редакционные материалы"
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "Страна для редакционных материалов"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Показывать только редакционные материалы, которые доступны для "
 "распространения в определенной стране (трехсимвольный (ISO 3166 Alpha-3) "
 "код страны)."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "Дом"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "Изображение сохранено в библиотеке медиа"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr "Изображения"
@@ -112,10 +130,12 @@ msgstr ""
 "модуль. Вы можете создать приложение и токен доступа на <a href=\"%s\" "
 "target=\"_blank\">странице для разработчиков приложений</a>."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "Вставить образец"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "Лицензия"
@@ -133,22 +153,25 @@ msgid "wordpress:text_license_images"
 msgstr "Лицензировать изображения"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "Лицензировать это изображение"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "Лицензирование изображения. Подождите."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "Загрузка. Подождите."
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "Вход через Shutterstock"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "Выход"
 
@@ -156,15 +179,16 @@ msgstr "Выход"
 msgid "wordpress:text_search_editorial_images"
 msgstr "Поиск редакционных изображений"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "Что-то пошло не так. Повторите попытку."
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "Пользовательские настройки"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr ""
 "Определите, пользователям с какими ролями разрешен поиск и/или "

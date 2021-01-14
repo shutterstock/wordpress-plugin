@@ -6,14 +6,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Domain: shutterstock\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-"POT-Creation-Date: 2020-11-27T12:15:24.298Z\n"
-"PO-Revision-Date: 2020-11-27T12:15:24.298Z\n"
+"POT-Creation-Date: 2021-01-13T19:17:29.484Z\n"
+"PO-Revision-Date: 2021-01-13T19:17:29.484Z\n"
 "Language: nb_NO\n"
 
-#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:29
+#: admin/partials/shutterstock-admin-field-shutterstock-login-button.php:33
 msgid "wordpress:connected"
 msgstr "Tilkoblet"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:downloading_image"
 msgstr "Laster ned bildet. Vent."
@@ -28,31 +29,32 @@ msgstr "Få tilgang til fantastisk royalty-fritt innhold direkte fra WordPress."
 msgid "wordpress:plugin_title"
 msgstr "Shutterstock"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_add_shuttersock_content_to_post"
 msgstr "Legg til Shutterstock-innhold i innlegget ditt"
 
-#: admin/class-shutterstock-admin.php:191
+#: admin/class-shutterstock-admin.php:251
 msgid "wordpress:text_api_key"
 msgstr "API-nøkkel *"
 
-#: admin/class-shutterstock-admin.php:197
+#: admin/class-shutterstock-admin.php:257
 msgid "wordpress:text_api_key_description"
 msgstr "Påkrevd. Bruk API-nøkkelen fra en app du har opprettet."
 
-#: admin/class-shutterstock-admin.php:203
+#: admin/class-shutterstock-admin.php:263
 msgid "wordpress:text_api_secret"
 msgstr "API-hemmelighet *"
 
-#: admin/class-shutterstock-admin.php:209
+#: admin/class-shutterstock-admin.php:269
 msgid "wordpress:text_api_secret_description"
 msgstr "Påkrevd. Bruk API-hemmeligheten fra en app du har opprettet."
 
-#: admin/class-shutterstock-admin.php:242
+#: admin/class-shutterstock-admin.php:302
 msgid "wordpress:text_app_token"
 msgstr "App-token *"
 
-#: admin/class-shutterstock-admin.php:254
+#: admin/class-shutterstock-admin.php:314
 msgid "wordpress:text_app_token_description"
 msgstr "Påkrevd for lisensiering."
 
@@ -60,6 +62,7 @@ msgstr "Påkrevd for lisensiering."
 msgid "wordpress:text_block_description_in_sidebar"
 msgstr "Shutterstock-blokkering for å bla gjennom og sette inn Shutterstock-bilder"
 
+#: public/shutterstock-block/build/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_block_paragraph"
 msgstr ""
@@ -70,32 +73,47 @@ msgstr ""
 msgid "wordpress:text_browse"
 msgstr "Bla gjennom"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_dowbload_and_insert"
 msgstr "Last ned og sett inn"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_download"
+msgstr "Last ned"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_downloads"
 msgstr "Nedlastinger"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_editorial"
 msgstr "Redaksjonelt"
 
-#: admin/class-shutterstock-admin.php:261
+#: admin/class-shutterstock-admin.php:321
 msgid "wordpress:text_editorial_country"
 msgstr "Redaksjonelt land"
 
-#: admin/class-shutterstock-admin.php:267
+#: admin/class-shutterstock-admin.php:327
 msgid "wordpress:text_editorial_country_description"
 msgstr ""
 "Bare vis redaksjonelt innhold som er tilgjengelig for distribusjon i et "
 "bestemt land (landskode med tre tegn (ISO 3166 Alpha-3))."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_home"
 msgstr "Hjem"
 
+#: admin/shutterstock-media-page/index.js:1
+#: public/shutterstock-block/build/index.js:1
+msgid "wordpress:text_image_stored_in_media_library"
+msgstr "Bildet er lagret i mediebiblioteket"
+
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_images"
 msgstr "Bilder"
@@ -108,10 +126,12 @@ msgstr ""
 "pluginet. Du kan opprette en app og få tilgang til token på <a href=\"%s\" "
 "target=\"_blank\">siden for utviklerapper</a>."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_insert_preview"
 msgstr "Sett inn forhåndsvisning"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license"
 msgstr "Lisens"
@@ -129,22 +149,25 @@ msgid "wordpress:text_license_images"
 msgstr "Lisensier bilder"
 
 #: public/shutterstock-block/build/index.js:1
+#: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_license_this_image"
 msgstr "Lisensier dette bildet"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_licensing_image_please_wait"
 msgstr "Lisensierer bildet. Vent."
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_loading_please_wait"
 msgstr "Laster. Vent."
 
-#: admin/class-shutterstock-admin.php:253
+#: admin/class-shutterstock-admin.php:313
 msgid "wordpress:text_log_in_with_shutterstock"
 msgstr "Logg på med Shutterstock"
 
-#: admin/class-shutterstock-admin.php:252
+#: admin/class-shutterstock-admin.php:312
 msgid "wordpress:text_logout"
 msgstr "Logg ut"
 
@@ -152,15 +175,16 @@ msgstr "Logg ut"
 msgid "wordpress:text_search_editorial_images"
 msgstr "Søk i redaksjonelle bilder"
 
+#: admin/shutterstock-media-page/index.js:1
 #: public/shutterstock-block/build/index.js:1
 msgid "wordpress:text_something_went_wrong"
 msgstr "Noe gikk galt. Prøv på nytt."
 
-#: admin/class-shutterstock-admin.php:273
+#: admin/class-shutterstock-admin.php:333
 msgid "wordpress:text_user_settings"
 msgstr "Brukerinnstillinger"
 
-#: admin/class-shutterstock-admin.php:279
+#: admin/class-shutterstock-admin.php:339
 msgid "wordpress:text_user_settings_description"
 msgstr ""
 "Definer hvilke brukerroller som har tillatelse til å søke og/eller "

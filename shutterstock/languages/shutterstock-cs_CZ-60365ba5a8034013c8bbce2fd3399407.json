@@ -1,5 +1,5 @@
 {
-    "translation-revision-date": "2020-11-27T12:15:24.276Z",
+    "translation-revision-date": "2021-01-13T19:17:29.459Z",
     "generator": "WP-CLI\/2.4.0",
     "source": "public\/shutterstock-block\/build\/index.js",
     "domain": "messages",
@@ -28,6 +28,9 @@
             "wordpress:text_dowbload_and_insert": [
                 "St\u00e1hnout a\u00a0vlo\u017eit"
             ],
+            "wordpress:text_download": [
+                "Sta\u017een\u00ed"
+            ],
             "wordpress:text_downloads": [
                 "Sta\u017een\u00ed"
             ],
@@ -36,6 +39,9 @@
             ],
             "wordpress:text_home": [
                 "Dom\u016f"
+            ],
+            "wordpress:text_image_stored_in_media_library": [
+                "Sn\u00edmek byl ulo\u017een do knihovny m\u00e9di\u00ed"
             ],
             "wordpress:text_images": [
                 "Sn\u00edmky"

@@ -70,9 +70,13 @@ class Shutterstock {
 		if ( defined( 'SHUTTERSTOCK_VERSION' ) ) {
 			$this->version = SHUTTERSTOCK_VERSION;
 		} else {
-			$this->version = '1.2.2';
+			$this->version = '1.3.0';
 		}
 		$this->shutterstock = 'shutterstock';
+		$this->shutterstock_ui = [
+			'js' => 'https://api-cdn.shutterstock.com/0.1.33/static/js/sstk-widget.js',
+			'css' => 'https://api-cdn.shutterstock.com/0.1.33/static/css/sstk-widget.css',
+		];
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -112,6 +116,7 @@ class Shutterstock {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-shutterstock-i18n.php';
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-shutterstock-helper.php';
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
@@ -157,7 +162,7 @@ class Shutterstock {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Shutterstock_Admin( $this->get_shutterstock(), $this->get_version() );
+		$plugin_admin = new Shutterstock_Admin( $this->get_shutterstock(), $this->get_version(), $this->shutterstock_ui );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -179,7 +184,7 @@ class Shutterstock {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Shutterstock_Public( $this->get_shutterstock(), $this->get_version() );
+		$plugin_public = new Shutterstock_Public( $this->get_shutterstock(), $this->get_version(), $this->shutterstock_ui );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
