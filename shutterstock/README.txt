@@ -3,7 +3,7 @@ Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
 Tested up to: 5.6
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -12,7 +12,7 @@ Insert Shutterstock's royalty-free content directly from the WordPress editor
 
 == Description ==
 
-The Shutterstock plugin for WordPress allows you to access our exceptional, royalty-free content directly from WordPress. You can search Shutterstock's library, put preview images on pages and posts, and license, download, and post images and editorial content without leaving the Wordpress page editor. By helping streamline your workflow at the point of production and publishing, you can get your message to market more efficiently and effectively than ever before.
+The Shutterstock plugin for WordPress allows you to access our exceptional, royalty-free content directly from WordPress. You can search Shutterstock's library, download images directly to the WordPress media library, put preview images on pages and posts, and license, download, and post images and editorial content without leaving the Wordpress page editor. By helping streamline your workflow at the point of production and publishing, you can get your message to market more efficiently and effectively than ever before.
 
 The Shutterstock plugin takes the complexity out of creativity and saves time, whether you're creating a draft or publishing a full article.
 
@@ -21,6 +21,9 @@ Choose content from Shutterstock's incredible collection and get suggestions bas
 
 **Preview**
 Take your ideas for a test run and use our watermarked content on draft posts and pages.
+
+**Download**
+Add new content or content that you have already licensed directly to the WordPress media library.
 
 **License**
 Love how it looks? License the content and use it directly within your posts and pages.
@@ -79,6 +82,10 @@ To install the Shutterstock plugin for WordPress, follow these steps:
 1. In the **User Settings** table, select which WordPress roles have access to search and license media.
 1. Click **Save Changes**.
 
+**Adding media to the WordPress library**
+
+You can search and download media directly from the WordPress admin console into your site's media library by clicking **Media > Shutterstock**. From this page you can search for images, license images, and redownload previously licensed images if your subscriptions allows redownloads.
+
 **Adding media to pages and posts**
 
 Now that you have the Shutterstock plugin installed and configured, you can use it to add Shutterstock media to your pages and posts:
@@ -107,6 +114,9 @@ You can click **View recommendations** to see suggested images based on the text
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.3.1 =
+* Documentation updates
+
 = 1.3.0 =
 * Added Shutterstock Tab to Media Library (Media > Shutterstock)
 
