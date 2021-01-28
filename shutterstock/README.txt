@@ -3,7 +3,7 @@ Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
 Tested up to: 5.6
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -16,17 +16,14 @@ The Shutterstock plugin for WordPress allows you to access our exceptional, roya
 
 The Shutterstock plugin takes the complexity out of creativity and saves time, whether you're creating a draft or publishing a full article.
 
-**Search**
-Choose content from Shutterstock's incredible collection and get suggestions based on the text on your page.
-
-**Preview**
-Take your ideas for a test run and use our watermarked content on draft posts and pages.
-
-**Download**
-Add new content or content that you have already licensed directly to the WordPress media library.
-
-**License**
-Love how it looks? License the content and use it directly within your posts and pages.
+- Connect your Shutterstock account in minutes
+- Search across 350 million creative images and editorial photos
+- Preview visuals within your WordPress post
+- License with one click directly within WordPress
+- Define user permissions for each WordPress role to define varying levels of access to Shutterstock
+- Get Smart Image Recommendations based on your post content automatically
+- Automatically sync previously licensed assets from Shutterstock directly into your WordPress VIP Media Library (Hot Folder)
+- Access Premier support any time
 
 By default, WordPress sites have access to a limited library of Shutterstock media. **To connect the WordPress plugin to your existing subscription or access our full collection, fill out the form at [https://www.shutterstock.com/design/plugins-wordpress](https://www.shutterstock.com/design/plugins-wordpress).**
 
@@ -114,6 +111,9 @@ You can click **View recommendations** to see suggested images based on the text
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.3.2 =
+* Documentation updates
+
 = 1.3.1 =
 * Documentation updates
 
