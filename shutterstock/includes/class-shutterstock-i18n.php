@@ -42,23 +42,23 @@ class Shutterstock_i18n {
 
 	}
 
-	public function load_textdomain_mofile($mofile, $domain) {		
+	public function load_textdomain_mofile($mofile, $domain) {
 		if ($domain === 'shutterstock') {
 			$mofile = $this->get_translation_file_name($domain, $mofile);
 		}
-		
+
 		return $mofile;
 	}
 
-	public function load_script_translation_file($file, $handle, $domain) {		
+	public function load_script_translation_file($file, $handle, $domain) {
 		if ($domain === 'shutterstock') {
-			$file = $this->get_translation_file_name($domain, $file);			
+			$file = $this->get_translation_file_name($domain, $file);
 		}
 		return $file;
 	}
 
 	private function get_translation_file_name($domain, $file) {
-		$current_locale = get_locale();
+		$current_locale = determine_locale();
 		/* If translation files doesn't exists for particular locale then we fallback to similar
 		 * language else en_US
 		 */
@@ -66,7 +66,7 @@ class Shutterstock_i18n {
 			$supported_locale = $this->get_supported_locale($current_locale);
 			$file = str_replace($current_locale, $supported_locale, $file);
 		}
-		
+
 		return $file;
 	}
 
@@ -91,7 +91,7 @@ class Shutterstock_i18n {
 			'ru'	=> 'ru_RU',
 			'th'	=> 'th',
 			'ko'	=> 'ko_KR',
-			'ja' 	=> 'ja',			
+			'ja' 	=> 'ja',
 			'zh_HK' => 'zh_TW', // traditional chinese,
 			'zh_TW' => 'zh_TW', // traditional chinese,
 			'zh'	=> 'zh_CN'
