@@ -80,7 +80,8 @@ class Shutterstock_Helper {
 
     private function get_supported_language() {
 		$plugin_i18n = new Shutterstock_i18n();
-		$locale = $plugin_i18n->get_supported_locale(get_locale());
+		$current_locale = determine_locale();
+		$locale = $plugin_i18n->get_supported_locale($current_locale);
 
 		$language = in_array($locale, ['zh_HK', 'zh_TW'], true)
 		? 'zh-Hant'
