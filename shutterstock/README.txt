@@ -3,7 +3,7 @@ Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
 Tested up to: 5.6
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -22,7 +22,7 @@ The Shutterstock plugin takes the complexity out of creativity and saves time, w
 - License with one click directly within WordPress
 - Define user permissions for each WordPress role to define varying levels of access to Shutterstock
 - Get Smart Image Recommendations based on your post content automatically
-- Automatically sync previously licensed assets from Shutterstock directly into your WordPress VIP Media Library (Hot Folder)
+- Access previously licensed content from within the Media Library and redownload on-demand
 - Access Premier support any time
 
 By default, WordPress sites have access to a limited library of Shutterstock media. **To connect the WordPress plugin to your existing subscription or access our full collection, fill out the form at [https://www.shutterstock.com/design/plugins-wordpress](https://www.shutterstock.com/design/plugins-wordpress).**
@@ -111,6 +111,9 @@ You can click **View recommendations** to see suggested images based on the text
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.3.4 =
+* Documentation updates
+
 = 1.3.3 =
 * Bug fixes related to language settings
 

@@ -70,7 +70,7 @@ class Shutterstock {
 		if ( defined( 'SHUTTERSTOCK_VERSION' ) ) {
 			$this->version = SHUTTERSTOCK_VERSION;
 		} else {
-			$this->version = '1.3.3';
+			$this->version = '1.3.4';
 		}
 		$this->shutterstock = 'shutterstock';
 		$this->shutterstock_ui = [
