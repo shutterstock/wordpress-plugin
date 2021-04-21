@@ -17,7 +17,7 @@ $capabilites_with_texts = [
 ];
 
 ?>
-<table class="user-settings-table">
+<table class="shutterstock-user-settings-table">
     <thead>
       <th><?php echo esc_html_e('wordpress:text_user_type', 'shutterstock') ?></th>
       <?php

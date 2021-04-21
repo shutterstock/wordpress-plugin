@@ -3,26 +3,26 @@
  * included in this file.
  */
 
-.user-settings-table {
+.shutterstock-user-settings-table {
  border-spacing: 0;
 }
 
-.user-settings-table th {
+.shutterstock-user-settings-table th {
   border-top: 1px solid #7e8993;
   padding-left: 10px;
 }
-.user-settings-table td:last-child,
-.user-settings-table th:last-child {
+.shutterstock-user-settings-table td:last-child,
+.shutterstock-user-settings-table th:last-child {
   border-right: 1px solid #7e8993;
 }
 
-.user-settings-table td,
-.user-settings-table th {
+.shutterstock-user-settings-table td,
+.shutterstock-user-settings-table th {
   border-bottom: 1px solid #7e8993;
   border-left: 1px solid #7e8993;
 }
 
-.connected,
+.shutterstock-connected,
 p.shutterstock-token {
     word-wrap: break-word;
     white-space: pre-wrap;
@@ -47,15 +47,15 @@ p.shutterstock-token {
     color: orange;
 }
 
-button.logout, input.login {
+button.shutterstock-logout, input.shutterstock-login {
     cursor: pointer;
 }
 
-.connected {
+.shutterstock-connected {
   padding-top: 5px;
 }
 
-.hidden {
+.shutterstock-hidden {
   display: none !important;
 }
 
