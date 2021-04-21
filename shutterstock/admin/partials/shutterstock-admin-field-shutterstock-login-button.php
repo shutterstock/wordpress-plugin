@@ -17,7 +17,7 @@
                 function logout() {
                   var pre = \'<p class="' . esc_attr($atts['context']['connected_class']) . '">' . esc_html__('wordpress:logging_out', 'shutterstock') . '</p>\';
                   jQuery(".shutterstock-token").replaceWith(pre);
-                  jQuery(".connected").addClass("hidden");
+                  jQuery(".shutterstock-connected").addClass("shutterstock-hidden");
                 }
             </script>
             ';
@@ -26,12 +26,12 @@
                 id="' . esc_attr($atts['id']) . '"
                 name="' . esc_attr($atts['name']) . '"
                 value="' . esc_textarea($atts['value']) . '"
-                class="' . esc_attr($atts['context']['connected_class']) . ' hidden">' .
+                class="' . esc_attr($atts['context']['connected_class']) . ' shutterstock-hidden">' .
                     esc_textarea($atts['value']) .
                 '</textarea>';
 
-            echo '<div class="connected">'. esc_html__('wordpress:connected', 'shutterstock') .'</div>';
-            echo '<button class="logout" onclick="logout()">' . esc_attr($atts['context']['has_value_button_text']) . '</button>';
+            echo '<div class="shutterstock-connected">'. esc_html__('wordpress:connected', 'shutterstock') .'</div>';
+            echo '<button class="shutterstock-logout" onclick="logout()">' . esc_attr($atts['context']['has_value_button_text']) . '</button>';
         } else {
             echo '
             <script type="text/javascript">
@@ -48,7 +48,7 @@
                 }
             </script>
             <input
-                class="login"
+                class="shutterstock-login"
                 type="button"
                 value="' . esc_attr($atts['context']['no_value_button_text']) . '"
                 onclick="loginWithShutterstock()"
