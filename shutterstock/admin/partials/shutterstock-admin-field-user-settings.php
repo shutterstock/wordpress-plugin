@@ -22,13 +22,13 @@ $capabilites_with_texts = [
       <th><?php echo esc_html_e('wordpress:text_user_type', 'shutterstock') ?></th>
       <?php
       foreach($capabilites_with_texts as $capability) { ?>
-        <th><?php echo esc_attr($capability); ?></th>
+        <th><?php echo esc_html($capability); ?></th>
       <?php }?>
     <tbody>
     <?php
       foreach($atts['role_names'] as $key => $value) {?>
           <tr valign="top">
-            <td><?php echo esc_attr($value); ?></td>
+            <td><?php echo esc_html($value); ?></td>
             <?php foreach($capabilites_with_texts as $cap_key => $cap_value) { ?>
                 <td>
                   <input aria-role="checkbox"
@@ -47,5 +47,5 @@ $capabilites_with_texts = [
       <?php }?>
     </tbody>
   </table>
-  <p class="description"><?php echo esc_attr( $atts['description'] ); ?></p>
+  <p class="description"><?php echo esc_html( $atts['description'] ); ?></p>
 <?php

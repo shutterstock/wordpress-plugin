@@ -18,5 +18,5 @@
 		type="<?php echo esc_attr( $atts['type'] ); ?>"
 		value="<?php echo esc_attr( $atts['value'] ); ?>"
 	/>
-	<p class="description"><?php echo esc_attr( $atts['description'] ); ?></p>
+	<p class="description"><?php echo esc_html( $atts['description'] ); ?></p>
 <?php

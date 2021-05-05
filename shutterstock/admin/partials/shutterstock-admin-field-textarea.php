@@ -20,5 +20,5 @@
 echo esc_textarea( $atts['value'] );
 ?>
 </textarea>
-<p class="description"><?php echo esc_attr( $atts['description'] ); ?></p>
+<p class="description"><?php echo esc_html( $atts['description'] ); ?></p>
 <?php
