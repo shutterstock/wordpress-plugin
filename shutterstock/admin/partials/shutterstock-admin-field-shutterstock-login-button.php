@@ -31,7 +31,7 @@
                 '</textarea>';
 
             echo '<div class="shutterstock-connected">'. esc_html__('wordpress:connected', 'shutterstock') .'</div>';
-            echo '<button class="shutterstock-logout" onclick="logout()">' . esc_attr($atts['context']['has_value_button_text']) . '</button>';
+            echo '<button class="shutterstock-logout" onclick="logout()">' . esc_html($atts['context']['has_value_button_text']) . '</button>';
         } else {
             echo '
             <script type="text/javascript">

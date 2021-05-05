@@ -3,7 +3,7 @@ Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
 Tested up to: 5.7
-Stable tag: 1.3.5
+Stable tag: 1.3.6
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -111,6 +111,9 @@ You can click **View recommendations** to see suggested images based on the text
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.3.6 =
+* Bug fixes related to WP VIP
+
 = 1.3.5 =
 * Bug fixes related to Screen options
 
