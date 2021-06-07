@@ -64,7 +64,7 @@ const Edit = (props) => {
 	};
 
 	const { snackbar, setSnackbar } = useSnackbarTimeout({
-		onRemoveSnackbar: () => toogleLoading(false),		
+		onRemoveSnackbar: () => toogleLoading(false),
 	});
 
 	const handleError = (error) => {
@@ -72,7 +72,7 @@ const Edit = (props) => {
     if (error?.data?.statusCode !== 500 && error?.data?.message) {
       errorMessage = error.data.message;
     }
-    
+
     setSnackbar({
 			...snackbar,
     	show: true,
@@ -82,7 +82,7 @@ const Edit = (props) => {
 
 	useEffect(() => {
 		if (props.attributes?.img?.licensedImageUrl) {
-			const { attributes: { img: { 
+			const { attributes: { img: {
 				licensedImageUrl,
 				contributorName,
 				uploadedImageId,
@@ -96,10 +96,10 @@ const Edit = (props) => {
 				alt: description,
 				align: 'center',
 			});
-			
+
 			props.replaceBlock(props.clientId, block);
 		}
-		
+
 	}, [props.attributes?.img?.licensedImageUrl])
 
   return (
@@ -154,7 +154,7 @@ const Edit = (props) => {
         setAttributes={props.setAttributes}
         closeModal={closeModal}
         canLicense={canLicense}
-        assetInfo={props?.attributes?.img}
+        item={props?.attributes?.img}
         licenseImage={licenseImage}
         subscriptions={subscriptions}
       />}

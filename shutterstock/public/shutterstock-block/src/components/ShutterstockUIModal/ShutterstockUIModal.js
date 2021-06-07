@@ -11,7 +11,7 @@ const ShutterstockUIModal = ({
   setAttributes,
   closeModal,
   canLicense,
-  assetInfo,
+  item,
   licenseImage,
   subscriptions,
 }) => {
@@ -28,7 +28,7 @@ const ShutterstockUIModal = ({
             setAttributes={setAttributes}
             closeModal={closeModal}
             canLicense={canLicense}
-            assetInfo={assetInfo}
+            item={item}
             licenseImage={licenseImage}
             subscriptions={subscriptions}
           />

@@ -2,7 +2,7 @@ import apiFetch from '@wordpress/api-fetch';
 import { __ } from '@wordpress/i18n';
 
 const licensingPageRoute = ({
-  assetInfo,
+  item,
   closeModal,
   commonLicensingProps,
   handleError,
@@ -12,10 +12,10 @@ const licensingPageRoute = ({
   subscriptions,
   toggleOverlay,
 }) => ({
-    name: 'licensingPage',
-    path: '/license/images/:id',
-    component: ShutterstockWidget.components.LicensingImagePage,
+    name: 'imageLicensingPage',
+    component: ShutterstockWidget.components.ImageLicensingPage,
     props: {
+      showSearchBar: true,
       buttons: [
         {
           ...commonLicensingProps,
@@ -80,7 +80,7 @@ const licensingPageRoute = ({
           },
         }
       ],
-      assetInfo,
+      item,
       subscriptions: subscriptions
     }
 });

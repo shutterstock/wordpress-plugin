@@ -70,12 +70,12 @@ class Shutterstock {
 		if ( defined( 'SHUTTERSTOCK_VERSION' ) ) {
 			$this->version = SHUTTERSTOCK_VERSION;
 		} else {
-			$this->version = '1.3.6';
+			$this->version = '1.3.7';
 		}
 		$this->shutterstock = 'shutterstock';
 		$this->shutterstock_ui = [
-			'js' => 'https://api-cdn.shutterstock.com/0.1.33/static/js/sstk-widget.js',
-			'css' => 'https://api-cdn.shutterstock.com/0.1.33/static/css/sstk-widget.css',
+			'js' => 'https://api-cdn.shutterstock.com/2.0.2/static/js/sstk-widget.js',
+			'css' => 'https://api-cdn.shutterstock.com/2.0.2/static/css/sstk-widget.css',
 		];
 
 		$this->load_dependencies();

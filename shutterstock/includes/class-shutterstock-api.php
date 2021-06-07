@@ -148,13 +148,22 @@ class Shutterstock_API {
 		$image_description = sanitize_text_field($req_body['description']);
 		$contributor_name = sanitize_text_field($req_body['contributorName']);
 		$media_type = sanitize_text_field($req_body['mediaType']);
-		$search_id = sanitize_text_field($req_body['search_id']);
 		$is_editorial = $media_type === 'editorial';
 
 		$width = sanitize_text_field($req_body['width']);
 		$height = sanitize_text_field($req_body['height']);
 
-		$metadata = array_map('sanitize_text_field', $req_body['metadata']);
+		$search_id = isset($req_body['search_id'])
+			? sanitize_text_field($req_body['search_id'])
+			: null;
+ 
+		$metadata = isset($req_body['metadata'])
+			? array_map('sanitize_text_field', $req_body['metadata'])
+			: null;
+
+ 		$local_amount = isset($req_body['pricePerDownload']['local_amount'])
+ 			? sanitize_text_field($req_body['pricePerDownload']['local_amount'])
+ 			: 0;
 
 		$local_amount = isset($req_body['pricePerDownload']['local_amount'])
 			? sanitize_text_field($req_body['pricePerDownload']['local_amount'])
@@ -167,7 +176,6 @@ class Shutterstock_API {
 			: $this->api_url. '/images/licenses?subscription_id='. $subscription_id;
 
 		$body_key = $is_editorial ? 'editorial' : 'images';
-		$body = [];
 
 		if ($is_editorial) {
 			$country = $this->shutterstock_helper->get_editorial_country();
