@@ -1,19 +1,19 @@
 import insertPreviewDarkSvg from '../../../images/insert-preview-dark.svg';
 
 const imageDetailsPageRoute = ({
-  assetInfo,
+  item,
   isMediaPage,
   commonInsertPreviewProps,
 }) => ({
   name: 'imageDetailsPage',
-  path: '/images/:id',
   component: ShutterstockWidget.components.ImageDetailsPage,
   props: {
+    showSearchBar: true,
     buttons: isMediaPage ? [] : [{
       ...commonInsertPreviewProps,
       icon: insertPreviewDarkSvg,
     }],
-    assetInfo,
+    item,
   }
 });
 

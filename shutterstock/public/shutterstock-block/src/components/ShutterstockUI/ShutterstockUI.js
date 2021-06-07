@@ -13,6 +13,7 @@ import {
   imageDetailsPageRoute,
   licenseHistoryPageRoute,
   licensingPageRoute,
+  searchPage,
 } from './routes';
 
 const regex = {
@@ -24,7 +25,7 @@ const ShutterstockUI = ({
   setAttributes,
   closeModal,
   canLicense = false,
-  assetInfo = {},
+  item = {},
   licenseImage = false,
   subscriptions = [],
   isMediaPage = false,
@@ -75,8 +76,12 @@ const ShutterstockUI = ({
     : [{ ...commonInsertPreviewProps, icon: insertPreviewSvg }];
 
   const routesConfig = [
-    imageDetailsPageRoute({ assetInfo, commonInsertPreviewProps, isMediaPage }),
+    imageDetailsPageRoute({ item, commonInsertPreviewProps, isMediaPage }),
   ];
+
+  const imageDetailsPage = imageDetailsPageRoute({ item, commonInsertPreviewProps, isMediaPage });
+  let licensingPage;
+  let licenseHistoryPage;
 
   if (canLicense) {
     const commonLicensingProps = {
@@ -92,23 +97,13 @@ const ShutterstockUI = ({
           const subscriptionsWithImageDetails = await getSubscriptionWithDetails(item.id, mediaType);
 
           // Adding subscription + search id to the route
-          routesConfig[1].props = {
-            ...routesConfig[1].props,
-            assetInfo: item,
+          widgetRef.current.navigateTo('imageLicensingPage', {
+            item,
             subscriptions: subscriptionsWithImageDetails,
-            searchId: item.searchId
-          }
-
-          widgetRef.current.updateRoutes({
-            routesConfig,
-          });
-
-          widgetRef.current.toggleLoadingIndicator(false);
+            searchId: item.searchId,
+          })
           toggleOverlay(false);
-
-          options.history.push(`/license/images/${item.id}`);
         } catch(error) {
-          widgetRef.current.toggleLoadingIndicator(false);
           toggleOverlay(false);
           handleError(error);
         }
@@ -120,34 +115,34 @@ const ShutterstockUI = ({
     });
 
     // Adding Licensing Button to the Image details page.
-    routesConfig[0].props.buttons.push({
+    imageDetailsPage.props.buttons.push({
       ...commonLicensingProps,
     });
 
     // Adding Licensing Route
-    routesConfig.push(
-      licensingPageRoute({
-        assetInfo,
-        closeModal,
-        commonLicensingProps,
-        handleError,
-        isMediaPage,
-        setAttributes,
-        showSnackbar,
-        subscriptions,
-        toggleOverlay,
-      }),
-      licenseHistoryPageRoute({
-        closeModal,
-        handleError,
-        isMediaPage,
-        routesConfig,
-        setAttributes,
-        showSnackbar,
-        toggleOverlay,
-        widgetRef,
-      }),
-    );
+    licensingPage = licensingPageRoute({
+      item,
+      closeModal,
+      commonLicensingProps,
+      handleError,
+      isMediaPage,
+      licenseImage,
+      setAttributes,
+      showSnackbar,
+      subscriptions,
+      toggleOverlay,
+    });
+
+    licenseHistoryPage = licenseHistoryPageRoute({
+      closeModal,
+      handleError,
+      isMediaPage,
+      routesConfig,
+      setAttributes,
+      showSnackbar,
+      toggleOverlay,
+      widgetRef,
+    })
   }
 
   useEffect(() => {
@@ -163,89 +158,43 @@ const ShutterstockUI = ({
       },
     ];
 
+    const searchImagePage = searchPage({
+      isMediaPage,
+      overlayActions,
+      shutterstock,
+      searchBarDropdownFilters,
+      userIsAbleToSearchEditorial,
+      widgetRef,
+    })
+    /**
+     * We have to show licensingPage & licenseHistoryPage only for users who have access to it
+     * so we do ...() and all.
+     * The condition on line 176 is specific to a case where a user already inserted an image in wordpress post
+     * and then clicks on `License Image` button. In that case we want to display licensingPage first to user.
+     */
+    const pages = [
+      ...((licenseImage && licensingPage) ? [licensingPage] : []),
+      searchImagePage,
+      imageDetailsPage,
+      ...((!licenseImage && licensingPage) ? [licensingPage] : []),
+      ...((licenseHistoryPage) ? [licenseHistoryPage] : []),
+    ];
+
     const widgetConfig = {
-      mediaType: 'images',
-      imageType: ['photo'],
-      subtitle: '',
       container: widgetRef.current,
-      showMore: true,
       key: shutterstock?.api_key,
       languageCode: shutterstock?.language,
-      dynamicTitle: true,
-      dynamicSubtitle: true,
-      showSearchBar: true,
-      assetsPerPage: 26,
-      onItemClick: (e, item, options) => {
-        e.preventDefault();
-        routesConfig[0].props = {
-          ...routesConfig[0].props,
-          assetInfo: item,
-        }
-
-        widgetRef.current.updateRoutes({
-          routesConfig,
-        });
-
-        widgetRef.current.toggleLoadingIndicator(false);
-        options.history.push(`/images/${item.id}`)
-      },
-      theme: {
-        searchBar: {
-          searchForm: 'components-shutterstock-ui__searchForm',
-          searchContainer: 'components-shutterstock-ui__searchContainer',
-          inputGroup: 'components-shutterstock-ui__inputgroup',
-          formControlInput: 'components-shutterstock-ui__input',
-          filterDrawer: {
-            filterDrawerContainer: 'components-shutterstock-ui__filterDrawerContainer',
-            overlay: 'components-shutterstock-ui__widget-drawer-position-fixed',
-            filterDrawer: 'components-shutterstock-ui__widget-drawer-position-fixed',
-            filterButtonWrapper: 'components-shutterstock-ui__filterButtonWrapper'
-          }
-        },
-      },
-      extraRoutes: {
-        ...(licenseImage ? { initialRoute: `/license/images/${assetInfo.id}` } : { } ),
-        routesConfig,
-        excludeSearchBarRoutes: ['^\/license-history$']
-      },
-      overlayActions,
       customHeaders: {
         'x-shutterstock-application': `Wordpress/${shutterstock?.version}`,
       },
-      editorialCountry: shutterstock?.country,
-      searchFilters: {
-        showFilterDrawer: true,
-        images: {
-          orientationFilter: true,
-        },
-        ...(userIsAbleToSearchEditorial ? { searchBarDropdownFilters } : {})
-      },
-      ...(isMediaPage ? {} : {
-        searchSuggestions: {
-          enable: true,
-          textProvider: () => {
-            const postTitle = wp.data.select('core/editor').getEditedPostAttribute('title') || '';
-            const postContent = wp.data.select('core/editor').getEditedPostContent() || '';
-
-            const text = stripHTML(`${postTitle} ${postContent}`)
-              .replace(regex.HTMLRegExp, '')
-              .replace(regex.NewLineRegExp, '')
-              .trim();
-
-            return text;
-          }
-        },
-        title: __('wordpress:text_add_shuttersock_content_to_post', 'shutterstock'),
-      }),
+      pages,
     };
 
     // eslint-disable-next-line no-undef
     if (typeof window === 'object' && window.ShutterstockWidget) {
       // eslint-disable-next-line no-undef
       const widgetInstance = new window.ShutterstockWidget(widgetConfig);
-      widgetInstance.search({
-        query: '',
-      });
+      widgetInstance.render({});
 
       widgetRef.current = widgetInstance;
     }
@@ -260,7 +209,7 @@ const ShutterstockUI = ({
         <div className={`components-shutterstock-ui__navigation ${overlay.show ? 'disabled' : ''} ${mediaPageClass}`}>
           <a
             onClick={(e, options) => {
-              widgetRef.current.getHistory().push(`/`);
+              widgetRef.current.navigateTo('searchPage')
             }}
           >
             {__('wordpress:text_home', 'shutterstock')}
@@ -272,20 +221,12 @@ const ShutterstockUI = ({
                 toggleOverlay(true, __('wordpress:text_loading_please_wait', 'shutterstock'));
                 const licenseHistory = await getLicenseHistory('images');
 
-                routesConfig[2].props = {
-                  ...routesConfig[2].props,
-                  licenseHistory,
-                }
-                widgetRef.current.updateRoutes({
-                  routesConfig,
-                });
-
-                widgetRef.current.toggleLoadingIndicator(false);
+                widgetRef.current.navigateTo('imageLicenseHistoryPage', {
+                  licenseHistory
+                })
                 toggleOverlay(false);
-                widgetRef.current.getHistory().push(`/license-history`);
 
               } catch(error) {
-                widgetRef.current.toggleLoadingIndicator(false);
                 toggleOverlay(false);
                 handleError(error);
               }

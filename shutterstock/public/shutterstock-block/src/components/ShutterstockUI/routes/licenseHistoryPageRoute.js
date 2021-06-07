@@ -14,25 +14,18 @@ const licenseHistoryPageRoute = ({
   toggleOverlay,
   widgetRef,
 }) => ({
-  name: 'licenseHistoryPage',
-  path: '/license-history',
-  component: ShutterstockWidget.components.LicenseHistoryPage,
+  name: 'imageLicenseHistoryPage',
+  component: ShutterstockWidget.components.ImageLicenseHistoryPage,
   props: {
     theme: {
       container: 'components-shutterstock-media-page__license-history-container',
     },
     onLicenseHistoryItemClick: (item, { history }) => {
-      routesConfig[0].props = {
-        ...routesConfig[0].props,
-        assetInfo: item,
-      }
 
-      widgetRef.current.updateRoutes({
-        routesConfig,
+      widgetRef.current.navigateTo('imageDetailsPage', {
+        item,
       });
 
-      widgetRef.current.toggleLoadingIndicator(false);
-      history.push(`/images/${item.id}`)
     },
     getMoreResults: async (page) => {
       const licenseHistory = await getLicenseHistory('images', page + 1);
