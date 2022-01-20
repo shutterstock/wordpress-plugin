@@ -138,8 +138,10 @@ class Shutterstock_Public {
 
 		// Registerging the shutterstock-block. Pattern is 'namespace/block-name'
 		register_block_type( 'shutterstock/shutterstock-block', array(
-			'editor_script' => ['shutterstock-block-block-editor', 'shutterstock-block-block-editor-shuttestock-ui-js'],
-			'editor_style'  => ['shutterstock-block-block-editor', 'shutterstock-block-block-editor-shutterstock-ui-css'],
+			'editor_script' => 'shutterstock-block-block-editor',
+			'script' => 'shutterstock-block-block-editor-shuttestock-ui-js',
+			'editor_style'  => 'shutterstock-block-block-editor',
+			'style' => 'shutterstock-block-block-editor-shutterstock-ui-css',
 		) );
 
 		$shutterstock_helper = new Shutterstock_Helper($this->shutterstock, $this->version);
