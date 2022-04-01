@@ -131,8 +131,9 @@ class Shutterstock_API {
 		$parameters = $request->get_params();
 		$page = isset($parameters['page']) ? sanitize_text_field($parameters['page']) : 1;
 		$per_page = isset($parameters['per_page']) ? sanitize_text_field($parameters['per_page']) : 20;
-		$list_image_licenses_route = $this->api_url. '/images/licenses?per_page='. $per_page .'&page=' . $page;
-
+		$download_availability = isset($parameters['download_availability']) ? sanitize_text_field($parameters['download_availability']) : 'downloadable';
+		$list_image_licenses_route = $this->api_url. '/images/licenses?download_availability='. $download_availability .'&per_page='. $per_page .'&page='. $page;
+		
 		$response = $this->do_api_get_request($list_image_licenses_route);
 
 		$decoded_response_body = json_decode($response['response_body'], true);
