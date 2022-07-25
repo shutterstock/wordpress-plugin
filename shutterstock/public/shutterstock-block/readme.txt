@@ -2,7 +2,7 @@
 Contributors: Shutterstock
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library
 Requires at least: 5.5
-Tested up to: 5.5
+Tested up to: 6.0
 Stable tag: 5.5
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html

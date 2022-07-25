@@ -2,8 +2,8 @@
 Contributors: shutterstockplugins
 Tags: shutterstock, stock photography, images, editorial images, licensing, media library, stock
 Requires at least: 5.5
-Tested up to: 5.9
-Stable tag: 1.3.11
+Tested up to: 6.0
+Stable tag: 1.3.12
 Requires PHP: 7.1
 License: MIT
 License URI: http://opensource.org/licenses/mit-license.html
@@ -111,6 +111,9 @@ You can click **View recommendations** to see suggested images based on the text
 1. Publish the page as usual. The image appears on the page just like any other image that you add to a page.
 
 == Changelog ==
+= 1.3.12 =
+* Update to support Wordpress 6.0
+
 = 1.3.11 =
 * Filter only downloadable licenses on the "Downloads" section
 
